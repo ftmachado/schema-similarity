@@ -44,10 +44,9 @@ public class Main {
 		 * @return Matriz Lev[][]
 		 */
 		
-//		int[][] mLev = new int[tamanhoMatriz][tamanhoMatriz];
-		//aplicar o levenshtein nesse arraylist palavras
-//		mLev = Algoritmos.geraMatrizStemmer(palavras, tamanhoMatriz);
-//		Util.mostraMatriz(mStem, tamanhoMatriz);
+		double[][] mLev = new double[tamanhoMatriz][tamanhoMatriz];
+		mLev = Algoritmos.aplicaLevenshtein(palavras);
+		Util.mostraMatriz(mLev);
 		
 		
 		/*
@@ -55,10 +54,19 @@ public class Main {
 		 * @param ArrayList com campos distintos
 		 * @return Matriz Lin[][]
 		 */
-//		int[][] mLin = new int[tamanhoMatriz][tamanhoMatriz];
-		//aplicar o lin nesse arraylist palavras
-//		mLev = Algoritmos.geraMatrizStemmer(palavras, tamanhoMatriz);
-//		Util.mostraMatriz(mStem, tamanhoMatriz);
+		double[][] mLin = new double[tamanhoMatriz][tamanhoMatriz];
+		mLin = Algoritmos.aplicaLin(palavras);
+		Util.mostraMatriz(mLin);
+
+		/*
+		 * Algoritmo 6
+		 * @param 3 matrizes das técnicas e tamanho da matriz
+		 * @return Matriz Resultados[][]
+		 */
+		double[][] resultados = new double[tamanhoMatriz][tamanhoMatriz];
+		resultados = Algoritmos.calculaEquivalencia(mStem, mLev, mLin, tamanhoMatriz);
+		Util.mostraMatriz(resultados);
+		Util.mostraPalavrasEquivalentes(resultados, palavras);
 	}
 
 }

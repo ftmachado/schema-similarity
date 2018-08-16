@@ -8,6 +8,11 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.stream.Stream;
+import java.util.Arrays;
+
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.io.PrintWriter;
@@ -136,10 +141,10 @@ public class Util {
 	}
 
 	 /**
-	 * Mostra uma matriz de floats acima da diagonal principal
+	 * Mostra uma matriz de double acima da diagonal principal
 	 * @param matriz - Matriz de inteiros
 	 */
-	 public static void mostraMatriz(float[][] matriz) {
+	 public static void mostraMatriz(double[][] matriz) {
 		 int t = matriz.length;
 		 for (int i = 0; i < t; i++) {
 				System.out.println("");
@@ -203,4 +208,108 @@ public class Util {
 		
 	 }
 
+	 /**
+	  * Lê um arquivo no formato CSV e gera uma matriz de inteiros
+	  * @param caminho absoluto do arquivo csv
+	  * @return uma matriz resultando do tipo int[][]
+	  */
+	public static int[][] csvParaMatrizInt(String caminho) throws IOException{
+		int[][] matriz;
+		Stream<String> lines = Files.lines(Paths.get(caminho));
+		matriz = lines
+            .map(s -> s.split(";"))
+            .map(s -> Arrays.stream(s).mapToInt(Integer::parseInt).toArray())
+			.toArray(int[][]::new);
+		lines.close();
+		return matriz;
+	}
+
+	 /**
+	  * Lê um arquivo no formato CSV e gera uma matriz de double
+	  * @param caminho absoluto do arquivo csv
+	  * @return uma matriz resultando do tipo double[][]
+	  */
+	  public static double[][] csvParaMatrizDouble(String caminho) throws IOException{
+		double[][] matriz;
+		Stream<String> lines = Files.lines(Paths.get(caminho));
+		matriz = lines
+            .map(s -> s.split(";"))
+            .map(s -> Arrays.stream(s).mapToDouble(Double::parseDouble).toArray())
+			.toArray(double[][]::new);
+		
+		lines.close();
+		return matriz;
+	}
+
+	public static String[] palavrasStrings;
+	/**
+	 * Lê um arquivo no formato CSV e gera um vetor de Strings
+	 * @param caminho absoluto do arquivo csv
+	 */
+	public static String[] csvParaVetorStrings(String caminho) throws IOException{
+		String auxString;
+		
+		try {
+			BufferedReader StrR = new BufferedReader(new FileReader(caminho));
+			while((auxString = StrR.readLine())!= null){
+				//divide a linha lida em um array de String passando como parametro o divisor ";".
+				palavrasStrings = auxString.split(";"); 
+			}
+			StrR.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException ex){
+			ex.printStackTrace();
+		}
+		
+		return palavrasStrings;
+	}
+
+	/**
+	 * Grava uma matriz em um arquivo no formato CSV
+	 * @param matriz para gravar, caminho absoluto do destivo com a extensão .csv
+	 */
+	public static void gravaMatrizParaCsv(Double[][] matriz, String destino) throws IOException{
+		int k, l;
+		try {
+
+			FileWriter writer = new FileWriter(destino);
+			for(k=0; k < matriz.length; k++){  
+				for (l=0;l< matriz.length;l++){
+					if (k == l){
+						writer.write(1.0+";");
+					} else{
+						
+						if (matriz[k][l] == -0.0) {writer.write(0.0+";");} else {writer.write(matriz[k][l]+";");}
+						
+					}
+				}
+				writer.write("\n"); 
+			}
+			writer.close();
+
+		} catch (IOException exc) {
+			exc.printStackTrace();
+		}
+	}
+
+	/**
+	 * Mostra as palavras equivalentes
+	 * @param matriz resultados e um ArrayList<String> com as palavras
+	 * @return void de palavras equivalentes
+	 */
+	public static void mostraPalavrasEquivalentes(double[][] resultado, ArrayList<String> palavras){
+		int k, l;
+
+		for (k=0; k<resultado.length ; k++){
+            for (l=0;l<resultado.length;l++){
+
+				if ((l>k) && (k != l)){
+					if (resultado[k][l] == 1.0){
+						System.out.println(palavras.get(k));
+					}					
+				}
+			}
+		}
+	}
 }

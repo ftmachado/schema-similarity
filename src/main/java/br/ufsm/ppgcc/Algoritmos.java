@@ -12,7 +12,10 @@ import java.io.StringWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
+import edu.cmu.lti.lexical_db.ILexicalDatabase;
+import edu.cmu.lti.lexical_db.NictWordNet;
+import edu.cmu.lti.ws4j.impl.Lin;
+import edu.cmu.lti.ws4j.util.WS4JConfiguration;
 
 import javax.json.Json;
 import javax.json.JsonReader;
@@ -58,8 +61,6 @@ public class Algoritmos {
 				}
 			
 				String file = caminho+"/doc"+i+".json";
-//				System.out.println(file);
-//				System.exit(0);
 				
 				reader = Json.createReader(new FileReader(file));
 				JsonStructure jsonst = reader.read();
@@ -78,26 +79,7 @@ public class Algoritmos {
 					
 					switch (event) {
 					
-/*						case START_ARRAY: {
-							gravarArq.println();
-							gravarArq.printf("[");
-							break;
-						}
-						case END_ARRAY: {
-							gravarArq.printf("]");
-							break;
-						}
-						
-						case START_OBJECT: {
-							gravarArq.println();
-							gravarArq.printf("{");
-							break;
-						}
-						case END_OBJECT: {
-							gravarArq.printf("}");
-							break;
-						}
-*/						case KEY_NAME:
+						case KEY_NAME:
 							gravarArq.println(parser.getString());
 							break;
 							
@@ -189,7 +171,6 @@ public class Algoritmos {
 	 * @param origemArquivo - Caminho do arquivo de origem
 	 * @return ArrayList de palavras com apenas o radical
 	 * @author Fhabiana Machado
-	 * @return 
 	 * @since 02 de março de 2018
 	 */
 	public static ArrayList<String> aplicaStemmerArquivo(String origemArquivo) {
@@ -289,13 +270,13 @@ public class Algoritmos {
 	 * de palavras comparando todas com todas. A linha da palavra será
 	 * seu índice.
 	 * @param palavras - ArrayList de Strings
-	 * @return Matriz float[][] com resultados par a par
+	 * @return Matriz double[][] com resultados par a par
 	 * @author Fhabiana Machado
 	 * @since 02 de março de 2018
 	 */
-	public static float[][] aplicaLevenshtein(ArrayList<String> palavras) {
+	public static double[][] aplicaLevenshtein(ArrayList<String> palavras) {
 		int t = palavras.size();
-		float lev[][] = new float[t][t];
+		double lev[][] = new double[t][t];
 		StringMetric metric = StringMetrics.levenshtein();
 		
 		for (int i = 0; i < palavras.size(); i++) {
@@ -315,4 +296,101 @@ public class Algoritmos {
 		return lev;
 	}
 
+	/**
+	 * Algoritmo 5 -
+	 * Aplica a função de similaridade de conhecimento Lin em um ArrayList<String>
+	 * de palavras comparando todas com todas. A linha da palavra será
+	 * seu índice.
+	 * @param palavras - ArrayList de Strings
+	 * @return Matriz double[][] com resultados par a par
+	 * @author Renata Padilha, Fhabiana Machado
+	 * @since 15 de agosto de 2018
+	 */
+	public static double[][] aplicaLin(ArrayList<String> palavras){
+		int t = palavras.size();
+		double lin[][] = new double[t][t];
+		
+		ILexicalDatabase db = new NictWordNet();
+		WS4JConfiguration.getInstance().setMFS(false);
+		
+		for (int i = 0; i < palavras.size(); i++) {
+            for (int j = 0; j < palavras.size(); j++) {
+            	
+            	System.out.println("Matriz["+i+"]["+j+"]");
+            	
+            	if (i==j) {
+            		lin[i][j]=1;
+            	} else {
+					lin[i][j] = new Lin(db).calcRelatednessOfWords(palavras.get(i), palavras.get(j));
+            	}
+            	
+            }
+		}
+
+		return lin;
+	}
+
+	/**
+	 * Algoritmo 6 -
+	 * Calcula a equivalência a partir das 3 matrizes de resultados das demais técnicas
+	 * @param 
+	 * @return Única matriz double com o resultado
+	 * @author Renata Padilha, Fhabiana Machado
+	 * @since 15 de agosto de 2018
+	 */
+	public static double[][] calculaEquivalencia(int[][] radical, double[][] lev, double[][] lin, int tamanho){
+		int i, j, count=0;
+		final double PONTO_CORTE=0.7, PONTO_CORTE_AHP=0.5;
+		final int pesoA=1, pesoB=3, pesoC=2;
+		double aux=0, media_ponderada=0;
+		double resultado[][]= new double[tamanho][tamanho];
+
+		for (i=0; i<tamanho; i++){
+			for (j=i; j<tamanho; j++){
+
+				//1º caso
+				if ((lev[i][j] == 1.0) || (radical[i][j] == 1.0) || (lin[i][j] == 1.0)){
+					resultado[i][j] = 1;
+				} else {
+					//2º caso
+					if (lev[i][j] == 0 && radical[i][j] == 0 && lin[i][j] == 0)	{
+						resultado[i][j] = 0;
+					} else {
+						count=0;
+						//3º caso
+						if (lev[i][j] >0.0 && lev[i][j] < 1.0) {
+							aux = lev[i][j];
+							count++;
+						} 
+					
+						if (radical[i][j] >0.0 && radical[i][j] < 1.0){
+							aux = radical[i][j];
+							count++;
+						}
+								
+						if (lin[i][j] >0.0 && lin[i][j] < 1.0){
+							aux = lin[i][j];
+							count++;
+						}
+						
+						if (count==1){
+							//se valor maior que ponto de corte(0.7)
+							resultado[i][j] = (aux > PONTO_CORTE) ? 1 : 0;
+
+						} else {
+							if (count>1){
+								//4º caso valores entre 0 < x < 1
+								media_ponderada = (pesoA*radical[i][j] + pesoB*lev[i][j] + pesoC*lin[i][j])/6;
+								resultado[i][j] = (media_ponderada > PONTO_CORTE_AHP) ? 1 : 0;
+							}
+						}
+					
+					}
+				}
+			} // fim for coluna
+		} // fim for linha	
+
+	return resultado;
+	}
+	
 }
