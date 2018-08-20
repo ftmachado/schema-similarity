@@ -227,7 +227,7 @@ public class Algoritmos {
 		}
 		// Mostrar palavras
 		for (int i = 0; i < palavras.size(); i++) {
-			System.out.println(palavras.get(i).toString());
+//			System.out.println(palavras.get(i).toString());
 		}
 		
 		return palavras;
@@ -282,7 +282,7 @@ public class Algoritmos {
 		for (int i = 0; i < palavras.size(); i++) {
             for (int j = 0; j < palavras.size(); j++) {
             	
-            	System.out.println("Matriz["+i+"]["+j+"]");
+//            	System.out.println("Matriz["+i+"]["+j+"]");
             	
             	if (i==j) {
             		lev[i][j]=1;
@@ -316,7 +316,7 @@ public class Algoritmos {
 		for (int i = 0; i < palavras.size(); i++) {
             for (int j = 0; j < palavras.size(); j++) {
             	
-            	System.out.println("Matriz["+i+"]["+j+"]");
+//            	System.out.println("Matriz["+i+"]["+j+"]");
             	
             	if (i==j) {
             		lin[i][j]=1;

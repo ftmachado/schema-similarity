@@ -1,0 +1,117 @@
+{
+  "PubmedArticle": {
+    "MedlineCitation": {
+      "@Status": "In-Process",
+      "@Owner": "NLM",
+      "PMID": {
+        "@Version": 1,
+        "$": 27936191
+      },
+      "DateCreated": {
+        "Year": 2016,
+        "Month": 12,
+        "Day": "09"
+      },
+      "DateRevised": {
+        "Year": 2017,
+        "Month": "02",
+        "Day": 24
+      },
+      "Article": {
+        "@PubModel": "Electronic-eCollection",
+        "Journal": {
+          "ISSN": {
+            "@IssnType": "Electronic",
+            "$": "1932-6203"
+          },
+          "JournalIssue": {
+            "@CitedMedium": "Internet",
+            "Volume": 11,
+            "Issue": 12,
+            "PubDate": {
+              "Year": 2016
+            }
+          },
+          "Title": "PloS one",
+          "ISOAbbreviation": "PLoS ONE"
+        },
+        "ArticleTitle": "A Scalable Data Access Layer to Manage Structured Heterogeneous Biomedical Data.",
+        "Pagination": {
+          "MedlinePgn": "e0168004"
+        },
+        "ELocationID": {
+          "@EIdType": "doi",
+          "@ValidYN": "Y",
+          "$": "10.1371/journal.pone.0168004"
+        },
+        "Abstract": {
+          "AbstractText": "This work presents a scalable data access layer, called PyEHR, designed to support the implementation of data management systems for secondary use of structured heterogeneous biomedical and clinical data. PyEHR adopts the openEHR's formalisms to guarantee the decoupling of data descriptions from implementation details and exploits structure indexing to accelerate searches. Data persistence is guaranteed by a driver layer with a common driver interface. Interfaces for two NoSQL Database Management Systems are already implemented: MongoDB and Elasticsearch. We evaluated the scalability of PyEHR experimentally through two types of tests, called \"Constant Load\" and \"Constant Number of Records\", with queries of increasing complexity on synthetic datasets of ten million records each, containing very complex openEHR archetype structures, distributed on up to ten computing nodes."
+        },
+        "AuthorList": {
+          "@CompleteYN": "Y",
+          "Author": [
+            {
+              "@ValidYN": "Y",
+              "LastName": "Delussu",
+              "ForeName": "Giovanni",
+              "Initials": "G",
+              "Identifier": {
+                "@Source": "ORCID",
+                "$": "http://orcid.org/0000-0002-1023-2257"
+              },
+              "AffiliationInfo": {
+                "Affiliation": "Data-Intensive Computing Group, CRS4, Pula, Italy."
+              }
+            },
+            {
+              "@ValidYN": "Y",
+              "LastName": "Lianas",
+              "ForeName": "Luca",
+              "Initials": "L",
+              "AffiliationInfo": {
+                "Affiliation": "Data-Intensive Computing Group, CRS4, Pula, Italy."
+              }
+            },
+            {
+              "@ValidYN": "Y",
+              "LastName": "Frexia",
+              "ForeName": "Francesca",
+              "Initials": "F",
+              "AffiliationInfo": {
+                "Affiliation": "Data-Intensive Computing Group, CRS4, Pula, Italy."
+              }
+            },
+            {
+              "@ValidYN": "Y",
+              "LastName": "Zanetti",
+              "ForeName": "Gianluigi",
+              "Initials": "G",
+              "AffiliationInfo": {
+                "Affiliation": "Data-Intensive Computing Group, CRS4, Pula, Italy."
+              }
+            }
+          ]
+        },
+        "Language": "eng",
+        "PublicationTypeList": {
+          "PublicationType": {
+            "@UI": "D016428",
+            "$": "Journal Article"
+          }
+        },
+        "ArticleDate": {
+          "@DateType": "Electronic",
+          "Year": 2016,
+          "Month": 12,
+          "Day": "09"
+        }
+      },
+      "MedlineJournalInfo": {
+        "Country": "United States",
+        "MedlineTA": "PLoS One",
+        "NlmUniqueID": 101285081,
+        "ISSNLinking": "1932-6203"
+      }
+    }
+  }
+}

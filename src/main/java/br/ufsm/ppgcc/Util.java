@@ -269,7 +269,7 @@ public class Util {
 	 * Grava uma matriz em um arquivo no formato CSV
 	 * @param matriz para gravar, caminho absoluto do destivo com a extensão .csv
 	 */
-	public static void gravaMatrizParaCsv(Double[][] matriz, String destino) throws IOException{
+	public static void gravaMatrizParaCsv(double[][] matriz, String destino) throws IOException{
 		int k, l;
 		try {
 
@@ -294,6 +294,35 @@ public class Util {
 	}
 
 	/**
+	 * Grava uma matriz em um arquivo no formato CSV
+	 * @param matriz para gravar, caminho absoluto do destivo com a extensão .csv
+	 */
+	public static void gravaMatrizParaCsv(int[][] matriz, String destino) throws IOException{
+		int k, l;
+		try {
+
+			FileWriter writer = new FileWriter(destino);
+			for(k=0; k < matriz.length; k++){  
+				for (l=0;l< matriz.length;l++){
+					if (k == l){
+						writer.write(1.0+";");
+					} else{
+						
+						if (matriz[k][l] == -0.0) {writer.write(0.0+";");} else {writer.write(matriz[k][l]+";");}
+						
+					}
+				}
+				writer.write("\n"); 
+			}
+			writer.close();
+
+		} catch (IOException exc) {
+			exc.printStackTrace();
+		}
+	}
+
+	
+	/**
 	 * Mostra as palavras equivalentes
 	 * @param matriz resultados e um ArrayList<String> com as palavras
 	 * @return void de palavras equivalentes
@@ -306,7 +335,7 @@ public class Util {
 
 				if ((l>k) && (k != l)){
 					if (resultado[k][l] == 1.0){
-						System.out.println(palavras.get(k));
+						System.out.println("A palavra "+palavras.get(k)+" é equivalente a "+palavras.get(l));
 					}					
 				}
 			}

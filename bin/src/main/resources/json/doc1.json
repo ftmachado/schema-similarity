@@ -1,0 +1,27 @@
+{
+			"Source": {
+				"Author": {
+					"Author": {
+						"NameList": {
+							"Person": {
+								"First": "Rick",
+								"Last": "Cattell"
+							}
+						}
+					}
+				},
+				"BIBTEX_KeyWords": "cloud-computing, nosql",
+				"City": "New York, NY, USA",
+				"JournalName": "SIGMOD Rec.",
+				"Month": "May",
+				"Pages": "12-27",
+				"Publisher": "ACM",
+				"SourceType": "JournalArticle",
+				"StandardNumber": " ISSN: 0163-5808 DOI: http://doi.acm.org/10.1145/1978915.1978919",
+				"Tag": "Cattell:2011:SSN:1978915.1978919",
+				"Title": "Scalable SQL and NoSQL data stores",
+				"URL": "http://doi.acm.org/10.1145/1978915.1978919",
+				"Volume": 39.0,
+				"Year": 2011.0
+			}
+}

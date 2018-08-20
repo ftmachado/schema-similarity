@@ -1,5 +1,6 @@
 package br.ufsm.ppgcc;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Main {
@@ -23,7 +24,7 @@ public class Main {
 		 */
 		palavras = Util.leArquivo("src/main/resources/artefatos/saidaAlg1.txt");
 		palavras = Algoritmos.removeRepetidasComListaRef(palavras, "-enddoc");
-		palavras = Util.removeUmaPalavra(palavras, "--enddoc");
+//		palavras = Util.removeUmaPalavra(palavras, "--enddoc");
 		tamanhoMatriz = palavras.size();
 		
 		
@@ -33,9 +34,13 @@ public class Main {
 		 * @return Matriz Stemmer[][]
 		 */
 		int[][] mStem = new int[tamanhoMatriz][tamanhoMatriz];
-		palavras = Algoritmos.aplicaStemmerList(palavras);
-		mStem = Algoritmos.geraMatrizStemmer(palavras);
-		Util.mostraMatriz(mStem);
+		mStem = Algoritmos.geraMatrizStemmer( Algoritmos.aplicaStemmerList(palavras) );
+//		Util.mostraMatriz(mStem);
+		try {
+			Util.gravaMatrizParaCsv(mStem, "src/main/resources/artefatos/radical.csv");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		
 		
 		/*
@@ -43,10 +48,14 @@ public class Main {
 		 * @param ArrayList com campos distintos
 		 * @return Matriz Lev[][]
 		 */
-		
 		double[][] mLev = new double[tamanhoMatriz][tamanhoMatriz];
 		mLev = Algoritmos.aplicaLevenshtein(palavras);
-		Util.mostraMatriz(mLev);
+//		Util.mostraMatriz(mLev);
+		try {
+			Util.gravaMatrizParaCsv(mLev, "src/main/resources/artefatos/levenshtein.csv");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		
 		
 		/*
@@ -56,7 +65,12 @@ public class Main {
 		 */
 		double[][] mLin = new double[tamanhoMatriz][tamanhoMatriz];
 		mLin = Algoritmos.aplicaLin(palavras);
-		Util.mostraMatriz(mLin);
+//		Util.mostraMatriz(mLin);
+		try {
+			Util.gravaMatrizParaCsv(mLin, "src/main/resources/artefatos/lin.csv");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
 		/*
 		 * Algoritmo 6
@@ -65,7 +79,12 @@ public class Main {
 		 */
 		double[][] resultados = new double[tamanhoMatriz][tamanhoMatriz];
 		resultados = Algoritmos.calculaEquivalencia(mStem, mLev, mLin, tamanhoMatriz);
-		Util.mostraMatriz(resultados);
+//		Util.mostraMatriz(resultados);
+//		try {
+//			Util.gravaMatrizParaCsv(mLin, "src/main/resources/artefatos/resultados.csv");
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
 		Util.mostraPalavrasEquivalentes(resultados, palavras);
 	}
 
