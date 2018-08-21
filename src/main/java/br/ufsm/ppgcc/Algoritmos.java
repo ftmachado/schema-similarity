@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.StringReader;
@@ -51,7 +52,9 @@ public class Algoritmos {
 		try {
 			JsonReader reader;
 
-			FileWriter arq = new FileWriter("src/main/resources/artefatos/saidaAlg1.txt");
+//			FileWriter arq = new FileWriter("src/main/resources/artefatos/saidaAlg1.txt");
+			FileWriter arq = new FileWriter(new File(".").getCanonicalPath() + "artefatos/saidaAlg1.txt");
+			
 			PrintWriter gravarArq = new PrintWriter(arq);
 			
 			for (i=1; i<=n_arquivos; i++) {
@@ -114,7 +117,9 @@ public class Algoritmos {
 	public static ArrayList<String> removeRepetidasComListaRef(ArrayList<String> palavras, String fim_doc) {
 		
 		try {
-			FileWriter arq = new FileWriter("src/main/resources/artefatos/listaRef1.txt");
+//			FileWriter arq = new FileWriter("src/main/resources/artefatos/listaRef1.txt");
+			FileWriter arq = new FileWriter(new File(".").getCanonicalPath() + "artefatos/listaRef1.txt");
+			
             PrintWriter gravarArq = new PrintWriter(arq);
 		
 			String doc_atuali="", doc_atualj=""; int k=2;

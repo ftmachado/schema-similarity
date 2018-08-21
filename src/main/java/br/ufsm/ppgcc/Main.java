@@ -1,20 +1,34 @@
 package br.ufsm.ppgcc;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
 
+	static String jsonDir;
+	
 	public static void main(String[] args) {
+		
+		try {
+			String DIR = new File(".").getCanonicalPath();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		
 		ArrayList<String> palavras = new ArrayList<String>();
 		int tamanhoMatriz=0;
+		
+		init();
+		System.exit(0);
 		
 		/* Algoritmo 1
 		 * @param Documentos pertencentes à mesma coleção
 		 * @return Arquivo com todos os campos: artefatos/saidaAlg1.txt 
 		 */
-		Algoritmos.separaCamposDosDados("src/main/resources/json");
+//		Algoritmos.separaCamposDosDados("src/main/resources/json");
+		Algoritmos.separaCamposDosDados(jsonDir);
 		
 		
 		/*
@@ -22,7 +36,8 @@ public class Main {
 		 * @param Arquivo com todos os campos
 		 * @return ArrayList com campos distintos, arquivo lista de referências 1
 		 */
-		palavras = Util.leArquivo("src/main/resources/artefatos/saidaAlg1.txt");
+//		palavras = Util.leArquivo("src/main/resources/artefatos/saidaAlg1.txt");
+//		palavras = Util.leArquivo(DIR + "artefatos/saidaAlg1.txt")x;
 		palavras = Algoritmos.removeRepetidasComListaRef(palavras, "-enddoc");
 //		palavras = Util.removeUmaPalavra(palavras, "--enddoc");
 		tamanhoMatriz = palavras.size();
@@ -86,6 +101,30 @@ public class Main {
 //			e.printStackTrace();
 //		}
 		Util.mostraPalavrasEquivalentes(resultados, palavras);
+	}
+	
+	public static void init() {
+		System.out.print("\n"+
+						"    ----- /--- -   - ----  -   -   ---       -----  -  -   -  - -    ---   ---  - ----- -  -\n"+
+						"    |_ _  |    | _ | | _  | \\-/ | | _ |  _   |_ _   | | \\-/ | | |   | _ | |  _| |   |    \\/\n"+
+						"        | |    |   | |    |     | |   |          |  | |     | | |   |   | |  \\  |   |    | \n"+
+						"    -----  ---  -  - ---- -     - -   -      -----  - -     - - --- -   - -   - -   -    -\n"+
+						"                                                                              agosto de 2018\n"+
+						"                                                         by Fhabiana Machado, Renata Padilha\n\n"
+		);
+		
+		Scanner ler = new Scanner(System.in);
+		System.out.println("Bem vindo ao sistema para definição de campos equivalentes em fontes de dados JSON");
+		System.out.println("O nome dos arquivos devem ser do modelo doc1.json, doc2.json...");
+		System.out.println("Informe o caminho absoluto do diretório de arquivos JSON:");
+		jsonDir = ler.nextLine();
+//		try {
+////			System.out.println("/  -> " + new File("/").getCanonicalPath());
+////			System.out.println(".. -> " + new File("..").getCanonicalPath());
+////			System.out.println(".  -> " + new File(".").getCanonicalPath());
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
 	}
 
 }
