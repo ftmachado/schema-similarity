@@ -8,20 +8,14 @@ import java.util.Scanner;
 public class Main {
 
 	static String jsonDir;
+	static double pontoCorte, pontoCorteAHP;
 	
 	public static void main(String[] args) {
-		
-		try {
-			String DIR = new File(".").getCanonicalPath();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 		
 		ArrayList<String> palavras = new ArrayList<String>();
 		int tamanhoMatriz=0;
 		
 		init();
-		System.exit(0);
 		
 		/* Algoritmo 1
 		 * @param Documentos pertencentes à mesma coleção
@@ -37,7 +31,11 @@ public class Main {
 		 * @return ArrayList com campos distintos, arquivo lista de referências 1
 		 */
 //		palavras = Util.leArquivo("src/main/resources/artefatos/saidaAlg1.txt");
-//		palavras = Util.leArquivo(DIR + "artefatos/saidaAlg1.txt")x;
+		try {
+			palavras = Util.leArquivo(new File(".").getCanonicalPath()+"saidaAlg1.txt");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		palavras = Algoritmos.removeRepetidasComListaRef(palavras, "-enddoc");
 //		palavras = Util.removeUmaPalavra(palavras, "--enddoc");
 		tamanhoMatriz = palavras.size();
@@ -52,7 +50,8 @@ public class Main {
 		mStem = Algoritmos.geraMatrizStemmer( Algoritmos.aplicaStemmerList(palavras) );
 //		Util.mostraMatriz(mStem);
 		try {
-			Util.gravaMatrizParaCsv(mStem, "src/main/resources/artefatos/radical.csv");
+//			Util.gravaMatrizParaCsv(mStem, "src/main/resources/artefatos/radical.csv");
+			Util.gravaMatrizParaCsv(mStem, new File(".").getCanonicalPath()+"matrizRadical.csv");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -67,7 +66,8 @@ public class Main {
 		mLev = Algoritmos.aplicaLevenshtein(palavras);
 //		Util.mostraMatriz(mLev);
 		try {
-			Util.gravaMatrizParaCsv(mLev, "src/main/resources/artefatos/levenshtein.csv");
+//			Util.gravaMatrizParaCsv(mLev, "src/main/resources/artefatos/levenshtein.csv");
+			Util.gravaMatrizParaCsv(mLev, new File(".").getCanonicalPath()+"matrizLevenshtein.csv");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -82,7 +82,8 @@ public class Main {
 		mLin = Algoritmos.aplicaLin(palavras);
 //		Util.mostraMatriz(mLin);
 		try {
-			Util.gravaMatrizParaCsv(mLin, "src/main/resources/artefatos/lin.csv");
+//			Util.gravaMatrizParaCsv(mLin, "src/main/resources/artefatos/lin.csv");
+			Util.gravaMatrizParaCsv(mLev, new File(".").getCanonicalPath()+"matrizLin.csv");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -93,7 +94,7 @@ public class Main {
 		 * @return Matriz Resultados[][]
 		 */
 		double[][] resultados = new double[tamanhoMatriz][tamanhoMatriz];
-		resultados = Algoritmos.calculaEquivalencia(mStem, mLev, mLin, tamanhoMatriz);
+		resultados = Algoritmos.calculaEquivalencia(mStem, mLev, mLin, tamanhoMatriz, pontoCorte, pontoCorteAHP);
 //		Util.mostraMatriz(resultados);
 //		try {
 //			Util.gravaMatrizParaCsv(mLin, "src/main/resources/artefatos/resultados.csv");
@@ -116,15 +117,24 @@ public class Main {
 		Scanner ler = new Scanner(System.in);
 		System.out.println("Bem vindo ao sistema para definição de campos equivalentes em fontes de dados JSON");
 		System.out.println("O nome dos arquivos devem ser do modelo doc1.json, doc2.json...");
+		
+		try {
+			System.out.println("Seu diretório corrente é "+new File(".").getCanonicalPath());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
 		System.out.println("Informe o caminho absoluto do diretório de arquivos JSON:");
 		jsonDir = ler.nextLine();
-//		try {
-////			System.out.println("/  -> " + new File("/").getCanonicalPath());
-////			System.out.println(".. -> " + new File("..").getCanonicalPath());
-////			System.out.println(".  -> " + new File(".").getCanonicalPath());
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
+		System.out.println("Para o cálculo de equivalências, defina as variáveis:");
+		System.out.println("Ponto de corte: ");
+		pontoCorte = ler.nextDouble();
+		System.out.println("Ponto de corte para cálculo com o método AHP(analytic hierarchy process): ");
+		pontoCorteAHP = ler.nextDouble();
+		System.out.println("Iniciar processo...");
+		ler.nextLine();
+		ler.close();
+//		
 	}
 
 }

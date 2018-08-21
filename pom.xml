@@ -31,16 +31,23 @@
 			<artifactId>simmetrics-core</artifactId>
 			<version>4.1.1</version>
 		</dependency>
-		<dependency>
-			<groupId>de.sciss</groupId>
-			<artifactId>jawjaw</artifactId>
-			<version>0.1.0</version>
-		</dependency>
-		<dependency>
-			<groupId>de.sciss</groupId>
-			<artifactId>ws4j</artifactId>
-			<version>0.1.0</version>
-		</dependency>
+
+        <dependency>
+            <groupId>de.sciss</groupId>
+            <artifactId>ws4j</artifactId>
+            <version>1.0.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/libs/ws4j-1.0.1.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>de.sciss</groupId>
+            <artifactId>jawjaw</artifactId>
+            <version>1.0.2</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/libs/jawjaw-1.0.2.jar</systemPath>
+        </dependency>
+
+
 		<dependency>
 			<groupId>org.glassfish</groupId>
 			<artifactId>javax.json</artifactId>
@@ -77,6 +84,18 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                        <addClasspath>true</addClasspath>
+                        <mainClass>br.ufsm.ppgcc.Main</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
             </plugin>
 
             <!--

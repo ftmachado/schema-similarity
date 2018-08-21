@@ -45,15 +45,17 @@ public class Algoritmos {
 
 	public static void separaCamposDosDados(String caminho) {
 		
-		int i=0;
-		int n_arquivos=Util.numArquivosJsonPasta(caminho);
-		
-	
 		try {
+			int i=0;
+			int n_arquivos=Util.numArquivosJsonPasta(caminho);
+		
+			//LOG
+			System.out.printf("\n\tSeparando campos dos dados...");
+	
 			JsonReader reader;
 
 //			FileWriter arq = new FileWriter("src/main/resources/artefatos/saidaAlg1.txt");
-			FileWriter arq = new FileWriter(new File(".").getCanonicalPath() + "artefatos/saidaAlg1.txt");
+			FileWriter arq = new FileWriter(new File(".").getCanonicalPath() + "saidaAlg1.txt");
 			
 			PrintWriter gravarArq = new PrintWriter(arq);
 			
@@ -116,9 +118,12 @@ public class Algoritmos {
 	 */
 	public static ArrayList<String> removeRepetidasComListaRef(ArrayList<String> palavras, String fim_doc) {
 		
+		//LOG
+		System.out.printf("\n\tRemovendo palavras repetidas...");
+		
 		try {
 //			FileWriter arq = new FileWriter("src/main/resources/artefatos/listaRef1.txt");
-			FileWriter arq = new FileWriter(new File(".").getCanonicalPath() + "artefatos/listaRef1.txt");
+			FileWriter arq = new FileWriter(new File(".").getCanonicalPath() + "listaRef1.txt");
 			
             PrintWriter gravarArq = new PrintWriter(arq);
 		
@@ -249,6 +254,10 @@ public class Algoritmos {
 	 * @return Matriz com 0 e 1
 	 */
 	public static int[][] geraMatrizStemmer(ArrayList<String> palavras){
+		
+		//LOG
+		System.out.printf("\n\tGerando matriz com radicais...");
+		
 		int n_palavras = palavras.size();
 		int[][] matriz = new int[n_palavras][n_palavras];
 		
@@ -280,6 +289,10 @@ public class Algoritmos {
 	 * @since 02 de março de 2018
 	 */
 	public static double[][] aplicaLevenshtein(ArrayList<String> palavras) {
+		
+		//LOG
+		System.out.printf("\n\tGerando matriz de levenshtein...");
+		
 		int t = palavras.size();
 		double lev[][] = new double[t][t];
 		StringMetric metric = StringMetrics.levenshtein();
@@ -312,6 +325,10 @@ public class Algoritmos {
 	 * @since 15 de agosto de 2018
 	 */
 	public static double[][] aplicaLin(ArrayList<String> palavras){
+		
+		//LOG
+		System.out.printf("\n\tGerando matriz com base no conhecimento...");
+		
 		int t = palavras.size();
 		double lin[][] = new double[t][t];
 		
@@ -343,9 +360,8 @@ public class Algoritmos {
 	 * @author Renata Padilha, Fhabiana Machado
 	 * @since 15 de agosto de 2018
 	 */
-	public static double[][] calculaEquivalencia(int[][] radical, double[][] lev, double[][] lin, int tamanho){
+	public static double[][] calculaEquivalencia(int[][] radical, double[][] lev, double[][] lin, int tamanho, double PONTO_CORTE, double PONTO_CORTE_AHP){
 		int i, j, count=0;
-		final double PONTO_CORTE=0.7, PONTO_CORTE_AHP=0.5;
 		final int pesoA=1, pesoB=3, pesoC=2;
 		double aux=0, media_ponderada=0;
 		double resultado[][]= new double[tamanho][tamanho];
