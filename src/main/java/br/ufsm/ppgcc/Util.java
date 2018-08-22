@@ -329,7 +329,7 @@ public class Util {
 	 */
 	public static void mostraPalavrasEquivalentes(double[][] resultado, ArrayList<String> palavras){
 		int k, l;
-
+		System.out.printf("\n\n");
 		for (k=0; k<resultado.length ; k++){
             for (l=0;l<resultado.length;l++){
 
