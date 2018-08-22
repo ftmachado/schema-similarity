@@ -1,8 +1,8 @@
-<p align="center">
+<p>
   
-  <h2 align="center">Schema Similarity</h2>
+  <h2>Schema Similarity</h2>
 
-  <p align="center">
+  <p>
     This is a tool that implements a master thesis "A text similarity-based approach for extracting JSON conceptual schemas". This process is formed by ten algorithms whose six of then are working in this software.
   </p>
 </p>
@@ -26,6 +26,7 @@ Several quick start options are available:
 - Needs install two external JARs that are not included in Maven Repo:
 - Ws4j:`mvn install:install-file -Dfile=/home/fhabiana/Downloads/libs/ws4j-1.0.1.jar -DgroupId=de.sciss -DartifactId=ws4j -Dversion=1.0.1 -Dpackaging=jar -DgeneratePom=true`
 - Jawjaw: `mvn install:install-file -Dfile=/home/fhabiana/Downloads/libs/jawjaw-1.0.2.jar -DgroupId=de.sciss -DartifactId=jawjaw -Dversion=1.0.2 -Dpackaging=jar -DgeneratePom=true`
+- If you have already install the external libraries, or are making some error in pom.xml, change in the pom.xml the system path of your .jar. For instance, in Windows I use: `<systemPath>C:\Users\Thieli\.m2\repository\de\sciss\ws4j\1.0.1\ws4j-1.0.1.jar</systemPath>` and `<systemPath>C:\Users\Thieli\.m2\repository\de\sciss\jawjaw\1.0.2\jawjaw-1.0.2.jar</systemPath>` for Linux I use: `<systemPath>${project.basedir}/src/main/resources/libs/ws4j-1.0.1.jar</systemPath>`.
 
 ## Whats included
 
