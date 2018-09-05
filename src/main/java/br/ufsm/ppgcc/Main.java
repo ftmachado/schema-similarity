@@ -24,7 +24,6 @@ public class Main {
 //		Algoritmos.separaCamposDosDados("src/main/resources/json");
 		Algoritmos.separaCamposDosDados(jsonDir);
 		
-		
 		/*
 		 * Algoritmo 2
 		 * @param Arquivo com todos os campos
@@ -32,14 +31,21 @@ public class Main {
 		 */
 //		palavras = Util.leArquivo("src/main/resources/artefatos/saidaAlg1.txt");
 		try {
-			palavras = Util.leArquivo(new File(".").getCanonicalPath()+"saidaAlg1.txt");
+			palavras = Util.leArquivo(new File(".").getCanonicalPath()+"/out/saidaAlg1.txt");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		palavras = Util.removeRepetidas(palavras);
+//		System.out.println("Palavras "+palavras.size());
+//		for(String s : palavras) {
+//		     System.out.println(s);
+//		}
+//		
 		palavras = Algoritmos.removeRepetidasComListaRef(palavras, "-enddoc");
 //		palavras = Util.removeUmaPalavra(palavras, "--enddoc");
 		tamanhoMatriz = palavras.size();
-		
+//		System.out.println("Tam matriz "+tamanhoMatriz);
+//		System.exit(0);
 		
 		/*
 		 * Algoritmo 3
@@ -51,7 +57,7 @@ public class Main {
 //		Util.mostraMatriz(mStem);
 		try {
 //			Util.gravaMatrizParaCsv(mStem, "src/main/resources/artefatos/radical.csv");
-			Util.gravaMatrizParaCsv(mStem, new File(".").getCanonicalPath()+"matrizRadical.csv");
+			Util.gravaMatrizParaCsv(mStem, new File(".").getCanonicalPath()+"/out/matrizRadical.csv");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -67,7 +73,7 @@ public class Main {
 //		Util.mostraMatriz(mLev);
 		try {
 //			Util.gravaMatrizParaCsv(mLev, "src/main/resources/artefatos/levenshtein.csv");
-			Util.gravaMatrizParaCsv(mLev, new File(".").getCanonicalPath()+"matrizLevenshtein.csv");
+			Util.gravaMatrizParaCsv(mLev, new File(".").getCanonicalPath()+"/out/matrizLevenshtein.csv");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -83,7 +89,7 @@ public class Main {
 //		Util.mostraMatriz(mLin);
 		try {
 //			Util.gravaMatrizParaCsv(mLin, "src/main/resources/artefatos/lin.csv");
-			Util.gravaMatrizParaCsv(mLev, new File(".").getCanonicalPath()+"matrizLin.csv");
+			Util.gravaMatrizParaCsv(mLev, new File(".").getCanonicalPath()+"/out/matrizLin.csv");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

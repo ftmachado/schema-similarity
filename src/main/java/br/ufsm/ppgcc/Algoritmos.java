@@ -55,7 +55,7 @@ public class Algoritmos {
 			JsonReader reader;
 
 //			FileWriter arq = new FileWriter("src/main/resources/artefatos/saidaAlg1.txt");
-			FileWriter arq = new FileWriter(new File(".").getCanonicalPath() + "saidaAlg1.txt");
+			FileWriter arq = new FileWriter(new File(".").getCanonicalPath() + "/out/saidaAlg1.txt");
 			
 			PrintWriter gravarArq = new PrintWriter(arq);
 			
@@ -123,7 +123,7 @@ public class Algoritmos {
 		
 		try {
 //			FileWriter arq = new FileWriter("src/main/resources/artefatos/listaRef1.txt");
-			FileWriter arq = new FileWriter(new File(".").getCanonicalPath() + "listaRef1.txt");
+			FileWriter arq = new FileWriter(new File(".").getCanonicalPath() + "/out/listaRef1.txt");
 			
             PrintWriter gravarArq = new PrintWriter(arq);
 		
