@@ -1,0 +1,29 @@
+﻿
+
+A palavra types é equivalente a type
+
+A palavra Publication é equivalente a Issue
+
+A palavra Tag é equivalente a label
+
+A palavra User é equivalente a user
+
+A palavra count é equivalente a number
+
+A palavra year é equivalente a Year
+
+A palavra author é equivalente a authors
+
+A palavra author é equivalente a Author
+
+A palavra editor é equivalente a editors
+
+A palavra volume é equivalente a Volume
+
+A palavra journal é equivalente a Journal
+
+A palavra number é equivalente a Issue
+
+A palavra title é equivalente a Title
+
+A palavra Hour é equivalente a Minute
