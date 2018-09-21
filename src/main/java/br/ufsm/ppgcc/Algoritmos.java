@@ -55,7 +55,7 @@ public class Algoritmos {
 			JsonReader reader;
 
 //			FileWriter arq = new FileWriter("src/main/resources/artefatos/saidaAlg1.txt");
-			FileWriter arq = new FileWriter(new File(".").getCanonicalPath() + "/out/saidaAlg1.txt");
+			FileWriter arq = new FileWriter(new File(".").getCanonicalPath() + "/out/etapa1_docEstruturalGeral.txt");
 			
 			PrintWriter gravarArq = new PrintWriter(arq);
 			
@@ -123,7 +123,7 @@ public class Algoritmos {
 		
 		try {
 //			FileWriter arq = new FileWriter("src/main/resources/artefatos/listaRef1.txt");
-			FileWriter arq = new FileWriter(new File(".").getCanonicalPath() + "/out/listaRef1.txt");
+			FileWriter arq = new FileWriter(new File(".").getCanonicalPath() + "/out/etapa1_listaReferencias1.txt");
 			
             PrintWriter gravarArq = new PrintWriter(arq);
 		
@@ -414,4 +414,37 @@ public class Algoritmos {
 	return resultado;
 	}
 	
+	
+	/**
+	 * Algoritmo 6 -
+	 * Gera lista de referências 2 - retorna as palavras equivalentes
+	 * @param matriz resultado, ArrayList<String> com as palavras e o caminho do arquivo de saída a ser salvo
+	 * @return arquivo com a lista de referências 2
+	 * @author Fhabiana Machado
+	 * @since 20 de setembro de 2018
+	 */
+	public static void geraListaReferencias2(double[][] resultado, ArrayList<String> palavras, String caminho){
+		int k, l;
+		try {
+			FileWriter writer = new FileWriter(caminho);
+			
+			writer.write("\n\n");
+			for (k=0; k<resultado.length ; k++){
+				for (l=0;l<resultado.length;l++){
+					
+					if ((l>k) && (k != l)){
+						if (resultado[k][l] == 1.0){
+							writer.write("A palavra "+palavras.get(k)+" é equivalente a "+palavras.get(l)+"\n");
+						}					
+					}
+				}
+			}
+			
+			writer.close();
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
 }

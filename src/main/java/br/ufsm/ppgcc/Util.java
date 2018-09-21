@@ -320,25 +320,5 @@ public class Util {
 			exc.printStackTrace();
 		}
 	}
-
 	
-	/**
-	 * Mostra as palavras equivalentes
-	 * @param matriz resultados e um ArrayList<String> com as palavras
-	 * @return void de palavras equivalentes
-	 */
-	public static void mostraPalavrasEquivalentes(double[][] resultado, ArrayList<String> palavras){
-		int k, l;
-		System.out.printf("\n\n");
-		for (k=0; k<resultado.length ; k++){
-            for (l=0;l<resultado.length;l++){
-
-				if ((l>k) && (k != l)){
-					if (resultado[k][l] == 1.0){
-						System.out.println("A palavra "+palavras.get(k)+" é equivalente a "+palavras.get(l));
-					}					
-				}
-			}
-		}
-	}
 }

@@ -31,7 +31,7 @@ public class Main {
 		 */
 //		palavras = Util.leArquivo("src/main/resources/artefatos/saidaAlg1.txt");
 		try {
-			palavras = Util.leArquivo(new File(".").getCanonicalPath()+"/out/saidaAlg1.txt");
+			palavras = Util.leArquivo(new File(".").getCanonicalPath()+"/out/etapa1_docEstruturalGeral.txt");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -57,7 +57,7 @@ public class Main {
 //		Util.mostraMatriz(mStem);
 		try {
 //			Util.gravaMatrizParaCsv(mStem, "src/main/resources/artefatos/radical.csv");
-			Util.gravaMatrizParaCsv(mStem, new File(".").getCanonicalPath()+"/out/matrizRadical.csv");
+			Util.gravaMatrizParaCsv(mStem, new File(".").getCanonicalPath()+"/out/etapa2_matrizRadical.csv");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -73,7 +73,7 @@ public class Main {
 //		Util.mostraMatriz(mLev);
 		try {
 //			Util.gravaMatrizParaCsv(mLev, "src/main/resources/artefatos/levenshtein.csv");
-			Util.gravaMatrizParaCsv(mLev, new File(".").getCanonicalPath()+"/out/matrizLevenshtein.csv");
+			Util.gravaMatrizParaCsv(mLev, new File(".").getCanonicalPath()+"/out/etapa2_matrizLevenshtein.csv");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -89,7 +89,7 @@ public class Main {
 //		Util.mostraMatriz(mLin);
 		try {
 //			Util.gravaMatrizParaCsv(mLin, "src/main/resources/artefatos/lin.csv");
-			Util.gravaMatrizParaCsv(mLev, new File(".").getCanonicalPath()+"/out/matrizLin.csv");
+			Util.gravaMatrizParaCsv(mLev, new File(".").getCanonicalPath()+"/out/etapa2_matrizLin.csv");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -107,7 +107,11 @@ public class Main {
 //		} catch (IOException e) {
 //			e.printStackTrace();
 //		}
-		Util.mostraPalavrasEquivalentes(resultados, palavras);
+		try {
+			Algoritmos.geraListaReferencias2(resultados, palavras, new File(".").getCanonicalPath()+"/out/etapa3_listaReferencias2.txt");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public static void init() {
