@@ -5,6 +5,9 @@
   <p>
     This is a tool that implements a master thesis "A text similarity-based approach for extracting JSON conceptual schemas". This process is formed by ten algorithms whose six of then are working in this software.
   </p>
+  <p>
+    The project uses similarity measures to identify equivalent fields in JSON documents. Due to the availability of libraries, the Java language was used. It is executed via console, generating the output files in a directory called `output`.
+  </p>
 </p>
 
 <br>
@@ -21,7 +24,7 @@
 
 Several quick start options are available:
 
-- Clone the repo: `git clone https://github.com/twbs/bootstrap.git`
+- Clone the repo: `git clone https://github.com/ftmachado/schema-similarity.git`
 - Needs Maven Project
 - Needs install two external JARs that are not included in Maven Repo:
 - Ws4j:`mvn install:install-file -Dfile=/home/fhabiana/Downloads/libs/ws4j-1.0.1.jar -DgroupId=de.sciss -DartifactId=ws4j -Dversion=1.0.1 -Dpackaging=jar -DgeneratePom=true`
@@ -51,17 +54,16 @@ schema-similarity/
 
 ## Documentation
 
-AAA
+The flow chart below represents the implementation
+
+![Flow Chart](https://github.com/ftmachado/schema-similarity/blob/master/fluxograma.png)
+
 
 ## Creators
 
-**Fhabiana Thieli Machado**
+*Fhabiana Thieli Machado* - <fsantos@inf.ufsm.br>
 
-- <fsantos@inf.ufsm.br>
-
-**Renata Padilha**
-
-- <rpadilha@inf.ufsm.br>
+*Renata Padilha* - <rpadilha@inf.ufsm.br>
 
 
 ## Copyright and license
