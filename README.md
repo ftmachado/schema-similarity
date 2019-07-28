@@ -15,6 +15,7 @@
 ## Table of contents
 
 - [Quick-start](#quick-start)
+- [Run](#run)
 - [What's included](#whats-included)
 - [Documentation](#documentation)
 - [Creators](#creators)
