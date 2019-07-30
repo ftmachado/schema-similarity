@@ -37,20 +37,18 @@
             <artifactId>ws4j</artifactId>
             <version>1.0.1</version>
             <scope>system</scope>
-            <!-- Descomentar para Windows 
+            <!-- Descomentar para Windows -->
             <systemPath>C:\Users\Thieli\.m2\repository\de\sciss\ws4j\1.0.1\ws4j-1.0.1.jar</systemPath>
-            -->
-            <systemPath>${project.basedir}/src/main/resources/libs/ws4j-1.0.1.jar</systemPath>
+            <!-- <systemPath>${project.basedir}/src/main/resources/libs/ws4j-1.0.1.jar</systemPath> -->
         </dependency>
         <dependency>
             <groupId>de.sciss</groupId>
             <artifactId>jawjaw</artifactId>
             <version>1.0.2</version>
             <scope>system</scope>
-            <!-- Descomentar para Windows 
+            <!-- Descomentar para Windows  -->
             <systemPath>C:\Users\Thieli\.m2\repository\de\sciss\jawjaw\1.0.2\jawjaw-1.0.2.jar</systemPath>
-            -->
-            <systemPath>${project.basedir}/src/main/resources/libs/jawjaw-1.0.2.jar</systemPath>
+            <!-- <systemPath>${project.basedir}/src/main/resources/libs/jawjaw-1.0.2.jar</systemPath> -->
         </dependency>
 
 
@@ -92,18 +90,18 @@
                 <artifactId>maven-checkstyle-plugin</artifactId>
             </plugin>
             <plugin>
-				    <artifactId>maven-assembly-plugin</artifactId>
-				    <configuration>
-				        <archive>
-				            <manifest>
-				                <mainClass>br.ufsm.ppgcc.Main</mainClass>
-				            </manifest>
-				        </archive>
-				        <descriptorRefs>
-				            <descriptorRef>jar-with-dependencies</descriptorRef>
-				        </descriptorRefs>
-				    </configuration>
-				</plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>br.ufsm.ppgcc.Main</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+            </plugin>
             <!--
             	Este é para o caso de não possuir nenhuma dependencia externa
             	Executa por 
