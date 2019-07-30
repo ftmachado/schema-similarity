@@ -64,7 +64,7 @@ schema-similarity/
 
 The flow chart below represents the implementation
 
-![Flow Chart](https://github.com/ftmachado/schema-similarity/blob/master/fluxograma.png)
+![Flow Chart](https://github.com/ftmachado/schema-similarity/blob/master/public/images/fluxograma.png)
 
 
 ## Creators
@@ -76,4 +76,4 @@ The flow chart below represents the implementation
 
 ## Copyright and license
 
-Code and documentation copyright 2017-2018.
+Code and documentation copyright 2017-2018-2019.
