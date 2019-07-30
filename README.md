@@ -15,6 +15,7 @@
 ## Table of contents
 
 - [Quick-start](#quick-start)
+- [Run](#run)
 - [What's included](#whats-included)
 - [Documentation](#documentation)
 - [Creators](#creators)
@@ -30,6 +31,13 @@ Several quick start options are available:
 - Ws4j:`mvn install:install-file -Dfile=/home/fhabiana/Downloads/libs/ws4j-1.0.1.jar -DgroupId=de.sciss -DartifactId=ws4j -Dversion=1.0.1 -Dpackaging=jar -DgeneratePom=true`
 - Jawjaw: `mvn install:install-file -Dfile=/home/fhabiana/Downloads/libs/jawjaw-1.0.2.jar -DgroupId=de.sciss -DartifactId=jawjaw -Dversion=1.0.2 -Dpackaging=jar -DgeneratePom=true`
 - If you have already install the external libraries, or are making some error in pom.xml, change in the pom.xml the system path of your .jar. For instance, in Windows I use: `<systemPath>C:\Users\Thieli\.m2\repository\de\sciss\ws4j\1.0.1\ws4j-1.0.1.jar</systemPath>` and `<systemPath>C:\Users\Thieli\.m2\repository\de\sciss\jawjaw\1.0.2\jawjaw-1.0.2.jar</systemPath>` for Linux I use: `<systemPath>${project.basedir}/src/main/resources/libs/ws4j-1.0.1.jar</systemPath>`.
+
+## Run
+
+- Make sure you have Apache Maven and Java Development Kit installed
+- In pom.xml set file paths for dependency ws4j and jawjaw (its are commented!)
+- Then build Maven Project
+- Execute the line command: `java -jar schema-similarity-1.0-SNAPSHOT-jar-with-dependencies.jar`
 
 ## Whats included
 
