@@ -12,6 +12,7 @@ import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.List;
 
 import edu.cmu.lti.lexical_db.ILexicalDatabase;
 import edu.cmu.lti.lexical_db.NictWordNet;
@@ -32,7 +33,7 @@ public class Algoritmos {
 
 
 	/** 
-	* Algoritmo 1 - 
+	* Algoritmo 1 - Separar Campos dos Dados
 	* Esta função descreve um parser json gerando um arquivo com saída formatada
 	* com apenas os campos do json. Utiliza o delimitador --enddoc para marcar o
 	* fim de um documento.
@@ -106,7 +107,7 @@ public class Algoritmos {
 	
 	
 	/**
-	 * Algoritmo 2 -
+	 * Algoritmo 2 - Mesclar Estrutura
 	 * Remove as palavras repetidas de um ArrayList gravando a lista de referências 1 
 	 * em um arquivo.
 	 * 
@@ -175,7 +176,7 @@ public class Algoritmos {
     }
 	
 	/**
-	 * Algoritmo 3 -
+	 * Algoritmo 3 - Analisar Radical da Palavra
 	 * Aplica o algoritmo Porter Stemmer em um arquivo texto
 	 * 
 	 * @param origemArquivo - Caminho do arquivo de origem
@@ -212,7 +213,7 @@ public class Algoritmos {
 	}
 	
 	/**
-	 * Algoritmo 3 -
+	 * Algoritmo 3 - Analisar Radical da Palavra
 	 * Aplica o algoritmo Porter Stemmer em um ArrayList
 	 * 
 	 * @param words - ArrayList<String> de palavras
@@ -245,7 +246,7 @@ public class Algoritmos {
 	}
 	
 	/**
-	 * Algoritmo 3 - 
+	 * Algoritmo 3 - Analisar Radical da Palavra
 	 * Gera a matriz do Stemmer, o índice da palavra será a ordem dela no arquivo
 	 * 
 	 * @param palavras - ArrayList<String> com as palavras já extraídas o radical
@@ -279,7 +280,7 @@ public class Algoritmos {
 	
 	
 	/**
-	 * Algoritmo 4 -
+	 * Algoritmo 4 - Analisar Similaridade Baseada em Caractere
 	 * Aplica a função de similaridade Levenshtein em um ArrayList<String>
 	 * de palavras comparando todas com todas. A linha da palavra será
 	 * seu índice.
@@ -315,7 +316,7 @@ public class Algoritmos {
 	}
 
 	/**
-	 * Algoritmo 5 -
+	 * Algoritmo 5 - Analisar Similaridade Baseada em Conhecimento
 	 * Aplica a função de similaridade de conhecimento Lin em um ArrayList<String>
 	 * de palavras comparando todas com todas. A linha da palavra será
 	 * seu índice.
@@ -353,7 +354,7 @@ public class Algoritmos {
 	}
 
 	/**
-	 * Algoritmo 6 -
+	 * Algoritmo 6 - Calcular Equivalência
 	 * Calcula a equivalência a partir das 3 matrizes de resultados das demais técnicas
 	 * @param 
 	 * @return Única matriz double com o resultado
@@ -416,7 +417,7 @@ public class Algoritmos {
 	
 	
 	/**
-	 * Algoritmo 6 -
+	 * 
 	 * Gera lista de referências 2 - retorna as palavras equivalentes
 	 * @param matriz resultado, ArrayList<String> com as palavras e o caminho do arquivo de saída a ser salvo
 	 * @return arquivo com a lista de referências 2
@@ -445,6 +446,53 @@ public class Algoritmos {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	/**
+	 * Algoritmo 7 - Consolidar Estrutura
+	 * Apaga as demais ocorrências do campo que estão escritas de forma distinta e as guarda na lista de referências
+	 *
+	 * @param resultado - matriz única
+	 * @return campos consolidados.txt
+	 * @author Ezequiel Ribeiro, Fhabiana Machado
+	 * @since 04 de agosto de 2019
+	 */
+	public static void consolidaEstrutura(double[][] resultado, ArrayList<String> palavras, String caminho) throws IOException {
+
+		ArrayList<String> aRemover = new ArrayList<String>();
+		int k, l;
+		int tam = resultado.length;
+
+		//Consolida todas as palavras da coluna, logo, coluna = ArrayList palavras
+
+		try {
+			FileWriter writer = new FileWriter(caminho);
+			
+			writer.write("\n\n");
+			for (k=0; k<tam ; k++){
+				for (l=0;l<tam;l++){
+					
+					//Para todo elemento acima da diagonal principal
+					if ((l>k) && (k != l)){
+						if (resultado[k][l] == 1.0){
+							writer.write("A palavra "+palavras.get(k)+" é equivalente a "+palavras.get(l)+"\n");
+							aRemover.add(palavras.get(l));
+						}					
+					}
+				}
+			}
+			
+			writer.close();
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		for (String s : aRemover) {
+			palavras.remove(s);
+			System.out.println("Removendo palavra "+s);
+		}
+
 	}
 
 }

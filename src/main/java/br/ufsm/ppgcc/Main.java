@@ -17,19 +17,20 @@ public class Main {
 		
 		init();
 		
-		/* Algoritmo 1
+		/**
+		 * Algoritmo 1 - Separar Campos dos Dados
 		 * @param Documentos pertencentes à mesma coleção
 		 * @return Arquivo com todos os campos: artefatos/saidaAlg1.txt 
+		 * Diretório - src/main/resources/json
 		 */
-//		Algoritmos.separaCamposDosDados("src/main/resources/json");
 		Algoritmos.separaCamposDosDados(jsonDir);
 		
-		/*
-		 * Algoritmo 2
+		/**
+		 * Algoritmo 2 - Mesclar estrutura
 		 * @param Arquivo com todos os campos
 		 * @return ArrayList com campos distintos, arquivo lista de referências 1
+		 * Diretório - src/main/resources/artefatos/saidaAlg1.txt
 		 */
-//		palavras = Util.leArquivo("src/main/resources/artefatos/saidaAlg1.txt");
 		try {
 			palavras = Util.leArquivo(new File(".").getCanonicalPath()+"/out/etapa1_docEstruturalGeral.txt");
 		} catch (IOException e) {
@@ -44,19 +45,17 @@ public class Main {
 		palavras = Algoritmos.removeRepetidasComListaRef(palavras, "-enddoc");
 //		palavras = Util.removeUmaPalavra(palavras, "--enddoc");
 		tamanhoMatriz = palavras.size();
-//		System.out.println("Tam matriz "+tamanhoMatriz);
-//		System.exit(0);
 		
-		/*
-		 * Algoritmo 3
+		/**
+		 * Algoritmo 3 - Analisar Radical da Palavra
 		 * @param ArrayList com campos distintos
 		 * @return Matriz Stemmer[][]
+		 * Diretório - src/main/resources/artefatos/radical.csv
 		 */
 		int[][] mStem = new int[tamanhoMatriz][tamanhoMatriz];
 		mStem = Algoritmos.geraMatrizStemmer( Algoritmos.aplicaStemmerList(palavras) );
 //		Util.mostraMatriz(mStem);
 		try {
-//			Util.gravaMatrizParaCsv(mStem, "src/main/resources/artefatos/radical.csv");
 			Util.gravaMatrizParaCsv(mStem, new File(".").getCanonicalPath()+"/out/etapa2_matrizRadical.csv");
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -64,15 +63,15 @@ public class Main {
 		
 		
 		/*
-		 * Algoritmo 4
+		 * Algoritmo 4 - Analisar Similaridade Baseada em Caractere
 		 * @param ArrayList com campos distintos
 		 * @return Matriz Lev[][]
+		 * Diretório - src/main/resources/artefatos/levenshtein.csv
 		 */
 		double[][] mLev = new double[tamanhoMatriz][tamanhoMatriz];
 		mLev = Algoritmos.aplicaLevenshtein(palavras);
 //		Util.mostraMatriz(mLev);
 		try {
-//			Util.gravaMatrizParaCsv(mLev, "src/main/resources/artefatos/levenshtein.csv");
 			Util.gravaMatrizParaCsv(mLev, new File(".").getCanonicalPath()+"/out/etapa2_matrizLevenshtein.csv");
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -80,38 +79,35 @@ public class Main {
 		
 		
 		/*
-		 * Algoritmo 5
+		 * Algoritmo 5 - Analisar Similaridade Baseada em Conhecimento
 		 * @param ArrayList com campos distintos
 		 * @return Matriz Lin[][]
+		 * Diretório - src/main/resources/artefatos/lin.csv
 		 */
 		double[][] mLin = new double[tamanhoMatriz][tamanhoMatriz];
 		mLin = Algoritmos.aplicaLin(palavras);
 //		Util.mostraMatriz(mLin);
 		try {
-//			Util.gravaMatrizParaCsv(mLin, "src/main/resources/artefatos/lin.csv");
 			Util.gravaMatrizParaCsv(mLev, new File(".").getCanonicalPath()+"/out/etapa2_matrizLin.csv");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
 		/*
-		 * Algoritmo 6
+		 * Algoritmo 6 - Calcular Equivalência
 		 * @param 3 matrizes das técnicas e tamanho da matriz
 		 * @return Matriz Resultados[][]
 		 */
 		double[][] resultados = new double[tamanhoMatriz][tamanhoMatriz];
 		resultados = Algoritmos.calculaEquivalencia(mStem, mLev, mLin, tamanhoMatriz, pontoCorte, pontoCorteAHP);
 //		Util.mostraMatriz(resultados);
-//		try {
-//			Util.gravaMatrizParaCsv(mLin, "src/main/resources/artefatos/resultados.csv");
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
 		try {
-			Algoritmos.geraListaReferencias2(resultados, palavras, new File(".").getCanonicalPath()+"/out/etapa3_listaReferencias2.txt");
+			Util.gravaMatrizParaCsv(resultados, new File(".").getCanonicalPath()+"/out/etapa3_resultados.csv");
+			Algoritmos.consolidaEstrutura(resultados, palavras, new File(".").getCanonicalPath()+"/out/etapa3_listaReferencias2.txt");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+
 	}
 	
 	public static void init() {
