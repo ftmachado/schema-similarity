@@ -130,7 +130,7 @@ public class Main {
 			e.printStackTrace();
 		}
 		
-		System.out.println("Informe o caminho absoluto do diretório de arquivos JSON:");
+		System.out.println("Informe o caminho absoluto do diretório de arquivos JSON (corrente+src/main/resources/json):");
 		jsonDir = ler.nextLine();
 		System.out.println("Para o cálculo de equivalências, defina as variáveis:");
 		System.out.println("Ponto de corte: ");

@@ -12,7 +12,6 @@ import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.List;
 
 import edu.cmu.lti.lexical_db.ILexicalDatabase;
 import edu.cmu.lti.lexical_db.NictWordNet;
