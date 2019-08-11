@@ -17,83 +17,44 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-			<groupId>gov.sandia.foundry</groupId>
-			<artifactId>porter-stemmer</artifactId>
-			<version>1.4</version>
-		</dependency>
-		<dependency>
-			<groupId>javax.json</groupId>
-			<artifactId>javax.json-api</artifactId>
-			<version>1.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.github.mpkorstanje</groupId>
-			<artifactId>simmetrics-core</artifactId>
-			<version>4.1.1</version>
-		</dependency>
+            <groupId>gov.sandia.foundry</groupId>
+            <artifactId>porter-stemmer</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.json</groupId>
+            <artifactId>javax.json-api</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.mpkorstanje</groupId>
+            <artifactId>simmetrics-core</artifactId>
+            <version>4.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>javax.json</artifactId>
+            <version>1.0.4</version>
+        </dependency>
 
         <dependency>
             <groupId>de.sciss</groupId>
             <artifactId>ws4j</artifactId>
             <version>1.0.1</version>
-            <scope>system</scope>
-            <!-- Descomentar para Windows -->
-            <!-- <systemPath>C:\Users\Thieli\.m2\repository\de\sciss\ws4j\1.0.1\ws4j-1.0.1.jar</systemPath> -->
-            <systemPath>${project.basedir}/src/main/resources/libs/ws4j-1.0.1.jar</systemPath>
         </dependency>
 
         <dependency>
             <groupId>de.sciss</groupId>
             <artifactId>jawjaw</artifactId>
             <version>1.0.2</version>
-            <scope>system</scope>
-            <!-- Descomentar para Windows  -->
-            <!-- <systemPath>C:\Users\Thieli\.m2\repository\de\sciss\jawjaw\1.0.2\jawjaw-1.0.2.jar</systemPath> -->
-            <systemPath>${project.basedir}/src/main/resources/libs/jawjaw-1.0.2.jar</systemPath>
         </dependency>
-
-
-		<dependency>
-			<groupId>org.glassfish</groupId>
-			<artifactId>javax.json</artifactId>
-			<version>1.0.4</version>
-		</dependency>
     </dependencies>
+    
     <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-checkstyle-plugin</artifactId>
-                    <version>3.0.0</version>
-                    <dependencies>
-                        <dependency>
-                            <groupId>com.puppycrawl.tools</groupId>
-                            <artifactId>checkstyle</artifactId>
-                            <version>8.10</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>com.github.ngeor</groupId>
-                            <artifactId>checkstyle-rules</artifactId>
-                            <version>1.1.0</version>
-                        </dependency>
-                    </dependencies>
-                    <configuration>
-                        <configLocation>com/github/ngeor/checkstyle.xml</configLocation>
-                        <includeTestSourceDirectory>true</includeTestSourceDirectory>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-            </plugin>
-
-            <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.1.1</version>
                 <configuration>
                     <archive>
                         <manifest>
@@ -104,16 +65,26 @@
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id> <!-- this is used for inheritance merges -->
+                        <phase>package</phase> <!-- bind to the packaging phase -->
+                        <goals>
+                        <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
-            <!--
-            	Este é para o caso de não possuir nenhuma dependencia externa
+            
+            	<!-- Este é para o caso de não possuir nenhuma dependencia externa
             	Executa por 
             		mvn install package
-					java -jar build/meu_main.jar 
+					java -jar build/meu_main.jar  -->
              
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
+                <version>3.1.2</version>
                 <configuration>
                     <archive>
                         <manifest>
@@ -123,111 +94,40 @@
                     </archive>
                 </configuration>
             </plugin>
-            -->
-            
-            <!--
-                You can run jacoco in the default profile with:
-                mvn jacoco:prepare-agent test jacoco:report
-            -->
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.1</version>
-            </plugin>
+           
+            <!-- <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>2.5</version>
+                <executions>
+                    <execution>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <configuration>
+                            <groupId>de.sciss</groupId>
+                            <artifactId>w4sj</artifactId>
+                            <version>1.0.1</version>
+                            <packaging>jar</packaging>
+                            <file>${basedir}/lib/ws4j-1.0.1.jar</file>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <configuration>
+                            <groupId>de.sciss</groupId>
+                            <artifactId>jawjaw</artifactId>
+                            <version>1.0.2</version>
+                            <packaging>jar</packaging>
+                            <file>${basedir}/lib/jawjaw-1.0.2.jar</file>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin> -->
         </plugins>
     </build>
-    
-    <reporting>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.0.0</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <configuration>
-                    <configLocation>com/github/ngeor/checkstyle.xml</configLocation>
-                    <includeTestSourceDirectory>true</includeTestSourceDirectory>
-                </configuration>
-            </plugin>
-        </plugins>
-    </reporting>
-
-    <profiles>
-        <!--
-        This profile enables jacoco when unit tests are run.
-        You can run it with mvn -P jacoco test.
-        It also activates itself on Travis.
-        -->
-        <profile>
-            <id>jacoco</id>
-            <activation>
-                <property>
-                    <name>env.TRAVIS</name>
-                </property>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.jacoco</groupId>
-                        <artifactId>jacoco-maven-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>prepare-agent</id>
-                                <phase>validate</phase>
-                                <goals>
-                                    <goal>prepare-agent</goal>
-                                </goals>
-                            </execution>
-                            <execution>
-                                <id>report</id>
-                                <phase>test</phase>
-                                <goals>
-                                    <goal>report</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-
-        <!--
-        For the Travis profile:
-        - we want to break the build on any checkstyle violation.
-        - we want to be able to publish coverage report to coveralls.
-        -->
-        <profile>
-            <id>travis</id>
-            <activation>
-                <property>
-                    <name>env.TRAVIS</name>
-                </property>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-checkstyle-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>checkstyle</id>
-                                <phase>test</phase>
-                                <goals>
-                                    <goal>check</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.eluder.coveralls</groupId>
-                        <artifactId>coveralls-maven-plugin</artifactId>
-                        <version>4.3.0</version>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 </project>

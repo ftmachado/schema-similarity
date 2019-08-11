@@ -125,12 +125,12 @@ public class Main {
 		System.out.println("O nome dos arquivos devem ser do modelo doc1.json, doc2.json...");
 		
 		try {
-			System.out.println("Seu diretório corrente é "+new File(".").getCanonicalPath());
+			System.out.println("Seu diretório corrente é "+new File(".").getCanonicalPath()+"\\resources\\json");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		
-		System.out.println("Informe o caminho absoluto do diretório de arquivos JSON (corrente+src/main/resources/json):");
+		System.out.println("Informe o caminho absoluto do diretório de arquivos JSON ({basedir}\\resources\\json):");
 		jsonDir = ler.nextLine();
 		System.out.println("Para o cálculo de equivalências, defina as variáveis:");
 		System.out.println("Ponto de corte: ");

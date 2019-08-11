@@ -467,7 +467,7 @@ public class Algoritmos {
 		try {
 			FileWriter writer = new FileWriter(caminho);
 			
-			writer.write("\n\n");
+			writer.write("\n");
 			for (k=0; k<tam ; k++){
 				for (l=0;l<tam;l++){
 					
@@ -487,6 +487,7 @@ public class Algoritmos {
 			e.printStackTrace();
 		}
 
+		System.out.println();
 		for (String s : aRemover) {
 			palavras.remove(s);
 			System.out.println("Removendo palavra "+s);
