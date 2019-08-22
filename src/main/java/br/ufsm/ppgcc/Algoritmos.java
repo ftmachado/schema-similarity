@@ -495,4 +495,24 @@ public class Algoritmos {
 
 	}
 
+	/**
+	 * Algoritmo 8 - Remontar Estrutura
+	 * Monta um novo documento com base no documento de origem com maior número de blocos
+	 * @param Campos consolidados, lista de referências 1 e lista de referências 2
+	 * @return Estrutura consolidada
+	 * @author Fhabiana Machado
+	 * @since 21 de agosto de 2019
+	 */
+	public static void remontarEstrutura(String jsonDir) {
+		//Escolhe o documento de origem para referência (com maior número de blocos)
+		
+
+		//para cada campo do documento de referência faça
+ 		//se campo está consolidado então mantém;
+		//senão verifica os correspondentes que estão consolidados e os substitui;
+		// fim
+		// Os campos consolidados que não estão no documento referência, 
+		// são incluídos em um novo objeto delimitado por chaves
+	}
+
 }

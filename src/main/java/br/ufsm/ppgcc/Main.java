@@ -1,6 +1,7 @@
 package br.ufsm.ppgcc;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -107,6 +108,17 @@ public class Main {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+
+		
+		try {
+			String total = Util.arquivoComMaisBlocos(jsonDir);
+			System.out.println(total);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
 
 	}
 	

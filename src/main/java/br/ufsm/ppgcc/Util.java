@@ -18,6 +18,9 @@ import java.io.LineNumberReader;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
+import javax.json.Json;
+import javax.json.stream.JsonParser;
+
 /*
  * @since 19 de fevereiro de 2018
  * @author Fhabiana Machado
@@ -319,6 +322,61 @@ public class Util {
 		} catch (IOException exc) {
 			exc.printStackTrace();
 		}
+	}
+
+	/**
+	 * Objtem o número de blocos de um documento
+	 * @param file - caminho do arquivo
+	 * @return numBlocos - total de blocos do arquivo
+	 */
+	public static int numeroBlocosDocumento(String file) throws FileNotFoundException, IOException {
+		int numBlocos = 0;
+
+		FileInputStream fi = new FileInputStream( new File(file) );
+		JsonParser parser = Json.createParser(fi);
+		
+		while(parser.hasNext()) {
+			JsonParser.Event evt  = parser.next();
+			
+            if (evt == JsonParser.Event.START_OBJECT) {
+                numBlocos++;
+            }
+		}
+		
+		fi.close();
+		parser.close();
+        return numBlocos;
+	}
+
+	/**
+	 * 
+	 */
+	public static String arquivoComMaisBlocos(String jsonDir) throws FileNotFoundException, IOException {
+
+            String[] arquivos = new File(jsonDir).list();
+
+
+        int qtdeBlocos = 0;
+        int qtdeBlocosMax = 0;
+		String max ="";
+		
+        if (arquivos.length > 0) {
+			
+			// Inicializa com o primeiro doc
+			qtdeBlocos = qtdeBlocosMax = Util.numeroBlocosDocumento(jsonDir+"\\"+arquivos[0]);
+			
+			for (String x : arquivos) {
+				qtdeBlocos = Util.numeroBlocosDocumento(jsonDir+"\\"+x);
+				if (qtdeBlocos > qtdeBlocosMax) {
+                    qtdeBlocosMax = qtdeBlocos;
+                    max = x;
+                }
+			}
+
+                        System.out.println("Máximo de blocos "+qtdeBlocosMax);
+			return max;
+		}
+        return null;
 	}
 	
 }
