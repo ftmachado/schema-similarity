@@ -325,7 +325,7 @@ public class Util {
 	}
 
 	/**
-	 * Objtem o número de blocos de um documento
+	 * Obtem o número de blocos de um documento
 	 * @param file - caminho do arquivo
 	 * @return numBlocos - total de blocos do arquivo
 	 */
@@ -349,16 +349,17 @@ public class Util {
 	}
 
 	/**
-	 * 
+	 * Para um determinado diretório, faz um parse e retorna o nome do arquivo com maior número de blocos
+	 * @param jsonDir - diretório com arquivos JSON
+	 * @return arqMax - nome do arquivo com máximo de blocos
 	 */
 	public static String arquivoComMaisBlocos(String jsonDir) throws FileNotFoundException, IOException {
 
-            String[] arquivos = new File(jsonDir).list();
-
+		String[] arquivos = new File(jsonDir).list();
 
         int qtdeBlocos = 0;
         int qtdeBlocosMax = 0;
-		String max ="";
+		String arqMax ="";
 		
         if (arquivos.length > 0) {
 			
@@ -369,12 +370,12 @@ public class Util {
 				qtdeBlocos = Util.numeroBlocosDocumento(jsonDir+"\\"+x);
 				if (qtdeBlocos > qtdeBlocosMax) {
                     qtdeBlocosMax = qtdeBlocos;
-                    max = x;
+                    arqMax = x;
                 }
 			}
 
-                        System.out.println("Máximo de blocos "+qtdeBlocosMax);
-			return max;
+			System.out.println("Máximo de blocos "+qtdeBlocosMax);
+			return arqMax;
 		}
         return null;
 	}

@@ -503,9 +503,9 @@ public class Algoritmos {
 	 * @author Fhabiana Machado
 	 * @since 21 de agosto de 2019
 	 */
-	public static void remontarEstrutura(String jsonDir) {
+	public static void remontarEstrutura(String jsonDir) throws FileNotFoundException, IOException {
 		//Escolhe o documento de origem para referência (com maior número de blocos)
-		
+		String docReferencia = Util.arquivoComMaisBlocos(jsonDir);
 
 		//para cada campo do documento de referência faça
  		//se campo está consolidado então mantém;
