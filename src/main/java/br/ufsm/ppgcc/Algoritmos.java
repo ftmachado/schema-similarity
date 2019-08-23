@@ -4,8 +4,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.List;
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.StringReader;
@@ -23,6 +25,7 @@ import javax.json.JsonReader;
 import javax.json.JsonStructure;
 import javax.json.JsonWriter;
 import javax.json.stream.JsonParser;
+import javax.json.stream.JsonParser.Event;
 
 import org.simmetrics.StringMetric;
 import org.simmetrics.metrics.StringMetrics;
@@ -361,6 +364,10 @@ public class Algoritmos {
 	 * @since 15 de agosto de 2018
 	 */
 	public static double[][] calculaEquivalencia(int[][] radical, double[][] lev, double[][] lin, int tamanho, double PONTO_CORTE, double PONTO_CORTE_AHP){
+
+		//LOG
+		System.out.printf("\n\tCalculando equivalência...");
+	
 		int i, j, count=0;
 		final int pesoA=1, pesoB=3, pesoC=2;
 		double aux=0, media_ponderada=0;
@@ -413,52 +420,25 @@ public class Algoritmos {
 
 	return resultado;
 	}
-	
-	
-	/**
-	 * 
-	 * Gera lista de referências 2 - retorna as palavras equivalentes
-	 * @param matriz resultado, ArrayList<String> com as palavras e o caminho do arquivo de saída a ser salvo
-	 * @return arquivo com a lista de referências 2
-	 * @author Fhabiana Machado
-	 * @since 20 de setembro de 2018
-	 */
-	public static void geraListaReferencias2(double[][] resultado, ArrayList<String> palavras, String caminho){
-		int k, l;
-		try {
-			FileWriter writer = new FileWriter(caminho);
-			
-			writer.write("\n\n");
-			for (k=0; k<resultado.length ; k++){
-				for (l=0;l<resultado.length;l++){
-					
-					if ((l>k) && (k != l)){
-						if (resultado[k][l] == 1.0){
-							writer.write("A palavra "+palavras.get(k)+" é equivalente a "+palavras.get(l)+"\n");
-						}					
-					}
-				}
-			}
-			
-			writer.close();
-			
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
 
 	/**
-	 * Algoritmo 7 - Consolidar Estrutura
-	 * Apaga as demais ocorrências do campo que estão escritas de forma distinta e as guarda na lista de referências
+	 * Algoritmo 7 - Consolidar Estrutura Apaga as demais ocorrências do campo que
+	 * estão escritas de forma distinta e as guarda na lista de referências
 	 *
 	 * @param resultado - matriz única
 	 * @return campos consolidados.txt
 	 * @author Ezequiel Ribeiro, Fhabiana Machado
+	 * @return listaReferencias2 - Lista de strings com palavra[0] e equivalencia[1]
 	 * @since 04 de agosto de 2019
 	 */
-	public static void consolidaEstrutura(double[][] resultado, ArrayList<String> palavras, String caminho) throws IOException {
+	public static List<String[]> consolidaEstrutura(double[][] resultado, ArrayList<String> palavras,
+		String caminho) throws IOException {
+
+		//LOG
+		System.out.printf("\n\tConsolidando estrutura...");
 
 		ArrayList<String> aRemover = new ArrayList<String>();
+		List<String[]> listaReferencias2 = new ArrayList<>();
 		int k, l;
 		int tam = resultado.length;
 
@@ -471,11 +451,18 @@ public class Algoritmos {
 			for (k=0; k<tam ; k++){
 				for (l=0;l<tam;l++){
 					
+					String[] equivalencias = new String[2];
+
 					//Para todo elemento acima da diagonal principal
 					if ((l>k) && (k != l)){
 						if (resultado[k][l] == 1.0){
 							writer.write("A palavra "+palavras.get(k)+" é equivalente a "+palavras.get(l)+"\n");
 							aRemover.add(palavras.get(l));
+							
+							equivalencias[0] = palavras.get(k);
+							equivalencias[1] = palavras.get(l);
+							listaReferencias2.add(equivalencias);
+
 						}					
 					}
 				}
@@ -487,11 +474,13 @@ public class Algoritmos {
 			e.printStackTrace();
 		}
 
-		System.out.println();
+		// System.out.println();
 		for (String s : aRemover) {
 			palavras.remove(s);
-			System.out.println("Removendo palavra "+s);
+			// System.out.println("Removendo palavra "+s);
 		}
+
+		return listaReferencias2;
 
 	}
 
@@ -503,9 +492,43 @@ public class Algoritmos {
 	 * @author Fhabiana Machado
 	 * @since 21 de agosto de 2019
 	 */
-	public static void remontarEstrutura(String jsonDir) throws FileNotFoundException, IOException {
+	public static void remontarEstrutura(String jsonDir, String destino, List<String[]> listaReferencias2)
+		throws FileNotFoundException, IOException {
+		
+		//LOG
+		System.out.printf("\n\tRemontando estrutura...");
+
 		//Escolhe o documento de origem para referência (com maior número de blocos)
-		String docReferencia = Util.arquivoComMaisBlocos(jsonDir);
+		String docReferencia = jsonDir+"\\";
+		docReferencia += Util.arquivoComMaisBlocos(jsonDir);
+
+		ElementoBloco raiz = new ElementoBloco("RAIZ", ElementoBloco.OBJETO);
+		List<String> visitados = new ArrayList<>();
+
+        //Verifica se o documento tem um objeto raiz dos demais
+        if (Util.temUnicoObjetoRaiz(docReferencia)) {
+            // Se sim, seta o nome do raiz com o nome do primeiro objeto
+            FileInputStream fi = new FileInputStream( new File(docReferencia) );
+            JsonParser parser = Json.createParser(fi);
+			Event evt = null;
+			
+            while (parser.hasNext()) {
+                evt = parser.next();
+                if (evt == Event.KEY_NAME) {
+                    raiz.setNome(parser.getString());
+                    parser.close();
+                    fi.close();
+                    break;
+                }
+			}
+			
+            montaArvore(raiz, listaReferencias2, palavras, visitados);
+        } else {
+            // Chama a função recursiva para formar a árvore a partir da raiz dada
+            montaArvore(raiz, listaReferencias2, palavras, visitados);
+        }
+		
+		Util.gravarEstruturaConsolidada(raiz, destino);
 
 		//para cada campo do documento de referência faça
  		//se campo está consolidado então mantém;

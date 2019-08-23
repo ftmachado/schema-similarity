@@ -21,8 +21,8 @@ public class Main {
 		/**
 		 * Algoritmo 1 - Separar Campos dos Dados
 		 * @param Documentos pertencentes à mesma coleção
-		 * @return Arquivo com todos os campos: artefatos/saidaAlg1.txt 
-		 * Diretório - src/main/resources/json
+		 * @return Arquivo com todos os campos: out/saidaAlg1.txt 
+		 * Diretório - resources/json
 		 */
 		Algoritmos.separaCamposDosDados(jsonDir);
 		
@@ -110,14 +110,7 @@ public class Main {
 		}
 
 		
-		try {
-			String total = Util.arquivoComMaisBlocos(jsonDir);
-			System.out.println(total);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+
 		
 
 	}
