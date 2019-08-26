@@ -480,6 +480,7 @@ public class Algoritmos {
 			// System.out.println("Removendo palavra "+s);
 		}
 
+		// return new List[] {palavras, listaReferencias2};
 		return listaReferencias2;
 
 	}
@@ -492,21 +493,33 @@ public class Algoritmos {
 	 * @author Fhabiana Machado
 	 * @since 21 de agosto de 2019
 	 */
-	public static void remontarEstrutura(String jsonDir, String destino, List<String[]> listaReferencias2)
+	public static void remontarEstrutura(String jsonDir, String destino, ArrayList<String> palavras, List<String[]> listaReferencias2)
 		throws FileNotFoundException, IOException {
 		
 		//LOG
-		System.out.printf("\n\tRemontando estrutura...");
+		System.out.printf("\n\tRemontando estrutura...\n");
 
 		//Escolhe o documento de origem para referência (com maior número de blocos)
 		String docReferencia = jsonDir+"\\";
-		docReferencia += Util.arquivoComMaisBlocos(jsonDir);
+		docReferencia += UtilJSON.arquivoComMaisBlocos(jsonDir);
+
+		//Transforma palavras em campos consolidados
+		List<List<ElementoBloco>> camposConsolidados = new ArrayList<>();
+		List<ElementoBloco> l = new ArrayList<>();
+		
+		for (String p : palavras) {
+			ElementoBloco e = new ElementoBloco();
+			e.setNome(p);
+			l.add(e);
+                        //System.out.println("Convertendo "+p);
+		}
+		camposConsolidados.add(l);
+
 
 		ElementoBloco raiz = new ElementoBloco("RAIZ", ElementoBloco.OBJETO);
-		List<String> visitados = new ArrayList<>();
 
         //Verifica se o documento tem um objeto raiz dos demais
-        if (Util.temUnicoObjetoRaiz(docReferencia)) {
+        if (UtilJSON.temUnicoObjetoRaiz(docReferencia)) {
             // Se sim, seta o nome do raiz com o nome do primeiro objeto
             FileInputStream fi = new FileInputStream( new File(docReferencia) );
             JsonParser parser = Json.createParser(fi);
@@ -522,20 +535,14 @@ public class Algoritmos {
                 }
 			}
 			
-            montaArvore(raiz, listaReferencias2, palavras, visitados);
+            UtilJSON.montaArvore(raiz, listaReferencias2, camposConsolidados, docReferencia);
         } else {
             // Chama a função recursiva para formar a árvore a partir da raiz dada
-            montaArvore(raiz, listaReferencias2, palavras, visitados);
+            UtilJSON.montaArvore(raiz, listaReferencias2, camposConsolidados, docReferencia);
         }
 		
-		Util.gravarEstruturaConsolidada(raiz, destino);
+		UtilJSON.gravarEstruturaConsolidada(raiz, destino);
 
-		//para cada campo do documento de referência faça
- 		//se campo está consolidado então mantém;
-		//senão verifica os correspondentes que estão consolidados e os substitui;
-		// fim
-		// Os campos consolidados que não estão no documento referência, 
-		// são incluídos em um novo objeto delimitado por chaves
 	}
 
 }

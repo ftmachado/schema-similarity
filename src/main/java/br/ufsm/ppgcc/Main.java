@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -104,14 +105,41 @@ public class Main {
 //		Util.mostraMatriz(resultados);
 		try {
 			Util.gravaMatrizParaCsv(resultados, new File(".").getCanonicalPath()+"/out/etapa3_resultados.csv");
-			Algoritmos.consolidaEstrutura(resultados, palavras, new File(".").getCanonicalPath()+"/out/etapa3_listaReferencias2.txt");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
-		
+		/*
+		 * Algoritmo 7 - Consolidar estrutura
+		 * @param única matriz por bloco
+		 * @return campos consolidados (palavras), lista de referências 2 
+		 */
+		List<String[]> listaReferencias2 = new ArrayList<>();
+                
+		try {
+//                    Util.geraListaReferencias2(resultados, palavras, new File(".").getCanonicalPath() + "/out/etapa3_listaReferencias2.txt");
+			listaReferencias2 = Algoritmos.consolidaEstrutura(resultados, palavras,
+					new File(".").getCanonicalPath() + "/out/etapa3_listaReferencias2.txt");
 
-		
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		/**
+		 * Algoritmo 8 - Remontar Estrutura
+		 * @param campos consolidados, lis de referencias 1, lista de referências 2
+		 * @return estrutura consolidada
+		 */
+//		try {
+//			Algoritmos.remontarEstrutura(jsonDir,
+//					new File(".").getCanonicalPath() + "/out/etapa3_estruturaConsolidada.txt",
+//					palavras,
+//					listaReferencias2);
+//		} catch (FileNotFoundException e) {
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
 
 	}
 	
@@ -121,8 +149,8 @@ public class Main {
 						"    |_ _  |    | _ | | _  | \\-/ | | _ |  _   |_ _   | | \\-/ | | |   | _ | |  _| |   |    \\/\n"+
 						"        | |    |   | |    |     | |   |          |  | |     | | |   |   | |  \\  |   |    | \n"+
 						"    -----  ---  -  - ---- -     - -   -      -----  - -     - - --- -   - -   - -   -    -\n"+
-						"                                                                              agosto de 2018\n"+
-						"                                                         by Fhabiana Machado, Renata Padilha\n\n"
+						"                                                                              agosto de 2019\n"+
+						"                                        by Fhabiana Machado, Renata Padilha, Ezequiel Ribeiro\n\n"
 		);
 		
 		Scanner ler = new Scanner(System.in);
