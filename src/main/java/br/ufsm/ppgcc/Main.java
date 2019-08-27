@@ -114,16 +114,16 @@ public class Main {
 		 * @param única matriz por bloco
 		 * @return campos consolidados (palavras), lista de referências 2 
 		 */
-		List<String[]> listaReferencias2 = new ArrayList<>();
-                
-		try {
-//                    Util.geraListaReferencias2(resultados, palavras, new File(".").getCanonicalPath() + "/out/etapa3_listaReferencias2.txt");
-			listaReferencias2 = Algoritmos.consolidaEstrutura(resultados, palavras,
-					new File(".").getCanonicalPath() + "/out/etapa3_listaReferencias2.txt");
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+//		List<String[]> listaReferencias2 = new ArrayList<>();
+//                
+//		try {
+////                    Util.geraListaReferencias2(resultados, palavras, new File(".").getCanonicalPath() + "/out/etapa3_listaReferencias2.txt");
+//			listaReferencias2 = Algoritmos.consolidaEstrutura(resultados, palavras,
+//					new File(".").getCanonicalPath() + "/out/etapa3_listaReferencias2.txt");
+//
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
 
 		/**
 		 * Algoritmo 8 - Remontar Estrutura

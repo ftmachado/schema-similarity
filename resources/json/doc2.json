@@ -1,697 +1,1878 @@
-[{
-	"@score": "3",
-	"@id": "141651",
-	"info": {
-		"authors": {
-			"author": ["Jane Adriana", "Maristela Holanda"]
-		},
-		"title": "NoSQL2 - SQL to NoSQL Databases.",
-		"venue": "WorldCIST",
-		"pages": "938-948",
-		"year": "2018",
-		"type": "Conference and Workshop Papers",
-		"key": "conf/worldcist/AdrianaH18",
-		"doi": "10.1007/978-3-319-77712-2_89",
-		"ee": "https://doi.org/10.1007/978-3-319-77712-2_89",
-		"url": "https://dblp.org/rec/conf/worldcist/AdrianaH18"
-	},
-	"url": "URL#141651"
-}, {
-	"@score": "2",
-	"@id": "19517",
-	"info": {
-		"authors": {
-			"author": ["Ali Davoudian", "Liu Chen", "Mengchi Liu"]
-		},
-		"title": "A Survey on NoSQL Stores.",
-		"venue": "ACM Comput. Surv.",
-		"volume": "51",
-		"number": "2",
-		"pages": "40:1-40:43",
-		"year": "2018",
-		"type": "Journal Articles",
-		"key": "journals/csur/DavoudianCL18",
-		"doi": "10.1145/3158661",
-		"ee": "http://doi.acm.org/10.1145/3158661",
-		"url": "https://dblp.org/rec/journals/csur/DavoudianCL18"
-	},
-	"url": "URL#19517"
-}, {
-	"@score": "2",
-	"@id": "25863",
-	"info": {
-		"authors": {
-			"author": ["Victor A. E. de Farias", "Flávio R. C. Sousa", "José Gilvan Rodrigues Maia", "João Paulo Pordeus Gomes", "Javam C. Machado"]
-		},
-		"title": "Regression based performance modeling and provisioning for NoSQL cloud databases.",
-		"venue": "Future Generation Comp. Syst.",
-		"volume": "79",
-		"pages": "72-81",
-		"year": "2018",
-		"type": "Journal Articles",
-		"key": "journals/fgcs/FariasSMGM18",
-		"doi": "10.1016/J.FUTURE.2017.08.061",
-		"ee": "https://doi.org/10.1016/j.future.2017.08.061",
-		"url": "https://dblp.org/rec/journals/fgcs/FariasSMGM18"
-	},
-	"url": "URL#25863"
-}, {
-	"@score": "2",
-	"@id": "25899",
-	"info": {
-		"authors": {
-			"author": ["María Teresa González-Aparicio", "Muhammad Younas 0001", "Javier Tuya", "Rubén Casado"]
-		},
-		"title": "Testing of transactional services in NoSQL key-value databases.",
-		"venue": "Future Generation Comp. Syst.",
-		"volume": "80",
-		"pages": "384-399",
-		"year": "2018",
-		"type": "Journal Articles",
-		"key": "journals/fgcs/Gonzalez-Aparicio18",
-		"doi": "10.1016/J.FUTURE.2017.07.004",
-		"ee": "https://doi.org/10.1016/j.future.2017.07.004",
-		"url": "https://dblp.org/rec/journals/fgcs/Gonzalez-Aparicio18"
-	},
-	"url": "URL#25899"
-}, {
-	"@score": "2",
-	"@id": "26979",
-	"info": {
-		"authors": {
-			"author": ["Arnaud Castelltort", "Trevor Martin"]
-		},
-		"title": "Handling scalable approximate queries over NoSQL graph databases - Cypherf and the Fuzzy4S framework.",
-		"venue": "Fuzzy Sets and Systems",
-		"volume": "348",
-		"pages": "21-49",
-		"year": "2018",
-		"type": "Journal Articles",
-		"key": "journals/fss/CastelltortM18",
-		"doi": "10.1016/J.FSS.2017.08.002",
-		"ee": "https://doi.org/10.1016/j.fss.2017.08.002",
-		"url": "https://dblp.org/rec/journals/fss/CastelltortM18"
-	},
-	"url": "URL#26979"
-}, {
-	"@score": "2",
-	"@id": "31228",
-	"info": {
-		"authors": {
-			"author": ["Srinidhi Hiriyannaiah", "G. M. Siddesh", "P. Anoop", "K. G. Srinivasa"]
-		},
-		"title": "Semi-structured data analysis and visualisation using NoSQL.",
-		"venue": "IJBDI",
-		"volume": "5",
-		"number": "3",
-		"pages": "133-142",
-		"year": "2018",
-		"type": "Journal Articles",
-		"key": "journals/ijbdi/HiriyannaiahSAS18",
-		"doi": "10.1504/IJBDI.2018.10008726",
-		"ee": "https://doi.org/10.1504/IJBDI.2018.10008726",
-		"url": "https://dblp.org/rec/journals/ijbdi/HiriyannaiahSAS18"
-	},
-	"url": "URL#31228"
-}, {
-	"@score": "2",
-	"@id": "31377",
-	"info": {
-		"authors": {
-			"author": ["Sangeeta Gupta", "Gugulothu Narsimha"]
-		},
-		"title": "Miscegenation of scalable and DEP3K performance evaluation of nosql-cassandra for bigdata applications deployed in cloud.",
-		"venue": "IJBPIM",
-		"volume": "9",
-		"number": "1",
-		"pages": "12-21",
-		"year": "2018",
-		"type": "Journal Articles",
-		"key": "journals/ijbpim/GuptaN18",
-		"doi": "10.1504/IJBPIM.2018.10012307",
-		"ee": "https://doi.org/10.1504/IJBPIM.2018.10012307",
-		"url": "https://dblp.org/rec/journals/ijbpim/GuptaN18"
-	},
-	"url": "URL#31377"
-}, {
-	"@score": "2",
-	"@id": "31405",
-	"info": {
-		"authors": {
-			"author": ["Sangeeta Gupta", "Gugulothu Narsimha"]
-		},
-		"title": "Secure NoSQL for the Social Networking and E-Commerce Based Bigdata Applications Deployed in Cloud.",
-		"venue": "IJCAC",
-		"volume": "8",
-		"number": "2",
-		"pages": "113-129",
-		"year": "2018",
-		"type": "Journal Articles",
-		"key": "journals/ijcac/GuptaG18a",
-		"doi": "10.4018/IJCAC.2018040106",
-		"ee": "https://doi.org/10.4018/IJCAC.2018040106",
-		"url": "https://dblp.org/rec/journals/ijcac/GuptaG18a"
-	},
-	"url": "URL#31405"
-}, {
-	"@score": "2",
-	"@id": "46341",
-	"info": {
-		"authors": {
-			"author": ["Jaejun Yoo", "Ki-Hoon Lee", "Young-Ho Jeon"]
-		},
-		"title": "Migration from RDBMS to NoSQL Using Column-level Denormalization and Atomic Aggregates.",
-		"venue": "J. Inf. Sci. Eng.",
-		"volume": "34",
-		"number": "1",
-		"pages": "243-259",
-		"year": "2018",
-		"type": "Journal Articles",
-		"key": "journals/jise/YooLJ18",
-		"ee": "http://jise.iis.sinica.edu.tw/JISESearch/pages/View/PaperView.jsf?keyId=160_2116",
-		"url": "https://dblp.org/rec/journals/jise/YooLJ18"
-	},
-	"url": "URL#46341"
-}, {
-	"@score": "2",
-	"@id": "48063",
-	"info": {
-		"authors": {
-			"author": "Fabiano Lucchese"
-		},
-		"title": "From P2P to NoSQL - A continuous metric for classifying large-scale storage systems.",
-		"venue": "J. Parallel Distrib. Comput.",
-		"volume": "113",
-		"pages": "227-249",
-		"year": "2018",
-		"type": "Journal Articles",
-		"key": "journals/jpdc/Lucchese18",
-		"doi": "10.1016/J.JPDC.2017.11.017",
-		"ee": "https://doi.org/10.1016/j.jpdc.2017.11.017",
-		"url": "https://dblp.org/rec/journals/jpdc/Lucchese18"
-	},
-	"url": "URL#48063"
-}, {
-	"@score": "2",
-	"@id": "57381",
-	"info": {
-		"authors": {
-			"author": ["Diogo Augusto Pereira", "Wagner Ourique de Morais", "Edison Pignaton de Freitas"]
-		},
-		"title": "NoSQL real-time database performance comparison.",
-		"venue": "IJPEDS",
-		"volume": "33",
-		"number": "2",
-		"pages": "144-156",
-		"year": "2018",
-		"type": "Journal Articles",
-		"key": "journals/paapp/PereiraMF18",
-		"doi": "10.1080/17445760.2017.1307367",
-		"ee": "https://doi.org/10.1080/17445760.2017.1307367",
-		"url": "https://dblp.org/rec/journals/paapp/PereiraMF18"
-	},
-	"url": "URL#57381"
-}, {
-	"@score": "2",
-	"@id": "61989",
-	"info": {
-		"authors": {
-			"author": ["Arthur Lorenzi Almeida", "Vinícius Junqueira Schettino", "Thiago Jesus Rodrigues Barbosa", "Pedro Fernandes Freitas", "Pedro Gabriel Silva Guimarães", "Wagner Arbex"]
-		},
-		"title": "Relative Scalability of NoSQL Databases for Genotype Data Manipulation.",
-		"venue": "RITA",
-		"volume": "25",
-		"number": "2",
-		"pages": "93-100",
-		"year": "2018",
-		"type": "Journal Articles",
-		"key": "journals/rita/AlmeidaSBFGA18",
-		"ee": "http://www.seer.ufrgs.br/rita/article/view/RITA-VOL-25-NR2-93",
-		"url": "https://dblp.org/rec/journals/rita/AlmeidaSBFGA18"
-	},
-	"url": "URL#61989"
-}, {
-	"@score": "2",
-	"@id": "70898",
-	"info": {
-		"authors": {
-			"author": ["Rami Sellami", "Bruno Defude"]
-		},
-		"title": "Complex Queries Optimization and Evaluation over Relational and NoSQL Data Stores in Cloud Environments.",
-		"venue": "IEEE Trans. Big Data",
-		"volume": "4",
-		"number": "2",
-		"pages": "217-230",
-		"year": "2018",
-		"type": "Journal Articles",
-		"key": "journals/tbd/SellamiD18",
-		"doi": "10.1109/TBDATA.2017.2719054",
-		"ee": "https://doi.org/10.1109/TBDATA.2017.2719054",
-		"url": "https://dblp.org/rec/journals/tbd/SellamiD18"
-	},
-	"url": "URL#70898"
-}, {
-	"@score": "2",
-	"@id": "77504",
-	"info": {
-		"authors": {
-			"author": ["Antonio Celesti", "Maria Fazio", "Agata Romano", "Alessia Bramanti", "Placido Bramanti", "Massimo Villari"]
-		},
-		"title": "An OAIS-Based Hospital Information System on the Cloud - Analysis of a NoSQL Column-Oriented Approach.",
-		"venue": "IEEE J. Biomedical and Health Informatics",
-		"volume": "22",
-		"number": "3",
-		"pages": "912-918",
-		"year": "2018",
-		"type": "Journal Articles",
-		"key": "journals/titb/CelestiFRBBV18",
-		"doi": "10.1109/JBHI.2017.2681126",
-		"ee": "https://doi.org/10.1109/JBHI.2017.2681126",
-		"url": "https://dblp.org/rec/journals/titb/CelestiFRBBV18"
-	},
-	"url": "URL#77504"
-}, {
-	"@score": "2",
-	"@id": "80077",
-	"info": {
-		"authors": {
-			"author": ["Adrian Colaso", "Pablo Prieto", "Jose Angel Herrero", "Pablo Abad Fidalgo", "Lucia G. Menezo", "Valentin Puente", "José-Ángel Gregorio"]
-		},
-		"title": "Memory Hierarchy Characterization of NoSQL Applications through Full-System Simulation.",
-		"venue": "IEEE Trans. Parallel Distrib. Syst.",
-		"volume": "29",
-		"number": "5",
-		"pages": "1161-1173",
-		"year": "2018",
-		"type": "Journal Articles",
-		"key": "journals/tpds/ColasoPHFMPG18",
-		"doi": "10.1109/TPDS.2017.2787150",
-		"ee": "https://doi.org/10.1109/TPDS.2017.2787150",
-		"url": "https://dblp.org/rec/journals/tpds/ColasoPHFMPG18"
-	},
-	"url": "URL#80077"
-}, {
-	"@score": "2",
-	"@id": "86869",
-	"info": {
-		"authors": {
-			"author": "Jaroslav Pokorný"
-		},
-		"title": "Integration of Relational and NoSQL Databases.",
-		"venue": "ACIIDS",
-		"pages": "35-45",
-		"year": "2018",
-		"type": "Conference and Workshop Papers",
-		"key": "conf/aciids/Pokorny18",
-		"doi": "10.1007/978-3-319-75420-8_4",
-		"ee": "https://doi.org/10.1007/978-3-319-75420-8_4",
-		"url": "https://dblp.org/rec/conf/aciids/Pokorny18"
-	},
-	"url": "URL#86869"
-}, {
-	"@score": "2",
-	"@id": "91379",
-	"info": {
-		"authors": {
-			"author": ["Yosra Hajjaji", "Imed Riadh Farah"]
-		},
-		"title": "Performance investigation of selected NoSQL databases for massive remote sensing image data storage.",
-		"venue": "ATSIP",
-		"pages": "1-6",
-		"year": "2018",
-		"type": "Conference and Workshop Papers",
-		"key": "conf/atsip/HajjajiF18",
-		"doi": "10.1109/ATSIP.2018.8364508",
-		"ee": "https://doi.org/10.1109/ATSIP.2018.8364508",
-		"url": "https://dblp.org/rec/conf/atsip/HajjajiF18"
-	},
-	"url": "URL#91379"
-}, {
-	"@score": "2",
-	"@id": "98674",
-	"info": {
-		"authors": {
-			"author": ["Sergey Kucherov", "Yuri I. Rogozov", "Elena Borisova"]
-		},
-		"title": "The Method of Forming Contents for a NoSQL Storage of Configurable Information System.",
-		"venue": "CSOS",
-		"pages": "412-419",
-		"year": "2018",
-		"type": "Conference and Workshop Papers",
-		"key": "conf/csoc/KucherovRB18",
-		"doi": "10.1007/978-3-319-91186-1_43",
-		"ee": "https://doi.org/10.1007/978-3-319-91186-1_43",
-		"url": "https://dblp.org/rec/conf/csoc/KucherovRB18"
-	},
-	"url": "URL#98674"
-}, {
-	"@score": "2",
-	"@id": "99269",
-	"info": {
-		"authors": {
-			"author": ["Prasoon Dadhich", "Andrey Sadovykh", "Alessandra Bagnato", "Michal Kepka", "Ondrej Kaas", "Karel Charvát"]
-		},
-		"title": "Sensor-based Database with SensLog - A Case Study of SQL to NoSQL Migration.",
-		"venue": "DATA",
-		"pages": "239-244",
-		"year": "2018",
-		"type": "Conference and Workshop Papers",
-		"key": "conf/data/DadhichSBKKC18",
-		"doi": "10.5220/0006909202390244",
-		"ee": "https://doi.org/10.5220/0006909202390244",
-		"url": "https://dblp.org/rec/conf/data/DadhichSBKKC18"
-	},
-	"url": "URL#99269"
-}, {
-	"@score": "2",
-	"@id": "99635",
-	"info": {
-		"authors": {
-			"author": ["Mohammed El Malki", "Hamdi Ben Hamadou", "Max Chevalier", "André Péninou", "Olivier Teste"]
-		},
-		"title": "Querying Heterogeneous Data in Graph-Oriented NoSQL Systems.",
-		"venue": "DaWaK",
-		"pages": "289-301",
-		"year": "2018",
-		"type": "Conference and Workshop Papers",
-		"key": "conf/dawak/MalkiHCPT18",
-		"doi": "10.1007/978-3-319-98539-8_22",
-		"ee": "https://doi.org/10.1007/978-3-319-98539-8_22",
-		"url": "https://dblp.org/rec/conf/dawak/MalkiHCPT18"
-	},
-	"url": "URL#99635"
-}, {
-	"@score": "2",
-	"@id": "99643",
-	"info": {
-		"authors": {
-			"author": ["Tim Waage", "Lena Wiese"]
-		},
-		"title": "CloudDBGuard - Enabling Sorting and Searching on Encrypted Data in NoSQL Cloud Databases.",
-		"venue": "DaWaK",
-		"pages": "261-270",
-		"year": "2018",
-		"type": "Conference and Workshop Papers",
-		"key": "conf/dawak/WaageW18",
-		"doi": "10.1007/978-3-319-98539-8_20",
-		"ee": "https://doi.org/10.1007/978-3-319-98539-8_20",
-		"url": "https://dblp.org/rec/conf/dawak/WaageW18"
-	},
-	"url": "URL#99643"
-}, {
-	"@score": "2",
-	"@id": "99665",
-	"info": {
-		"authors": {
-			"author": ["Grisha Weintraub", "Ehud Gudes"]
-		},
-		"title": "Data Integrity Verification in Column-Oriented NoSQL Databases.",
-		"venue": "DBSec",
-		"pages": "165-181",
-		"year": "2018",
-		"type": "Conference and Workshop Papers",
-		"key": "conf/dbsec/WeintraubG18",
-		"doi": "10.1007/978-3-319-95729-6_11",
-		"ee": "https://doi.org/10.1007/978-3-319-95729-6_11",
-		"url": "https://dblp.org/rec/conf/dbsec/WeintraubG18"
-	},
-	"url": "URL#99665"
-}, {
-	"@score": "2",
-	"@id": "101730",
-	"info": {
-		"authors": {
-			"author": ["Belén Vela", "José María Cavero", "Paloma Cáceres", "Almudena Sierra-Alonso", "Carlos E. Cuesta"]
-		},
-		"title": "Using a NoSQL Graph Oriented Database to Store Accessible Transport Routes.",
-		"venue": "EDBT/ICDT Workshops",
-		"pages": "62-66",
-		"year": "2018",
-		"type": "Conference and Workshop Papers",
-		"key": "conf/edbt/VelaCCSC18",
-		"ee": "http://ceur-ws.org/Vol-2083/paper-10.pdf",
-		"url": "https://dblp.org/rec/conf/edbt/VelaCCSC18"
-	},
-	"url": "URL#101730"
-}, {
-	"@score": "2",
-	"@id": "107446",
-	"info": {
-		"authors": {
-			"author": "Fumbeya Marungo"
-		},
-		"title": "A Primer on NoSQL Databases for Enterprise Architects - The CAP Theorem and Transparent Data Access with MongoDB and Cassandra.",
-		"venue": "HICSS",
-		"year": "2018",
-		"type": "Conference and Workshop Papers",
-		"key": "conf/hicss/Marungo18",
-		"ee": "http://aisel.aisnet.org/hicss-51/os/enterprise_architecture/4",
-		"url": "https://dblp.org/rec/conf/hicss/Marungo18"
-	},
-	"url": "URL#107446"
-}, {
-	"@score": "2",
-	"@id": "107892",
-	"info": {
-		"authors": {
-			"author": ["Yuvraj Patel", "Mohit Verma", "Andrea C. Arpaci-Dusseau", "Remzi H. Arpaci-Dusseau"]
-		},
-		"title": "Revisiting Concurrency in High-Performance NoSQL Databases.",
-		"venue": "HotStorage",
-		"year": "2018",
-		"type": "Conference and Workshop Papers",
-		"key": "conf/hotstorage/PatelVAA18",
-		"ee": "https://www.usenix.org/conference/hotstorage18/presentation/patel",
-		"url": "https://dblp.org/rec/conf/hotstorage/PatelVAA18"
-	},
-	"url": "URL#107892"
-}, {
-	"@score": "2",
-	"@id": "112504",
-	"info": {
-		"authors": {
-			"author": ["Antonis Papaioannou", "Kostas Magoutis"]
-		},
-		"title": "Replica-Group Leadership Change as a Performance Enhancing Mechanism in NoSQL Data Stores.",
-		"venue": "ICDCS",
-		"pages": "1448-1453",
-		"year": "2018",
-		"type": "Conference and Workshop Papers",
-		"key": "conf/icdcs/PapaioannouM18",
-		"doi": "10.1109/ICDCS.2018.00147",
-		"ee": "https://doi.org/10.1109/ICDCS.2018.00147",
-		"url": "https://dblp.org/rec/conf/icdcs/PapaioannouM18"
-	},
-	"url": "URL#112504"
-}, {
-	"@score": "2",
-	"@id": "113000",
-	"info": {
-		"authors": {
-			"author": ["Mohammed El Malki", "Hamdi Ben Hamadou", "Nabil El Malki", "Arlind Kopliku"]
-		},
-		"title": "MPT - Suite Tools to Support Performance Tuning in NoSQL Systems.",
-		"venue": "ICEIS",
-		"pages": "127-134",
-		"year": "2018",
-		"type": "Conference and Workshop Papers",
-		"key": "conf/iceis/MalkiHMK18",
-		"doi": "10.5220/0006687601270134",
-		"ee": "https://doi.org/10.5220/0006687601270134",
-		"url": "https://dblp.org/rec/conf/iceis/MalkiHMK18"
-	},
-	"url": "URL#113000"
-}, {
-	"@score": "2",
-	"@id": "119967",
-	"info": {
-		"authors": {
-			"author": ["Lucas B. Dias", "Maristela Holanda", "Ruben Cruz Huacarpuma", "Rafael T. de Sousa Jr."]
-		},
-		"title": "NoSQL Database Performance Tuning for IoT Data - Cassandra Case Study.",
-		"venue": "IoTBDS",
-		"pages": "277-284",
-		"year": "2018",
-		"type": "Conference and Workshop Papers",
-		"key": "conf/iotbd/DiasHHS18",
-		"doi": "10.5220/0006782702770284",
-		"ee": "https://doi.org/10.5220/0006782702770284",
-		"url": "https://dblp.org/rec/conf/iotbd/DiasHHS18"
-	},
-	"url": "URL#119967"
-}, {
-	"@score": "2",
-	"@id": "120755",
-	"info": {
-		"authors": {
-			"author": ["Mahmudul Hassan", "Srividya K. Bansal"]
-		},
-		"title": "Semantic Data Querying over NoSQL Databases with Apache Spark.",
-		"venue": "IRI",
-		"pages": "364-371",
-		"year": "2018",
-		"type": "Conference and Workshop Papers",
-		"key": "conf/iri/HassanB18a",
-		"doi": "10.1109/IRI.2018.00061",
-		"ee": "https://doi.org/10.1109/IRI.2018.00061",
-		"url": "https://dblp.org/rec/conf/iri/HassanB18a"
-	},
-	"url": "URL#120755"
-}, {
-	"@score": "2",
-	"@id": "129154",
-	"info": {
-		"authors": {
-			"author": ["Salvatore Dipietro", "Rajkumar Buyya", "Giuliano Casale"]
-		},
-		"title": "PAX - Partition-aware autoscaling for the Cassandra NoSQL database.",
-		"venue": "NOMS",
-		"pages": "1-9",
-		"year": "2018",
-		"type": "Conference and Workshop Papers",
-		"key": "conf/noms/DipietroBC18",
-		"doi": "10.1109/NOMS.2018.8406271",
-		"ee": "https://doi.org/10.1109/NOMS.2018.8406271",
-		"url": "https://dblp.org/rec/conf/noms/DipietroBC18"
-	},
-	"url": "URL#129154"
-}, {
-	"@score": "2",
-	"@id": "132310",
-	"info": {
-		"authors": {
-			"author": ["Angelo Augusto Frozza", "Ronaldo dos Santos Mello"]
-		},
-		"title": "A Process for Reverse Engineering of Aggregate-Oriented NoSQL Databases with Emphasis on Geographic Data.",
-		"venue": "SBBD Companion",
-		"pages": "109-115",
-		"year": "2018",
-		"type": "Conference and Workshop Papers",
-		"key": "conf/sbbd/FrozzaM18",
-		"ee": "http://sbbd.org.br/2018/wp-content/uploads/sites/5/2018/08/109-sbbd_2018_comp.pdf",
-		"url": "https://dblp.org/rec/conf/sbbd/FrozzaM18"
-	},
-	"url": "URL#132310"
-}, {
-	"@score": "2",
-	"@id": "132337",
-	"info": {
-		"authors": {
-			"author": ["Luciana de Sá Silva Perciliano", "Fernanda Araujo Baião"]
-		},
-		"title": "Alinhamento de Grandes Ontologias com Recurso de Banco de Dados NoSQL e Utilização de Workflow Científico.",
-		"venue": "SBBD Companion",
-		"pages": "53-59",
-		"year": "2018",
-		"type": "Conference and Workshop Papers",
-		"key": "conf/sbbd/PercilianoB18",
-		"ee": "http://sbbd.org.br/2018/wp-content/uploads/sites/5/2018/08/053-sbbd_2018_comp.pdf",
-		"url": "https://dblp.org/rec/conf/sbbd/PercilianoB18"
-	},
-	"url": "URL#132337"
-}, {
-	"@score": "2",
-	"@id": "133905",
-	"info": {
-		"authors": {
-			"author": "Sriram Mohan"
-		},
-		"title": "Teaching NoSQL Databases to Undergraduate Students - A Novel Approach.",
-		"venue": "SIGCSE",
-		"pages": "314-319",
-		"year": "2018",
-		"type": "Conference and Workshop Papers",
-		"key": "conf/sigcse/Mohan18",
-		"doi": "10.1145/3159450.3159554",
-		"ee": "http://doi.acm.org/10.1145/3159450.3159554",
-		"url": "https://dblp.org/rec/conf/sigcse/Mohan18"
-	},
-	"url": "URL#133905"
-}, {
-	"@score": "2",
-	"@id": "134850",
-	"info": {
-		"authors": {
-			"author": ["Mohiuddin Abdul Qader", "Shiwen Cheng", "Vagelis Hristidis"]
-		},
-		"title": "A Comparative Study of Secondary Indexing Techniques in LSM-based NoSQL Databases.",
-		"venue": "SIGMOD Conference",
-		"pages": "551-566",
-		"year": "2018",
-		"type": "Conference and Workshop Papers",
-		"key": "conf/sigmod/QaderCH18",
-		"doi": "10.1145/3183713.3196900",
-		"ee": "http://doi.acm.org/10.1145/3183713.3196900",
-		"url": "https://dblp.org/rec/conf/sigmod/QaderCH18"
-	},
-	"url": "URL#134850"
-}, {
-	"@score": "2",
-	"@id": "141878",
-	"info": {
-		"authors": {
-			"author": ["Debora G. Reis", "Fabio S. Gasparoni", "Maristela Holanda", "Márcio Victorino", "Marcelo Ladeira", "Edward de Oliveira Ribeiro"]
-		},
-		"title": "An Evaluation of Data Model for NoSQL Document-Based Databases.",
-		"venue": "WorldCIST",
-		"pages": "616-625",
-		"year": "2018",
-		"type": "Conference and Workshop Papers",
-		"key": "conf/worldcist/ReisGHVLR18",
-		"doi": "10.1007/978-3-319-77703-0_61",
-		"ee": "https://doi.org/10.1007/978-3-319-77703-0_61",
-		"url": "https://dblp.org/rec/conf/worldcist/ReisGHVLR18"
-	},
-	"url": "URL#141878"
-}, {
-	"@score": "2",
-	"@id": "149577",
-	"info": {
-		"authors": {
-			"author": "Nazim Faour"
-		},
-		"title": "Data Consistency Simulation Tool for NoSQL Database Systems.",
-		"venue": "CoRR",
-		"volume": "abs/1802.08052",
-		"year": "2018",
-		"type": "Informal Publications",
-		"key": "journals/corr/abs-1802-08052",
-		"ee": "http://arxiv.org/abs/1802.08052",
-		"url": "https://dblp.org/rec/journals/corr/abs-1802-08052"
-	},
-	"url": "URL#149577"
-}, {
-	"@score": "2",
-	"@id": "157108",
-	"info": {
-		"authors": {
-			"author": ["Gouri Ginde", "Snehanshu Saha", "Archana Mathur", "Harsha Vamsi", "Sudeepa Roy Dey", "Swati Sampatrao Gambhire"]
-		},
-		"title": "Use of NoSQL database and visualization techniques to analyze massive scholarly article data from journals.",
-		"venue": "CoRR",
-		"volume": "abs/1805.00390",
-		"year": "2018",
-		"type": "Informal Publications",
-		"key": "journals/corr/abs-1805-00390",
-		"ee": "http://arxiv.org/abs/1805.00390",
-		"url": "https://dblp.org/rec/journals/corr/abs-1805-00390"
-	},
-	"url": "URL#157108"
-}, {
-	"@score": "2",
-	"@id": "163848",
-	"info": {
-		"authors": {
-			"author": ["Tran Khanh Dang", "An Khuong Vo", "Josef Küng"]
-		},
-		"title": "A NoSQL Data-based Personalized Recommendation System for C2C e-Commerce.",
-		"venue": "CoRR",
-		"volume": "abs/1806.09793",
-		"year": "2018",
-		"type": "Informal Publications",
-		"key": "journals/corr/abs-1806-09793",
-		"ee": "http://arxiv.org/abs/1806.09793",
-		"url": "https://dblp.org/rec/journals/corr/abs-1806-09793"
-	},
-	"url": "URL#163848"
-}]
+
+{  
+   "types" : {
+      "Bookmark" : {
+         "pluralLabel" : "Bookmarks"
+      },
+      "Publication" : {
+         "pluralLabel" : "Publications"
+      },
+      "GoldStandardPublication" : {
+         "pluralLabel" : "GoldStandardPublications"
+      },
+      "GoldStandardBookmark" : {
+         "pluralLabel" : "GoldStandardBookmarks"
+      },
+      "Tag" : {
+         "pluralLabel" : "Tags"
+      },
+      "User" : {
+         "pluralLabel" : "Users"
+      },
+      "Sphere" : {
+         "pluralLabel" : "Spheres"
+      }
+   },
+   
+   "properties" : {
+      "count" : {
+         "valueType" : "number"
+      },
+      "date" : {
+         "valueType" : "date"
+      },
+      "changeDate" : {
+         "valueType" : "date"
+      },
+      "url" : {
+         "valueType" : "url"
+      },
+      "id" : {
+         "valueType" : "url"
+      },
+      "tags" : {
+         "valueType" : "item"
+      },
+      "user" : {
+         "valueType" : "item"
+      }      
+   },
+   
+   "items" : [
+   	  
+	  {  
+         "type" : "Bookmark",
+         "id"   : "https://www.bibsonomy.org/url/7dab640ba07053f5bb972e46d989daf4/michael-t-weber",
+         "tags" : [
+            "orientdb","da","graphdb"
+         ],
+         
+         "intraHash" : "7dab640ba07053f5bb972e46d989daf4",
+         "label" : "OrientDB | Orient TechnologiesOrient Technologies",
+         "user" : "michael-t-weber",
+         "description" : "OrientDB NoSQL document graph database",
+         "date" : "2014-04-05 11:28:15",
+         "changeDate" : "2014-04-05 11:28:15",
+         "count" : 1,
+         "url" : "http://www.orientechnologies.com/orientdb/"
+
+      }
+,
+	  {  
+         "type" : "Bookmark",
+         "id"   : "https://www.bibsonomy.org/url/0a551a7cf7711dac77767f6706209b43/mjbrown",
+         "tags" : [
+            "web","database","software","json","data","storage","mongodb","nosql"
+         ],
+         
+         "intraHash" : "0a551a7cf7711dac77767f6706209b43",
+         "label" : "MongoDB for GIANT Ideas | MongoDB",
+         "user" : "mjbrown",
+         "description" : "A free and open-source cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schemas.",
+         "date" : "2018-07-28 21:07:43",
+         "changeDate" : "2018-07-28 21:28:55",
+         "count" : 2,
+         "url" : "https://www.mongodb.com/"
+
+      }
+,
+	  {  
+         "type" : "Bookmark",
+         "id"   : "https://www.bibsonomy.org/url/6032f13d8a2b8215a8f85be40be54eb2/michael-t-weber",
+         "tags" : [
+            "DA","graphdb"
+         ],
+         
+         "intraHash" : "6032f13d8a2b8215a8f85be40be54eb2",
+         "label" : "5 Graph Databases to Consider \u2013 ReadWrite",
+         "user" : "michael-t-weber",
+         "description" : "Of the major categories of NoSQL databases - document-oriented databases, key-value stores and graph databases - we've given the least attention to graph databases on this blog. That's a shame, because as many have pointed out it may become the most significant category. Graph databases apply graph theory to the storage of information about the&hellip;",
+         "date" : "2014-03-13 21:42:26",
+         "changeDate" : "2014-03-13 21:42:26",
+         "count" : 1,
+         "url" : "http://readwrite.com/2011/04/20/5-graph-databases-to-consider#awesm=~oyqkPgzQL1SwVt"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/2242b1a54cd45db6a9b4c6200f85671fa/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "242b1a54cd45db6a9b4c6200f85671fa",
+         "interHash" : "a79be31cb76ea4df848ac171dc37123e",
+         "label" : "From Document Warehouse to Column-Oriented NoSQL Document Warehouse.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2017-12-14 00:00:00",
+         "changeDate" : "2017-12-15 11:43:10",
+         "count" : 1,
+         "pub-type": "inproceedings",
+         "booktitle": "ICSOFT","publisher":"SciTePress",
+         "year": "2017", 
+         "url": "http://dblp.uni-trier.de/db/conf/icsoft/icsoft2017.html#0002AF17", 
+         
+         "author": [ 
+            "Ines Ben Messaoud","Refka Ben Ali","Jamel Feki"
+         ],
+         "authors": [
+         	
+            	{"first" : "Ines Ben",	"last" : "Messaoud"},
+            	{"first" : "Refka Ben",	"last" : "Ali"},
+            	{"first" : "Jamel",	"last" : "Feki"}
+         ],
+         
+         "editor": [ 
+            "Jorge S. Cardoso","Leszek A. Maciaszek","Marten van Sinderen","Enrique Cabello"
+         ],
+         "editors": [
+         	
+            	{"first" : "Jorge S.",	"last" : "Cardoso"},
+            	{"first" : "Leszek A.",	"last" : "Maciaszek"},
+            	{"first" : "Marten",	"last" : "van Sinderen"},
+            	{"first" : "Enrique",	"last" : "Cabello"}
+         ],
+         "pages": "85-94",
+         "ee" : "https://doi.org/10.5220/0006423500850094",
+         
+         "isbn" : "978-989-758-262-2",
+         
+         "bibtexKey": "conf/icsoft/0002AF17"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/2357a3335561919500f9d1c1e6ea895a8/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "357a3335561919500f9d1c1e6ea895a8",
+         "interHash" : "1979818c66d979c0b3fe83d37e660d5d",
+         "label" : "Evaluating NoSQL Document Oriented Data Model.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2017-05-23 00:00:00",
+         "changeDate" : "2019-03-20 11:37:09",
+         "count" : 1,
+         "pub-type": "inproceedings",
+         "booktitle": "FiCloud Workshops","publisher":"IEEE Computer Society",
+         "year": "2016", 
+         "url": "http://dblp.uni-trier.de/db/conf/ficloud/ficloud2016w.html#HashemR16", 
+         
+         "author": [ 
+            "Hadi Hashem","Daniel Ranc"
+         ],
+         "authors": [
+         	
+            	{"first" : "Hadi",	"last" : "Hashem"},
+            	{"first" : "Daniel",	"last" : "Ranc"}
+         ],
+         
+         "editor": [ 
+            "Muhammad Younas","Irfan Awan","Joyce El Haddad"
+         ],
+         "editors": [
+         	
+            	{"first" : "Muhammad",	"last" : "Younas"},
+            	{"first" : "Irfan",	"last" : "Awan"},
+            	{"first" : "Joyce El",	"last" : "Haddad"}
+         ],
+         "pages": "51-56",
+         "ee" : "http://doi.ieeecomputersociety.org/10.1109/W-FiCloud.2016.26",
+         
+         "isbn" : "978-1-5090-3946-3",
+         
+         "bibtexKey": "conf/ficloud/HashemR16"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/2598c8d4ffcb644dbcf4bd6e4fe94c202/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "598c8d4ffcb644dbcf4bd6e4fe94c202",
+         "interHash" : "01c6558361fce652efd79e23cda2f0f3",
+         "label" : "Data Modeling for NoSQL Document-Oriented Databases.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2019-05-28 00:00:00",
+         "changeDate" : "2019-05-29 12:13:22",
+         "count" : 1,
+         "pub-type": "inproceedings",
+         "booktitle": "SIMBig","series": "CEUR Workshop Proceedings","publisher":"CEUR-WS.org",
+         "year": "2015", 
+         "url": "http://dblp.uni-trier.de/db/conf/simbig/simbig2015.html#OliveraHGHB15", 
+         
+         "author": [ 
+            "Harley Vera Olivera","Maristela Holanda","Valeria Guimarâes","Fernanda Hondo","Wagner Boaventura"
+         ],
+         "authors": [
+         	
+            	{"first" : "Harley Vera",	"last" : "Olivera"},
+            	{"first" : "Maristela",	"last" : "Holanda"},
+            	{"first" : "Valeria",	"last" : "Guimarâes"},
+            	{"first" : "Fernanda",	"last" : "Hondo"},
+            	{"first" : "Wagner",	"last" : "Boaventura"}
+         ],
+         
+         "editor": [ 
+            "Juan Antonio Lossio-Ventura","Hugo Alatrista-Salas"
+         ],
+         "editors": [
+         	
+            	{"first" : "Juan Antonio",	"last" : "Lossio-Ventura"},
+            	{"first" : "Hugo",	"last" : "Alatrista-Salas"}
+         ],
+         "volume": "1478","pages": "129-135",
+         "ee" : "http://ceur-ws.org/Vol-1478/paper17.pdf",
+         
+         "bibtexKey": "conf/simbig/OliveraHGHB15"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/27dd1d2ab692d85e2edc25fca4368afee/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "7dd1d2ab692d85e2edc25fca4368afee",
+         "interHash" : "3ee8df617f7022c4f10b615c0b06301a",
+         "label" : "Cleager: Eager Schema Evolution in NoSQL Document Stores.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2018-04-16 00:00:00",
+         "changeDate" : "2018-04-17 11:41:13",
+         "count" : 1,
+         "pub-type": "inproceedings",
+         "booktitle": "BTW","series": "LNI","publisher":"GI",
+         "year": "2015", 
+         "url": "http://dblp.uni-trier.de/db/conf/btw/btw2015.html#ScherzingerKS15", 
+         
+         "author": [ 
+            "Stefanie Scherzinger","Meike Klettke","Uta Störl"
+         ],
+         "authors": [
+         	
+            	{"first" : "Stefanie",	"last" : "Scherzinger"},
+            	{"first" : "Meike",	"last" : "Klettke"},
+            	{"first" : "Uta",	"last" : "Störl"}
+         ],
+         
+         "editor": [ 
+            "Thomas Seidl","Norbert Ritter","Harald Schöning","Kai-Uwe Sattler","Theo Härder","Steffen Friedrich","Wolfram Wingerath"
+         ],
+         "editors": [
+         	
+            	{"first" : "Thomas",	"last" : "Seidl"},
+            	{"first" : "Norbert",	"last" : "Ritter"},
+            	{"first" : "Harald",	"last" : "Schöning"},
+            	{"first" : "Kai-Uwe",	"last" : "Sattler"},
+            	{"first" : "Theo",	"last" : "Härder"},
+            	{"first" : "Steffen",	"last" : "Friedrich"},
+            	{"first" : "Wolfram",	"last" : "Wingerath"}
+         ],
+         "volume": "241","pages": "659-662",
+         "ee" : "https://dl.gi.de/20.500.12116/2440",
+         
+         "isbn" : "978-3-88579-635-0",
+         
+         "bibtexKey": "conf/btw/ScherzingerKS15"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/2804e3cf4f5f7f3f441f69ef30309df04/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "804e3cf4f5f7f3f441f69ef30309df04",
+         "interHash" : "8f2deba5f14761bd327021d84ab7f11a",
+         "label" : "Data Mining from NoSQL Document-Append Style Storages.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2015-08-20 00:00:00",
+         "changeDate" : "2015-08-21 11:41:44",
+         "count" : 1,
+         "pub-type": "inproceedings",
+         "booktitle": "ICWS","publisher":"IEEE Computer Society",
+         "year": "2014", 
+         "url": "http://dblp.uni-trier.de/db/conf/icws/icws2014.html#LomoteyD14", 
+         
+         "author": [ 
+            "Richard K. Lomotey","Ralph Deters"
+         ],
+         "authors": [
+         	
+            	{"first" : "Richard K.",	"last" : "Lomotey"},
+            	{"first" : "Ralph",	"last" : "Deters"}
+         ],
+         "pages": "385-392",
+         "ee" : "http://doi.ieeecomputersociety.org/10.1109/ICWS.2014.62",
+         
+         "isbn" : "978-1-4799-5054-6",
+         
+         "bibtexKey": "conf/icws/LomoteyD14"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/2be466b504951f724611e6be3de696385/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "be466b504951f724611e6be3de696385",
+         "interHash" : "748a000471f08e4914a5869c7426e219",
+         "label" : "Implementation of Multidimensional Databases with Document-Oriented NoSQL.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2017-06-15 00:00:00",
+         "changeDate" : "2019-05-15 20:20:25",
+         "count" : 1,
+         "pub-type": "inproceedings",
+         "booktitle": "DaWaK","series": "Lecture Notes in Computer Science","publisher":"Springer",
+         "year": "2015", 
+         "url": "http://dblp.uni-trier.de/db/conf/dawak/dawak2015.html#ChevalierMKTT15", 
+         
+         "author": [ 
+            "Max Chevalier","Mohammed El Malki","Arlind Kopliku","Olivier Teste","Ronan Tournier"
+         ],
+         "authors": [
+         	
+            	{"first" : "Max",	"last" : "Chevalier"},
+            	{"first" : "Mohammed El",	"last" : "Malki"},
+            	{"first" : "Arlind",	"last" : "Kopliku"},
+            	{"first" : "Olivier",	"last" : "Teste"},
+            	{"first" : "Ronan",	"last" : "Tournier"}
+         ],
+         
+         "editor": [ 
+            "Sanjay Madria","Takahiro Hara"
+         ],
+         "editors": [
+         	
+            	{"first" : "Sanjay",	"last" : "Madria"},
+            	{"first" : "Takahiro",	"last" : "Hara"}
+         ],
+         "volume": "9263","pages": "379-390",
+         "ee" : "https://doi.org/10.1007/978-3-319-22729-0_29",
+         
+         "isbn" : "978-3-319-22728-3",
+         
+         "bibtexKey": "conf/dawak/ChevalierMKTT15"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/272e86465292e8981e7bd974034406dfd/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "72e86465292e8981e7bd974034406dfd",
+         "interHash" : "f3fab872a5b3b4ab5fb7539021574b73",
+         "label" : "Document-oriented Models for Data Warehouses - NoSQL Document-oriented for Data Warehouses.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2016-08-09 00:00:00",
+         "changeDate" : "2016-08-10 11:42:42",
+         "count" : 1,
+         "pub-type": "inproceedings",
+         "booktitle": "ICEIS (1)","publisher":"SciTePress",
+         "year": "2016", 
+         "url": "http://dblp.uni-trier.de/db/conf/iceis/iceis2016-1.html#ChevalierMKTT16", 
+         
+         "author": [ 
+            "Max Chevalier","Mohammed El Malki","Arlind Kopliku","Olivier Teste","Ronan Tournier"
+         ],
+         "authors": [
+         	
+            	{"first" : "Max",	"last" : "Chevalier"},
+            	{"first" : "Mohammed El",	"last" : "Malki"},
+            	{"first" : "Arlind",	"last" : "Kopliku"},
+            	{"first" : "Olivier",	"last" : "Teste"},
+            	{"first" : "Ronan",	"last" : "Tournier"}
+         ],
+         
+         "editor": [ 
+            "Slimane Hammoudi","Leszek A. Maciaszek","Michele Missikoff","Olivier Camp","José Cordeiro"
+         ],
+         "editors": [
+         	
+            	{"first" : "Slimane",	"last" : "Hammoudi"},
+            	{"first" : "Leszek A.",	"last" : "Maciaszek"},
+            	{"first" : "Michele",	"last" : "Missikoff"},
+            	{"first" : "Olivier",	"last" : "Camp"},
+            	{"first" : "José",	"last" : "Cordeiro"}
+         ],
+         "pages": "142-149",
+         "ee" : "http://dx.doi.org/10.5220/0005830801420149",
+         
+         "isbn" : "978-989-758-187-8",
+         
+         "bibtexKey": "conf/iceis/ChevalierMKTT16"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/2faa4d2689807caf265c4d963c61c8fd3/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "faa4d2689807caf265c4d963c61c8fd3",
+         "interHash" : "a5bc55b73829903001d3a90db11a3f42",
+         "label" : "Defining a NoSQL Document Database of Accessible Transport Routes.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2018-04-11 00:00:00",
+         "changeDate" : "2018-04-12 11:45:01",
+         "count" : 1,
+         "pub-type": "inproceedings",
+         "booktitle": "iThings/GreenCom/CPSCom/SmartData","publisher":"IEEE Computer Society",
+         "year": "2017", 
+         "url": "http://dblp.uni-trier.de/db/conf/ithings/ithings2017.html#VelaBCSC17", 
+         
+         "author": [ 
+            "Belén Vela","José María Cavero Barca","Paloma Cáceres","Almudena Sierra-Alonso","Carlos E. Cuesta"
+         ],
+         "authors": [
+         	
+            	{"first" : "Belén",	"last" : "Vela"},
+            	{"first" : "José María Cavero",	"last" : "Barca"},
+            	{"first" : "Paloma",	"last" : "Cáceres"},
+            	{"first" : "Almudena",	"last" : "Sierra-Alonso"},
+            	{"first" : "Carlos E.",	"last" : "Cuesta"}
+         ],
+         
+         "editor": [ 
+            "Yulei Wu","Geyong Min","Nektarios Georgalas","Ahmed Al-Dubi","Xiaolong Jin","Laurence T. Yang","Jianhua Ma","Po Yang"
+         ],
+         "editors": [
+         	
+            	{"first" : "Yulei",	"last" : "Wu"},
+            	{"first" : "Geyong",	"last" : "Min"},
+            	{"first" : "Nektarios",	"last" : "Georgalas"},
+            	{"first" : "Ahmed",	"last" : "Al-Dubi"},
+            	{"first" : "Xiaolong",	"last" : "Jin"},
+            	{"first" : "Laurence T.",	"last" : "Yang"},
+            	{"first" : "Jianhua",	"last" : "Ma"},
+            	{"first" : "Po",	"last" : "Yang"}
+         ],
+         "pages": "1125-1129",
+         "ee" : "http://doi.ieeecomputersociety.org/10.1109/iThings-GreenCom-CPSCom-SmartData.2017.172",
+         
+         "isbn" : "978-1-5386-3066-2",
+         
+         "bibtexKey": "conf/ithings/VelaBCSC17"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/2672e1f064ae0872b7c0bd82b7c64c678/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "672e1f064ae0872b7c0bd82b7c64c678",
+         "interHash" : "a02eabf715bc8fa32efc35cf7fc5243d",
+         "label" : "Automatic schema suggestion model for NoSQL document-stores databases.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2019-03-11 00:00:00",
+         "changeDate" : "2019-03-12 11:39:06",
+         "count" : 1,
+         "pub-type": "article",
+         "journal": "J. Big Data",
+         "year": "2018", 
+         "url": "http://dblp.uni-trier.de/db/journals/jbd/jbd5.html#ImamBAWG18", 
+         
+         "author": [ 
+            "Abdullahi Abubakar Imam","Shuib B. Basri","Rohiza Ahmad","Junzu Watada","María Teresa González-Aparicio"
+         ],
+         "authors": [
+         	
+            	{"first" : "Abdullahi Abubakar",	"last" : "Imam"},
+            	{"first" : "Shuib B.",	"last" : "Basri"},
+            	{"first" : "Rohiza",	"last" : "Ahmad"},
+            	{"first" : "Junzu",	"last" : "Watada"},
+            	{"first" : "María Teresa",	"last" : "González-Aparicio"}
+         ],
+         "volume": "5","pages": "46",
+         "ee" : "https://doi.org/10.1186/s40537-018-0156-1",
+         
+         "bibtexKey": "journals/jbd/ImamBAWG18"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/2dcf15fd4dfbccb22c2364f720207ccd3/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "dcf15fd4dfbccb22c2364f720207ccd3",
+         "interHash" : "68b1edb2ee54afd69f01d68d33fb5849",
+         "label" : "Terms analytics service for CouchDB: a document-based NoSQL.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2015-06-23 00:00:00",
+         "changeDate" : "2015-06-24 11:33:23",
+         "count" : 1,
+         "pub-type": "article",
+         "journal": "IJBDI",
+         "year": "2015", 
+         "url": "http://dblp.uni-trier.de/db/journals/ijbdi/ijbdi2.html#LomoteyD15", 
+         
+         "author": [ 
+            "Richard K. Lomotey","Ralph Deters"
+         ],
+         "authors": [
+         	
+            	{"first" : "Richard K.",	"last" : "Lomotey"},
+            	{"first" : "Ralph",	"last" : "Deters"}
+         ],
+         "volume": "2","number": "1","pages": "23-36",
+         "ee" : "http://dx.doi.org/10.1504/IJBDI.2015.067567",
+         
+         "bibtexKey": "journals/ijbdi/LomoteyD15"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/209cf5be819bc65215b0d1cf448336c4d/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "09cf5be819bc65215b0d1cf448336c4d",
+         "interHash" : "82f326af71f841f4c5f8e27e04a478ca",
+         "label" : "A data replication strategy for document-oriented NoSQL systems.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2019-02-25 00:00:00",
+         "changeDate" : "2019-02-26 11:37:19",
+         "count" : 1,
+         "pub-type": "article",
+         "journal": "IJGUC",
+         "year": "2019", 
+         "url": "http://dblp.uni-trier.de/db/journals/ijguc/ijguc10.html#TabetML19", 
+         
+         "author": [ 
+            "Khaoula Tabet","Riad Mokadem","Mohamed Ridda Laouar"
+         ],
+         "authors": [
+         	
+            	{"first" : "Khaoula",	"last" : "Tabet"},
+            	{"first" : "Riad",	"last" : "Mokadem"},
+            	{"first" : "Mohamed Ridda",	"last" : "Laouar"}
+         ],
+         "volume": "10","number": "1","pages": "53-62",
+         "ee" : "https://doi.org/10.1504/IJGUC.2019.097224",
+         
+         "bibtexKey": "journals/ijguc/TabetML19"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/22757b43f42d63b349b8071f3d38b118e/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "2757b43f42d63b349b8071f3d38b118e",
+         "interHash" : "52015bcf4c425e9a71fbe41d0f129cc5",
+         "label" : "NoSQL document store translation to data vault based EDW.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2019-05-29 00:00:00",
+         "changeDate" : "2019-05-30 11:59:43",
+         "count" : 1,
+         "pub-type": "inproceedings",
+         "booktitle": "MIPRO","publisher":"IEEE",
+         "year": "2018", 
+         "url": "http://dblp.uni-trier.de/db/conf/mipro/mipro2018.html#CernjekaJJ18", 
+         
+         "author": [ 
+            "Katerina Cernjeka","Danijela Jaksic","Vladan Jovanovic"
+         ],
+         "authors": [
+         	
+            	{"first" : "Katerina",	"last" : "Cernjeka"},
+            	{"first" : "Danijela",	"last" : "Jaksic"},
+            	{"first" : "Vladan",	"last" : "Jovanovic"}
+         ],
+         
+         "editor": [ 
+            "Karolj Skala","Marko Koricic","Tihana Galinac Grbac","Marina Cicin-Sain","Vlado Sruk","Slobodan Ribaric","Stjepan Gros","Boris Vrdoljak","Mladen Mauher","Edvard Tijan","Predrag Pale","Matej Janjic"
+         ],
+         "editors": [
+         	
+            	{"first" : "Karolj",	"last" : "Skala"},
+            	{"first" : "Marko",	"last" : "Koricic"},
+            	{"first" : "Tihana Galinac",	"last" : "Grbac"},
+            	{"first" : "Marina",	"last" : "Cicin-Sain"},
+            	{"first" : "Vlado",	"last" : "Sruk"},
+            	{"first" : "Slobodan",	"last" : "Ribaric"},
+            	{"first" : "Stjepan",	"last" : "Gros"},
+            	{"first" : "Boris",	"last" : "Vrdoljak"},
+            	{"first" : "Mladen",	"last" : "Mauher"},
+            	{"first" : "Edvard",	"last" : "Tijan"},
+            	{"first" : "Predrag",	"last" : "Pale"},
+            	{"first" : "Matej",	"last" : "Janjic"}
+         ],
+         "pages": "1197-1202",
+         "ee" : "https://doi.org/10.23919/MIPRO.2018.8400217",
+         
+         "isbn" : "978-953-233-095-3",
+         
+         "bibtexKey": "conf/mipro/CernjekaJJ18"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/2c12a2bcf7382f6fd04c8531a59e77a8b/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "c12a2bcf7382f6fd04c8531a59e77a8b",
+         "interHash" : "9dd55da882e7626e8d8e0981df21055a",
+         "label" : "Fine-Grained Access Control Within NoSQL Document-Oriented Datastores.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2019-06-02 00:00:00",
+         "changeDate" : "2019-06-04 12:21:15",
+         "count" : 1,
+         "pub-type": "article",
+         "journal": "Data Science and Engineering",
+         "year": "2016", 
+         "url": "http://dblp.uni-trier.de/db/journals/dase/dase1.html#ColomboF16", 
+         
+         "author": [ 
+            "Pietro Colombo","Elena Ferrari"
+         ],
+         "authors": [
+         	
+            	{"first" : "Pietro",	"last" : "Colombo"},
+            	{"first" : "Elena",	"last" : "Ferrari"}
+         ],
+         "volume": "1","number": "3","pages": "127-138",
+         "ee" : "https://www.wikidata.org/entity/Q59470113",
+         
+         "bibtexKey": "journals/dase/ColomboF16"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/21abddae9d45bc60b7f1dbc52b8c29ab9/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "1abddae9d45bc60b7f1dbc52b8c29ab9",
+         "interHash" : "9fe19530dfcb4952659b5e31cfb0cd40",
+         "label" : "Terms Mining in Document-Based NoSQL: Response to Unstructured Data.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2017-06-15 00:00:00",
+         "changeDate" : "2019-02-21 11:44:12",
+         "count" : 1,
+         "pub-type": "inproceedings",
+         "booktitle": "BigData Congress","publisher":"IEEE Computer Society",
+         "year": "2014", 
+         "url": "http://dblp.uni-trier.de/db/conf/bigdata/bigdata2014.html#LomoteyD14", 
+         
+         "author": [ 
+            "Richard K. Lomotey","Ralph Deters"
+         ],
+         "authors": [
+         	
+            	{"first" : "Richard K.",	"last" : "Lomotey"},
+            	{"first" : "Ralph",	"last" : "Deters"}
+         ],
+         "pages": "661-668",
+         "ee" : "https://doi.org/10.1109/BigData.Congress.2014.99",
+         
+         "isbn" : "978-1-4799-5057-7",
+         
+         "bibtexKey": "conf/bigdata/LomoteyD14"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/2fe1bf5eb35090fb6b020c098e59e8a78/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "fe1bf5eb35090fb6b020c098e59e8a78",
+         "interHash" : "58f49081b1debc85621cd5fe5af6d5ae",
+         "label" : "An Evaluation of Data Model for NoSQL Document-Based Databases.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2018-04-16 00:00:00",
+         "changeDate" : "2018-04-17 11:41:44",
+         "count" : 1,
+         "pub-type": "inproceedings",
+         "booktitle": "WorldCIST (1)","series": "Advances in Intelligent Systems and Computing","publisher":"Springer",
+         "year": "2018", 
+         "url": "http://dblp.uni-trier.de/db/conf/worldcist/worldcist2018-1.html#ReisGHVLR18", 
+         
+         "author": [ 
+            "Debora G. Reis","Fabio S. Gasparoni","Maristela Holanda","Márcio Victorino","Marcelo Ladeira","Edward de Oliveira Ribeiro"
+         ],
+         "authors": [
+         	
+            	{"first" : "Debora G.",	"last" : "Reis"},
+            	{"first" : "Fabio S.",	"last" : "Gasparoni"},
+            	{"first" : "Maristela",	"last" : "Holanda"},
+            	{"first" : "Márcio",	"last" : "Victorino"},
+            	{"first" : "Marcelo",	"last" : "Ladeira"},
+            	{"first" : "Edward",	"last" : "de Oliveira Ribeiro"}
+         ],
+         
+         "editor": [ 
+            "Álvaro Rocha","Hojjat Adeli","Luís Paulo Reis","Sandra Costanzo"
+         ],
+         "editors": [
+         	
+            	{"first" : "Álvaro",	"last" : "Rocha"},
+            	{"first" : "Hojjat",	"last" : "Adeli"},
+            	{"first" : "Luís Paulo",	"last" : "Reis"},
+            	{"first" : "Sandra",	"last" : "Costanzo"}
+         ],
+         "volume": "745","pages": "616-625",
+         "ee" : "https://doi.org/10.1007/978-3-319-77703-0_61",
+         
+         "isbn" : "978-3-319-77703-0",
+         
+         "bibtexKey": "conf/worldcist/ReisGHVLR18"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/212c6289f10dfa9fcd8e711b6e88a1288/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "12c6289f10dfa9fcd8e711b6e88a1288",
+         "interHash" : "731b04587ad046dc4b0293ed0eb73c57",
+         "label" : "Document-Oriented Data Schema for Relational Database Migration to NoSQL.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2018-05-11 00:00:00",
+         "changeDate" : "2019-03-20 11:37:46",
+         "count" : 1,
+         "pub-type": "inproceedings",
+         "booktitle": "Innovate-Data","publisher":"IEEE",
+         "year": "2017", 
+         "url": "http://dblp.uni-trier.de/db/conf/obd/innovate-data2017.html#HamoudaZ17", 
+         
+         "author": [ 
+            "Shady Hamouda","Zurinahni Zainol"
+         ],
+         "authors": [
+         	
+            	{"first" : "Shady",	"last" : "Hamouda"},
+            	{"first" : "Zurinahni",	"last" : "Zainol"}
+         ],
+         
+         "editor": [ 
+            "Muhammad Younas","Irfan Awan","Irena Holubová"
+         ],
+         "editors": [
+         	
+            	{"first" : "Muhammad",	"last" : "Younas"},
+            	{"first" : "Irfan",	"last" : "Awan"},
+            	{"first" : "Irena",	"last" : "Holubová"}
+         ],
+         "pages": "43-50",
+         "ee" : "http://doi.ieeecomputersociety.org/10.1109/Innovate-Data.2017.13",
+         
+         "isbn" : "978-1-5386-0960-6",
+         
+         "bibtexKey": "conf/obd/HamoudaZ17"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/2099f2b749f95c7585320012d19c40c06/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "099f2b749f95c7585320012d19c40c06",
+         "interHash" : "1953e154800903661c9b914963e90891",
+         "label" : "Schema-independent querying for heterogeneous collections in NoSQL document stores.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2019-08-21 00:00:00",
+         "changeDate" : "2019-08-22 11:40:51",
+         "count" : 1,
+         "pub-type": "article",
+         "journal": "Inf. Syst.",
+         "year": "2019", 
+         "url": "http://dblp.uni-trier.de/db/journals/is/is85.html#HamadouGPT19", 
+         
+         "author": [ 
+            "Hamdi Ben Hamadou","Faïza Ghozzi","André Péninou","Olivier Teste"
+         ],
+         "authors": [
+         	
+            	{"first" : "Hamdi Ben",	"last" : "Hamadou"},
+            	{"first" : "Faïza",	"last" : "Ghozzi"},
+            	{"first" : "André",	"last" : "Péninou"},
+            	{"first" : "Olivier",	"last" : "Teste"}
+         ],
+         "volume": "85","pages": "48-67",
+         "ee" : "https://doi.org/10.1016/j.is.2019.04.005",
+         
+         "bibtexKey": "journals/is/HamadouGPT19"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/261ef1dabd620a7a7f17b763b22c364de/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "61ef1dabd620a7a7f17b763b22c364de",
+         "interHash" : "db35a15afcd061ecd543e3940f7c0260",
+         "label" : "On proposing and evaluating a NoSQL document database logical approach.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2016-12-07 00:00:00",
+         "changeDate" : "2016-12-08 11:34:29",
+         "count" : 1,
+         "pub-type": "article",
+         "journal": "IJWIS",
+         "year": "2016", 
+         "url": "http://dblp.uni-trier.de/db/journals/ijwis/ijwis12.html#LimaM16", 
+         
+         "author": [ 
+            "Claudio de Lima","Ronaldo dos Santos Mello"
+         ],
+         "authors": [
+         	
+            	{"first" : "Claudio",	"last" : "de Lima"},
+            	{"first" : "Ronaldo",	"last" : "dos Santos Mello"}
+         ],
+         "volume": "12","number": "4","pages": "398-417",
+         "ee" : "http://dx.doi.org/10.1108/IJWIS-04-2016-0018",
+         
+         "bibtexKey": "journals/ijwis/LimaM16"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/2d8e08dc8e0843357a5df123da5d71dae/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "d8e08dc8e0843357a5df123da5d71dae",
+         "interHash" : "f26b78a5688c32583ae680dcf8f516e9",
+         "label" : "A workload-driven logical design approach for NoSQL document databases.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2018-11-06 00:00:00",
+         "changeDate" : "2018-11-07 16:29:15",
+         "count" : 1,
+         "pub-type": "inproceedings",
+         "booktitle": "iiWAS","publisher":"ACM",
+         "year": "2015", 
+         "url": "http://dblp.uni-trier.de/db/conf/iiwas/iiwas2015.html#LimaM15", 
+         
+         "author": [ 
+            "Claudio de Lima","Ronaldo dos Santos Mello"
+         ],
+         "authors": [
+         	
+            	{"first" : "Claudio",	"last" : "de Lima"},
+            	{"first" : "Ronaldo",	"last" : "dos Santos Mello"}
+         ],
+         
+         "editor": [ 
+            "Gabriele Anderst-Kotsis","Maria Indrawan-Santiago"
+         ],
+         "editors": [
+         	
+            	{"first" : "Gabriele",	"last" : "Anderst-Kotsis"},
+            	{"first" : "Maria",	"last" : "Indrawan-Santiago"}
+         ],
+         "pages": "73:1-73:10",
+         "ee" : "https://doi.org/10.1145/2837185.2837218",
+         
+         "isbn" : "978-1-4503-3491-4",
+         
+         "bibtexKey": "conf/iiwas/LimaM15"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/2b481c7ef1d5e0d36b2088960cabed70a/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "b481c7ef1d5e0d36b2088960cabed70a",
+         "interHash" : "c204c673c8fbb958eb2ae142abf08628",
+         "label" : "Ontology Based Data Integration Over Document and Column Family Oriented NOSQL.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2018-08-13 00:00:00",
+         "changeDate" : "2018-08-14 15:15:00",
+         "count" : 1,
+         "pub-type": "article",
+         "journal": "CoRR",
+         "year": "2013", 
+         "url": "http://dblp.uni-trier.de/db/journals/corr/corr1307.html#CureLD13", 
+         
+         "author": [ 
+            "Olivier Curé","Myriam Lamolle","Chan Le Duc"
+         ],
+         "authors": [
+         	
+            	{"first" : "Olivier",	"last" : "Curé"},
+            	{"first" : "Myriam",	"last" : "Lamolle"},
+            	{"first" : "Chan Le",	"last" : "Duc"}
+         ],
+         "volume": "abs/1307.2603",
+         "ee" : "http://arxiv.org/abs/1307.2603",
+         
+         "bibtexKey": "journals/corr/CureLD13"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/2b178047ac5dd69bdba687f1aff838535/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "b178047ac5dd69bdba687f1aff838535",
+         "interHash" : "631a112d410d26a0db7f4594bb6510bc",
+         "label" : "NoSQL: collection document and cloud by using a dynamic web query form.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2016-07-11 00:00:00",
+         "changeDate" : "2016-07-12 11:52:06",
+         "count" : 1,
+         "pub-type": "inproceedings",
+         "booktitle": "ICDIP","series": "SPIE Proceedings","publisher":"SPIE",
+         "year": "2015", 
+         "url": "http://dblp.uni-trier.de/db/conf/icdip/icdip2015.html#AbdallaLL15", 
+         
+         "author": [ 
+            "Hemn B. Abdalla","Jinzhao Lin","Guoquan Li"
+         ],
+         "authors": [
+         	
+            	{"first" : "Hemn B.",	"last" : "Abdalla"},
+            	{"first" : "Jinzhao",	"last" : "Lin"},
+            	{"first" : "Guoquan",	"last" : "Li"}
+         ],
+         
+         "editor": [ 
+            "Charles M. Falco","Xudong Jiang"
+         ],
+         "editors": [
+         	
+            	{"first" : "Charles M.",	"last" : "Falco"},
+            	{"first" : "Xudong",	"last" : "Jiang"}
+         ],
+         "volume": "9631","pages": "96312D",
+         "ee" : "http://dx.doi.org/10.1117/12.2197093",
+         
+         "isbn" : "978-1-6284-1829-3",
+         
+         "bibtexKey": "conf/icdip/AbdallaLL15"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/2bcf5ca413639a8abedde718aa9dfa017/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "bcf5ca413639a8abedde718aa9dfa017",
+         "interHash" : "cddc0a8be8f265be98f7702f33d3cf9f",
+         "label" : "DB-SECaaS: a cloud-based protection system for document-oriented NoSQL databases.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2019-06-02 00:00:00",
+         "changeDate" : "2019-06-04 12:23:45",
+         "count" : 1,
+         "pub-type": "article",
+         "journal": "EURASIP J. Information Security",
+         "year": "2016", 
+         "url": "http://dblp.uni-trier.de/db/journals/ejisec/ejisec2016.html#GhaziMRSH16", 
+         
+         "author": [ 
+            "Yumna Ghazi","Rahat Masood","Abid Rauf","Muhammad Awais Shibli","Osman Hassan"
+         ],
+         "authors": [
+         	
+            	{"first" : "Yumna",	"last" : "Ghazi"},
+            	{"first" : "Rahat",	"last" : "Masood"},
+            	{"first" : "Abid",	"last" : "Rauf"},
+            	{"first" : "Muhammad Awais",	"last" : "Shibli"},
+            	{"first" : "Osman",	"last" : "Hassan"}
+         ],
+         "volume": "2016","pages": "16",
+         "ee" : "https://www.wikidata.org/entity/Q59465235",
+         
+         "bibtexKey": "journals/ejisec/GhaziMRSH16"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/2d3abd4322df5ce77cbbb2a0d0b56517d/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "d3abd4322df5ce77cbbb2a0d0b56517d",
+         "interHash" : "5789925cc87f09f94aaf7ddf68c1244c",
+         "label" : "MDA Process to Extract the Data Model from Document-oriented NoSQL Database.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2019-06-05 00:00:00",
+         "changeDate" : "2019-06-06 11:38:36",
+         "count" : 1,
+         "pub-type": "inproceedings",
+         "booktitle": "ICEIS (1)","publisher":"SciTePress",
+         "year": "2019", 
+         "url": "http://dblp.uni-trier.de/db/conf/iceis/iceis2019-1.html#BrahimFZ19", 
+         
+         "author": [ 
+            "Amal Ait Brahim","Rabah Tighilt Ferhat","Gilles Zurfluh"
+         ],
+         "authors": [
+         	
+            	{"first" : "Amal Ait",	"last" : "Brahim"},
+            	{"first" : "Rabah Tighilt",	"last" : "Ferhat"},
+            	{"first" : "Gilles",	"last" : "Zurfluh"}
+         ],
+         
+         "editor": [ 
+            "Joaquim Filipe","Michal Smialek","Alexander Brodsky","Slimane Hammoudi"
+         ],
+         "editors": [
+         	
+            	{"first" : "Joaquim",	"last" : "Filipe"},
+            	{"first" : "Michal",	"last" : "Smialek"},
+            	{"first" : "Alexander",	"last" : "Brodsky"},
+            	{"first" : "Slimane",	"last" : "Hammoudi"}
+         ],
+         "pages": "141-148",
+         "ee" : "https://doi.org/10.5220/0007676201410148",
+         
+         "isbn" : "978-989-758-372-8",
+         
+         "bibtexKey": "conf/iceis/BrahimFZ19"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/2a9d69d3839343b4597de58bb99145b26/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "a9d69d3839343b4597de58bb99145b26",
+         "interHash" : "a2ccde5df17efaacf51c935a566b286b",
+         "label" : "Schema-Independent Querying and Manipulation for Heterogeneous Collections in NoSQL Document Stores.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2019-07-31 00:00:00",
+         "changeDate" : "2019-08-01 11:36:49",
+         "count" : 1,
+         "pub-type": "inproceedings",
+         "booktitle": "ICEIS (Revised Selected Papers)","series": "Lecture Notes in Business Information Processing","publisher":"Springer",
+         "year": "2018", 
+         "url": "http://dblp.uni-trier.de/db/conf/iceis/iceis2018sp.html#HamadouGPT18a", 
+         
+         "author": [ 
+            "Hamdi Ben Hamadou","Faïza Ghozzi","André Péninou","Olivier Teste"
+         ],
+         "authors": [
+         	
+            	{"first" : "Hamdi Ben",	"last" : "Hamadou"},
+            	{"first" : "Faïza",	"last" : "Ghozzi"},
+            	{"first" : "André",	"last" : "Péninou"},
+            	{"first" : "Olivier",	"last" : "Teste"}
+         ],
+         
+         "editor": [ 
+            "Slimane Hammoudi","Michal Smialek","Olivier Camp","Joaquim Filipe"
+         ],
+         "editors": [
+         	
+            	{"first" : "Slimane",	"last" : "Hammoudi"},
+            	{"first" : "Michal",	"last" : "Smialek"},
+            	{"first" : "Olivier",	"last" : "Camp"},
+            	{"first" : "Joaquim",	"last" : "Filipe"}
+         ],
+         "volume": "363","pages": "324-349",
+         "ee" : "https://doi.org/10.1007/978-3-030-26169-6_16",
+         
+         "isbn" : "978-3-030-26169-6",
+         
+         "bibtexKey": "conf/iceis/HamadouGPT18a"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/2d841c90514c28bd80fcfae738abc45a4/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "d841c90514c28bd80fcfae738abc45a4",
+         "interHash" : "e9329d1f72fe7f252e64f684c347ff31",
+         "label" : "A study of genomic data provenance in NoSQL document-oriented database systems.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2018-11-02 00:00:00",
+         "changeDate" : "2018-11-03 17:16:24",
+         "count" : 1,
+         "pub-type": "inproceedings",
+         "booktitle": "BIBM","publisher":"IEEE Computer Society",
+         "year": "2015", 
+         "url": "http://dblp.uni-trier.de/db/conf/bibm/bibm2015.html#GuimaraesHAOHAW15", 
+         
+         "author": [ 
+            "Valeria Guimarâes","Fernanda Hondo","Rodrigo F. Almeida","Harley Vera Olivera","Maristela Holanda","Aletéia P. F. Araújo","Maria Emilia Telles Walter","Sérgio Lifschitz"
+         ],
+         "authors": [
+         	
+            	{"first" : "Valeria",	"last" : "Guimarâes"},
+            	{"first" : "Fernanda",	"last" : "Hondo"},
+            	{"first" : "Rodrigo F.",	"last" : "Almeida"},
+            	{"first" : "Harley Vera",	"last" : "Olivera"},
+            	{"first" : "Maristela",	"last" : "Holanda"},
+            	{"first" : "Aletéia P. F.",	"last" : "Araújo"},
+            	{"first" : "Maria Emilia Telles",	"last" : "Walter"},
+            	{"first" : "Sérgio",	"last" : "Lifschitz"}
+         ],
+         
+         "editor": [ 
+            "Jun Huan","Satoru Miyano","Amarda Shehu","Xiaohua Tony Hu","Bin Ma","Sanguthevar Rajasekaran","Vijay K. Gombar","Matthieu-P. Schapranow","Illhoi Yoo","Jiayu Zhou","Brian Chen","Vinay Pai","Brian G. Pierce"
+         ],
+         "editors": [
+         	
+            	{"first" : "Jun",	"last" : "Huan"},
+            	{"first" : "Satoru",	"last" : "Miyano"},
+            	{"first" : "Amarda",	"last" : "Shehu"},
+            	{"first" : "Xiaohua Tony",	"last" : "Hu"},
+            	{"first" : "Bin",	"last" : "Ma"},
+            	{"first" : "Sanguthevar",	"last" : "Rajasekaran"},
+            	{"first" : "Vijay K.",	"last" : "Gombar"},
+            	{"first" : "Matthieu-P.",	"last" : "Schapranow"},
+            	{"first" : "Illhoi",	"last" : "Yoo"},
+            	{"first" : "Jiayu",	"last" : "Zhou"},
+            	{"first" : "Brian",	"last" : "Chen"},
+            	{"first" : "Vinay",	"last" : "Pai"},
+            	{"first" : "Brian G.",	"last" : "Pierce"}
+         ],
+         "pages": "1525-1531",
+         "ee" : "http://doi.ieeecomputersociety.org/10.1109/BIBM.2015.7359902",
+         
+         "isbn" : "978-1-4673-6799-8",
+         
+         "bibtexKey": "conf/bibm/GuimaraesHAOHAW15"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/2a94954d61b1c612f9fbb104b993feaf0/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "a94954d61b1c612f9fbb104b993feaf0",
+         "interHash" : "d51b3fd67af8dc82218e5b4f3f6972a8",
+         "label" : "On Providing DDL Support for a Relational Layer over a Document NoSQL Database.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2018-11-06 00:00:00",
+         "changeDate" : "2018-11-07 16:29:24",
+         "count" : 1,
+         "pub-type": "inproceedings",
+         "booktitle": "iiWAS","publisher":"ACM",
+         "year": "2013", 
+         "url": "http://dblp.uni-trier.de/db/conf/iiwas/iiwas2013.html#FerreiraCM13", 
+         
+         "author": [ 
+            "Gabriel dos Santos Ferreira","Andre Calil","Ronaldo dos Santos Mello"
+         ],
+         "authors": [
+         	
+            	{"first" : "Gabriel",	"last" : "dos Santos Ferreira"},
+            	{"first" : "Andre",	"last" : "Calil"},
+            	{"first" : "Ronaldo",	"last" : "dos Santos Mello"}
+         ],
+         
+         "editor": [ 
+            "Edgar R. Weippl","Maria Indrawan-Santiago","Matthias Steinbauer","Gabriele Kotsis","Ismail Khalil"
+         ],
+         "editors": [
+         	
+            	{"first" : "Edgar R.",	"last" : "Weippl"},
+            	{"first" : "Maria",	"last" : "Indrawan-Santiago"},
+            	{"first" : "Matthias",	"last" : "Steinbauer"},
+            	{"first" : "Gabriele",	"last" : "Kotsis"},
+            	{"first" : "Ismail",	"last" : "Khalil"}
+         ],
+         "pages": "125",
+         "ee" : "https://doi.org/10.1145/2539150.2539196",
+         
+         "isbn" : "978-1-4503-2113-6",
+         
+         "bibtexKey": "conf/iiwas/FerreiraCM13"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/2777d6871b137f19a95a2d01ec7c1c5f6/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "777d6871b137f19a95a2d01ec7c1c5f6",
+         "interHash" : "6e257ebe047e82c86ed86ac0c4007214",
+         "label" : "A Case Study of the Aggregation Query Model in Read-Mostly NoSQL Document Stores.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2018-11-06 00:00:00",
+         "changeDate" : "2018-11-07 12:58:13",
+         "count" : 1,
+         "pub-type": "inproceedings",
+         "booktitle": "IDEAS","publisher":"ACM",
+         "year": "2016", 
+         "url": "http://dblp.uni-trier.de/db/conf/ideas/ideas2016.html#PasqualinSBAFW16", 
+         
+         "author": [ 
+            "Diego Pasqualin","Giovanni Souza","Eduardo Luis Buratti","Eduardo Cunha de Almeida","Marcos Didonet Del Fabro","Daniel Weingaertner"
+         ],
+         "authors": [
+         	
+            	{"first" : "Diego",	"last" : "Pasqualin"},
+            	{"first" : "Giovanni",	"last" : "Souza"},
+            	{"first" : "Eduardo Luis",	"last" : "Buratti"},
+            	{"first" : "Eduardo Cunha",	"last" : "de Almeida"},
+            	{"first" : "Marcos Didonet Del",	"last" : "Fabro"},
+            	{"first" : "Daniel",	"last" : "Weingaertner"}
+         ],
+         
+         "editor": [ 
+            "Evan Desai","Bipin C. Desai","Motomichi Toyama","Jorge Bernardino"
+         ],
+         "editors": [
+         	
+            	{"first" : "Evan",	"last" : "Desai"},
+            	{"first" : "Bipin C.",	"last" : "Desai"},
+            	{"first" : "Motomichi",	"last" : "Toyama"},
+            	{"first" : "Jorge",	"last" : "Bernardino"}
+         ],
+         "pages": "224-229",
+         "ee" : "https://doi.org/10.1145/2938503.2938546",
+         
+         "isbn" : "978-1-4503-4118-9",
+         
+         "bibtexKey": "conf/ideas/PasqualinSBAFW16"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/2ffdd4dec5535c6e4fe2e6a785b162e19/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "ffdd4dec5535c6e4fe2e6a785b162e19",
+         "interHash" : "4fe34e3ee0605d9a8a5a54bda11350ee",
+         "label" : "Testing data-centric services using poor quality data: from relational to NoSQL document databases.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2019-06-02 00:00:00",
+         "changeDate" : "2019-06-04 12:41:12",
+         "count" : 1,
+         "pub-type": "article",
+         "journal": "J. Braz. Comp. Soc.",
+         "year": "2017", 
+         "url": "http://dblp.uni-trier.de/db/journals/jbcs/jbcs23.html#LaranjeiroSIB17", 
+         
+         "author": [ 
+            "Nuno Laranjeiro","Seyma Nur Soydemir","Naghmeh Ivaki","Jorge Bernardino"
+         ],
+         "authors": [
+         	
+            	{"first" : "Nuno",	"last" : "Laranjeiro"},
+            	{"first" : "Seyma Nur",	"last" : "Soydemir"},
+            	{"first" : "Naghmeh",	"last" : "Ivaki"},
+            	{"first" : "Jorge",	"last" : "Bernardino"}
+         ],
+         "volume": "23","number": "1","pages": "14:1-14:14",
+         "ee" : "https://www.wikidata.org/entity/Q59516187",
+         
+         "bibtexKey": "journals/jbcs/LaranjeiroSIB17"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/2c058e0b2fe52e65ef72dc56cd916751c/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "c058e0b2fe52e65ef72dc56cd916751c",
+         "interHash" : "ad8e7cf54e3b610ac10a779fa2dea51d",
+         "label" : "A similarity query system for road traffic data based on a NoSQL document store.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2017-03-16 00:00:00",
+         "changeDate" : "2017-03-17 11:35:05",
+         "count" : 1,
+         "pub-type": "article",
+         "journal": "Journal of Systems and Software",
+         "year": "2017", 
+         "url": "http://dblp.uni-trier.de/db/journals/jss/jss127.html#DamaiyantiIICK17", 
+         
+         "author": [ 
+            "Titus Irma Damaiyanti","Ardi Imawan","Fitri Indra Indikawati","Yoon-Ho Choi","Joonho Kwon"
+         ],
+         "authors": [
+         	
+            	{"first" : "Titus Irma",	"last" : "Damaiyanti"},
+            	{"first" : "Ardi",	"last" : "Imawan"},
+            	{"first" : "Fitri Indra",	"last" : "Indikawati"},
+            	{"first" : "Yoon-Ho",	"last" : "Choi"},
+            	{"first" : "Joonho",	"last" : "Kwon"}
+         ],
+         "volume": "127","pages": "28-51",
+         "ee" : "http://dx.doi.org/10.1016/j.jss.2017.01.016",
+         
+         "bibtexKey": "journals/jss/DamaiyantiIICK17"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/2914e42729f5572be37e97475c9a918e5/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "914e42729f5572be37e97475c9a918e5",
+         "interHash" : "b140e43c382ab58451ab36e58b7a3160",
+         "label" : "Forensic investigation framework for the document store NoSQL DBMS: MongoDB as a case study.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2016-07-11 00:00:00",
+         "changeDate" : "2016-07-12 11:46:52",
+         "count" : 1,
+         "pub-type": "article",
+         "journal": "Digital Investigation",
+         "year": "2016", 
+         "url": "http://dblp.uni-trier.de/db/journals/di/di17.html#YoonJKL16", 
+         
+         "author": [ 
+            "Jongseong Yoon","Doowon Jeong","Chulhoon Kang","Sangjin Lee"
+         ],
+         "authors": [
+         	
+            	{"first" : "Jongseong",	"last" : "Yoon"},
+            	{"first" : "Doowon",	"last" : "Jeong"},
+            	{"first" : "Chulhoon",	"last" : "Kang"},
+            	{"first" : "Sangjin",	"last" : "Lee"}
+         ],
+         "volume": "17","pages": "53-65",
+         "ee" : "http://dx.doi.org/10.1016/j.diin.2016.03.003",
+         
+         "bibtexKey": "journals/di/YoonJKL16"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/2624178d41c4d5a6d0967c0a2045a69af/lepsky",         
+         "tags" : [
+            "datenformate"
+         ],
+         
+         "intraHash" : "624178d41c4d5a6d0967c0a2045a69af",
+         "interHash" : "b57d2e247a04f3d53f766546a69533c0",
+         "label" : "Unstructured data, NoSQL, and terms analytics",
+         "user" : "lepsky",
+         "description" : "",
+         "date" : "2018-11-04 16:50:10",
+         "changeDate" : "2018-11-04 16:50:10",
+         "count" : 1,
+         "pub-type": "incollection",
+         "booktitle": "Big Data Applications and Use Cases","series": "International Series on Computer Entertainment and Media Technology","publisher":"Springer International Publishing",
+         "year": "2016", 
+         "url": "http://link.springer.com/chapter/10.1007/978-3-319-30146-4_6", 
+         
+         "author": [ 
+            "Richard K. Lomotey","Ralph Deters"
+         ],
+         "authors": [
+         	
+            	{"first" : "Richard K.",	"last" : "Lomotey"},
+            	{"first" : "Ralph",	"last" : "Deters"}
+         ],
+         
+         "editor": [ 
+            "Patrick C. K. Hung"
+         ],
+         "editors": [
+         	
+            	{"first" : "Patrick C. K.",	"last" : "Hung"}
+         ],
+         "pages": "109--143","abstract": "Today\u2019s high-dimensional data, which is mostly unstructured, makes data patterns discovery (a.k.a. data mining) challenging and difficult for services engineers. Unstructured data mining deviates from existing information extraction methodologies that have been previously put forward due to the fact that recent data formation and storage has no standard schema; and the data is heterogeneous. At the storage level, the NoSQL database has been proposed as a preferred technology to accommodate the high-dimensional data, and the technology has received significant enterprise adoption. At the technology level, the query style of NoSQL databases differ from schema-based storages such as the RDBMS. Currently, there is lack of tools, technologies, and methodologies that can aid the community to support data patterns discovery in the big data epoch. Previously, an Analytics-as-a-Service (AaaS) framework is proposed for terms mining in document-based NoSQL systems. In this chapter, we provide comprehensive views about the performance of several algorithms that have been employed to achieve the topics and terms mining tasks. This chapter is a reproduction of several proposed algorithms which can enable the software engineering community to realize what has been done regarding the enhancement of accuracy of terms mining form document-based NoSQL systems.",
+         "copyright" : "©2016 Springer International Publishing Switzerland",
+         
+         "isbn" : "978-3-319-30144-0 978-3-319-30146-4",
+         
+         "language" : "en",
+         
+         "urldate" : "2016-05-28",
+         
+         "doi" : "10.1007/978-3-319-30146-4_6",
+         
+         "bibtexKey": "lomotey_unstructured_2016"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/21a66ffe28d660ef5dbf74c0ef6993c59/mbruschi",         
+         "tags" : [
+            "webbackend","sql","nosql"
+         ],
+         
+         "intraHash" : "1a66ffe28d660ef5dbf74c0ef6993c59",
+         "interHash" : "835f764ac78c2a485d35bd93ee231327",
+         "label" : "Can the Elephants Handle the NoSQL Onslaught?",
+         "user" : "mbruschi",
+         "description" : "Can the elephants handle the NoSQL onslaught?",
+         "date" : "2015-02-09 18:42:28",
+         "changeDate" : "2015-02-09 18:42:28",
+         "count" : 3,
+         "pub-type": "article",
+         "journal": "Proc. VLDB Endow.","publisher":"VLDB Endowment",
+         "year": "2012", 
+         "url": "http://dx.doi.org/10.14778/2367502.2367511", 
+         
+         "author": [ 
+            "Avrilia Floratou","Nikhil Teletia","David J. DeWitt","Jignesh M. Patel","Donghui Zhang"
+         ],
+         "authors": [
+         	
+            	{"first" : "Avrilia",	"last" : "Floratou"},
+            	{"first" : "Nikhil",	"last" : "Teletia"},
+            	{"first" : "David J.",	"last" : "DeWitt"},
+            	{"first" : "Jignesh M.",	"last" : "Patel"},
+            	{"first" : "Donghui",	"last" : "Zhang"}
+         ],
+         "volume": "5","number": "12","pages": "1712--1723","abstract": "In this new era of \"big data\", traditional DBMSs are under attack from two sides. At one end of the spectrum, the use of document store NoSQL systems (e.g. MongoDB) threatens to move modern Web 2.0 applications away from traditional RDBMSs. At the other end of the spectrum, big data DSS analytics that used to be the domain of parallel RDBMSs is now under attack by another class of NoSQL data analytics systems, such as Hive on Hadoop. So, are the traditional RDBMSs, aka \"big elephants\", doomed as they are challenged from both ends of this \"big data\" spectrum? In this paper, we compare one representative NoSQL system from each end of this spectrum with SQL Server, and analyze the performance and scalability aspects of each of these approaches (NoSQL vs. SQL) on two workloads (decision support analysis and interactive data-serving) that represent the two ends of the application spectrum. We present insights from this evaluation and speculate on potential trends for the future.",
+         "issn" : "2150-8097",
+         
+         "acmid" : "2367511",
+         
+         "numpages" : "12",
+         
+         "issue_date" : "August 2012",
+         
+         "doi" : "10.14778/2367502.2367511",
+         
+         "bibtexKey": "Floratou:2012:EHN:2367502.2367511"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/2780feede75223006ec7965a7ffbf6e2c/flint63",         
+         "tags" : [
+            "web","development","database","103","software","book","01841","application","shelf"
+         ],
+         
+         "intraHash" : "780feede75223006ec7965a7ffbf6e2c",
+         "interHash" : "f689ad43a638c75eee0e8cf247e9812f",
+         "label" : "NoSQL: Einstieg in die Welt nichtrelationaler Web 2.0 Datenbanken",
+         "user" : "flint63",
+         "description" : "1. Auflage 2010",
+         "date" : "2016-12-23 18:00:00",
+         "changeDate" : "2018-04-16 11:30:49",
+         "count" : 2,
+         "pub-type": "book",
+         "publisher":"Hanser","address":"München",
+         "year": "2011", 
+         "url": "", 
+         
+         "author": [ 
+            "Stefan Edlich","Achim Friedland","Jens Hampe","Benjamin Brauer","Markus Brückner"
+         ],
+         "authors": [
+         	
+            	{"first" : "Stefan",	"last" : "Edlich"},
+            	{"first" : "Achim",	"last" : "Friedland"},
+            	{"first" : "Jens",	"last" : "Hampe"},
+            	{"first" : "Benjamin",	"last" : "Brauer"},
+            	{"first" : "Markus",	"last" : "Brückner"}
+         ],
+         "abstract": "NoSQL-Datenbanken sind dabei, die Datenbankwelt zu revolutionieren. Laufend hört man von neuen NoSQL-Datenbanken, die sich jeweils für besondere Einsatzbereiche gut eignen. Dieses Buch hilft Datenbank- und Web-Entwicklern, den Überblick zu behalten und das richtige System für ihre Zwecke zu finden. Sie lernen die Konzepte von NoSQL-Systemen kennen, die sie von den klassischen relationalen Datenbanksystemen unterscheiden. Vorgestellt und erklärt werden die theoretischen Grundlagen Map/Reduce, CAP-Theorem/Eventually Consistent, Consistent Hashing, MVCC-Protokoll, Vector Clocks, Paxos und REST. Detailliert stellen die Autoren die wichtigsten Vertreter der vier großen NoSQL-Datenbanktypen Wide Column Stores, Document Stores, Key/Value-Datenbanken und Graphdatenbanken vor. Damit Sie die Systeme gut vergleichen können, werden alle nach dem gleichen Schema vorgestellt. Sie erfahren, wie die Systeme aufgesetzt und skaliert werden, welche Vor- und Nachteile sie haben und für welche Anwendungsgebiete Sie sie einsetzen können. So haben Sie eine gute Grundlage für die Entscheidung, welche Datenbank in Ihrem Fall am besten geeignet ist.",
+         "file" : "eBook:2011/EdlichFriedlandEtAl11.pdf:PDF;Hanser Product page:http\\://www.hanser.de/978-3-446-42753-2:URL;Amazon Search inside:http\\://www.amazon.de/gp/reader/3446427538/:URL",
+         
+         "isbn" : "978-3-446-42753-2",
+         
+         "groups" : "public",
+         
+         "intrahash" : "780feede75223006ec7965a7ffbf6e2c",
+         
+         "doi" : "10.3139/9783446428553",
+         
+         "timestamp" : "2011.10.01",
+         
+         "username" : "flint63",
+         
+         "bibtexKey": "EdlichFriedlandEtAl11"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/29dc5f915c80cbd8f9ed2be01931034d6/flrnb",         
+         "tags" : [
+            "database","nosql"
+         ],
+         
+         "intraHash" : "9dc5f915c80cbd8f9ed2be01931034d6",
+         "interHash" : "f689ad43a638c75eee0e8cf247e9812f",
+         "label" : "NoSQL - Einstieg in die Welt nichtrelationaler Web 2.0 Datenbanken",
+         "user" : "flrnb",
+         "description" : "",
+         "date" : "2012-12-14 14:37:11",
+         "changeDate" : "2012-12-14 14:37:11",
+         "count" : 2,
+         "pub-type": "book",
+         "publisher":"Hanser","address":"München",
+         "year": "2011", 
+         "url": "", 
+         
+         "author": [ 
+            "Stefan Edlich","Achim Friedland","Jens Hampe","Benjamin Brauer","Markus Brückner"
+         ],
+         "authors": [
+         	
+            	{"first" : "Stefan",	"last" : "Edlich"},
+            	{"first" : "Achim",	"last" : "Friedland"},
+            	{"first" : "Jens",	"last" : "Hampe"},
+            	{"first" : "Benjamin",	"last" : "Brauer"},
+            	{"first" : "Markus",	"last" : "Brückner"}
+         ],
+         "abstract": "NoSQL-Datenbanken sind dabei, die Datenbankwelt zu revolutionieren. Laufend hört man von neuen NoSQL-Datenbanken, die sich jeweils für besondere Einsatzbereiche gut eignen. Dieses Buch hilft Datenbank- und Web-Entwicklern, den überblick zu behalten und das richtige System für ihre Zwecke zu finden. Sie lernen die Konzepte von NoSQL-Systemen kennen, die sie von den klassischen relationalen Datenbanksystemen unterscheiden. Vorgestellt und erklärt werden die theoretischen Grundlagen Map/Reduce, CAP-Theorem/Eventually Consistent, Consistent Hashing, MVCC-Protokoll, Vector Clocks, Paxos und REST. Detailliert stellen die Autoren die wichtigsten Vertreter der vier großen NoSQL-Datenbanktypen Wide Column Stores, Document Stores, Key/Value-Datenbanken und Graphdatenbanken vor. Damit Sie die Systeme gut vergleichen können, werden alle nach dem gleichen Schema vorgestellt. Sie erfahren, wie die Systeme aufgesetzt und skaliert werden, welche Vor- und Nachteile sie haben und für welche Anwendungsgebiete Sie sie einsetzen können. So haben Sie eine gute Grundlage für die Entscheidung, welche Datenbank in Ihrem Fall am besten geeignet ist.",
+         "username" : "flint63",
+         
+         "file" : "Elektronische Version (Auflage 2010):2011/EdlichFriedlandEtAl11.pdf:PDF;Hanser Product page:http\\://www.hanser.de/buch.asp?isbn=978-3-446-42753-2:URL;Amazon Search inside:http\\://www.amazon.de/gp/reader/3446427538/:URL",
+         
+         "isbn" : "978-3-446-42753-2",
+         
+         "groups" : "public",
+         
+         "bibtexKey": "EdlichFriedlandEtAl11"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/223b97d1728f4c7e47f499d75d122232d/lepsky",         
+         "tags" : [
+            "big_data"
+         ],
+         
+         "intraHash" : "23b97d1728f4c7e47f499d75d122232d",
+         "interHash" : "9915d5b066f813193dc3445a147e5619",
+         "label" : "Big Data",
+         "user" : "lepsky",
+         "description" : "",
+         "date" : "2018-11-04 16:43:36",
+         "changeDate" : "2018-11-04 16:43:36",
+         "count" : 1,
+         "pub-type": "book",
+         "series": "Edition HMD","publisher":"Springer Fachmedien Wiesbaden","address":"Wiesbaden",
+         "year": "2016", 
+         "url": "http://link.springer.com/10.1007/978-3-658-11589-0", 
+         
+         "editor": [ 
+            "Daniel Fasel","Andreas Meier"
+         ],
+         "editors": [
+         	
+            	{"first" : "Daniel",	"last" : "Fasel"},
+            	{"first" : "Andreas",	"last" : "Meier"}
+         ],
+         "abstract": "Dieser Herausgeber-Band bietet eine umfassende Einführung in das Gebiet Big Data. Neben einer Markteinschätzung und grundlegenden Konzepten (semantische Modellbildung, Anfragesprachen, Konsistenzgewährung etc.) werden wichtige NoSQL-Systeme (Key/Value Store, Column Store, Document Store, Graph Database) vorgestellt und erfolgreiche Anwendungen aus unterschiedlichen Perspektiven erläutert. Eine Diskussion rechtlicher Aspekte und ein Vorschlag zum Berufsbild des Data Scientist runden das Buch ab. Damit erhält die Leserschaft Handlungsempfehlungen für die Nutzung von Big-Data-Technologien im Unternehmen.",
+         "file" : "big-data-2016.pdf:/Users/le/Jottacloud/papers/big-data-2016.pdf:application/pdf",
+         
+         "isbn" : "978-3-658-11588-3 978-3-658-11589-0",
+         
+         "urldate" : "2016-06-29",
+         
+         "bibtexKey": "fasel_big_2016"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/2873225ee5c206db88ed57941904e5457/calvanese",         
+         "tags" : [
+            "optique-project"
+         ],
+         
+         "intraHash" : "873225ee5c206db88ed57941904e5457",
+         "interHash" : "5ce168e86c93e9c02911006fb7b616f9",
+         "label" : "OBDA Over Non-Relational DBs",
+         "user" : "calvanese",
+         "description" : "",
+         "date" : "2016-11-02 04:00:58",
+         "changeDate" : "2016-11-02 04:02:37",
+         "count" : 1,
+         "pub-type": "inproceedings",
+         "booktitle": "Proceedings of the 10th Alberto Mendelzon International\n                  Workshop on Foundations of Data Management (AMW~2016)",
+         "year": "2016", 
+         "url": "", 
+         
+         "author": [ 
+            "Elena Botoeva","Diego Calvanese","Benjamin Cogrel","Martin Rezk","Guohui Xiao"
+         ],
+         "authors": [
+         	
+            	{"first" : "Elena",	"last" : "Botoeva"},
+            	{"first" : "Diego",	"last" : "Calvanese"},
+            	{"first" : "Benjamin",	"last" : "Cogrel"},
+            	{"first" : "Martin",	"last" : "Rezk"},
+            	{"first" : "Guohui",	"last" : "Xiao"}
+         ],
+         "abstract": "The database landscape has been significantly diversified\n                  during the last decade, resulting in the emergence of a\n                  variety of non-relational (also called NoSQL) databases,\n                  e.g., XML and JSON-document databases, key-value stores, and\n                  graph databases. To facilitate access to such databases and\n                  to enable data integration of non-relational data sources, we\n                  generalize the well-known ontology based data access (OBDA)\n                  framework so as to allow for querying arbitrary databases\n                  through a mediating ontology. We instantiate this framework\n                  to MongoDB, a popular JSON-document database, and implement a\n                  prototype extension of the virtual OBDA system Ontop for\n                  answering SPARQL queries over MongoDB.",
+         "audience" : "academic",
+         
+         "yearoptique" : "Y4",
+         
+         "partneroptique" : "FUB",
+         
+         "wpoptique" : "WP6",
+         
+         "bibtexKey": "2016-AMW-obda-mongo"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/266196d60dbe53531497b44aeb761137b/calvanese",         
+         "tags" : [
+            "optique-project"
+         ],
+         
+         "intraHash" : "66196d60dbe53531497b44aeb761137b",
+         "interHash" : "ab36720ed4bad93a85594c2dad26b7ba",
+         "label" : "OBDA Beyond Relational DBs: A Study for MongoDB",
+         "user" : "calvanese",
+         "description" : "",
+         "date" : "2016-11-02 04:00:58",
+         "changeDate" : "2016-11-02 04:02:37",
+         "count" : 2,
+         "pub-type": "inproceedings",
+         "booktitle": "Proceedings of the 29th International Workshop on Description\n                  Logics (DL~2016)","series": "CEUR Electronic Workshop Proceedings","publisher":"CEUR-WS.org",
+         "year": "2016", 
+         "url": "", 
+         
+         "author": [ 
+            "Elena Botoeva","Diego Calvanese","Benjamin Cogrel","Martin Rezk","Guohui Xiao"
+         ],
+         "authors": [
+         	
+            	{"first" : "Elena",	"last" : "Botoeva"},
+            	{"first" : "Diego",	"last" : "Calvanese"},
+            	{"first" : "Benjamin",	"last" : "Cogrel"},
+            	{"first" : "Martin",	"last" : "Rezk"},
+            	{"first" : "Guohui",	"last" : "Xiao"}
+         ],
+         "volume": "1577","abstract": "The database landscape has been significantly diversified\n                  during the last decade, resulting in the emergence of a\n                  variety of non-relational (also called NoSQL) databases,\n                  e.g., XML and JSON-document databases, key-value stores, and\n                  graph databases. To facilitate access to such databases and\n                  to enable data integration of non-relational data sources, we\n                  generalize the well-known ontology based data access (OBDA)\n                  framework so as to allow for querying arbitrary databases\n                  through a mediating ontology. We instantiate this framework\n                  to MongoDB, a popular JSON-document database, and implement\n                  an prototype extension of the virtual OBDA system Ontop for\n                  answering SPARQL queries over MongoDB.",
+         "audience" : "academic",
+         
+         "yearoptique" : "Y4",
+         
+         "partneroptique" : "FUB",
+         
+         "wpoptique" : "WP6",
+         
+         "bibtexKey": "2016-DL-obda-mongo"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/24d7bd181e26bee2213ba5913029b6c55/aksw",         
+         "tags" : [
+            "iis","sparqlmap","unbehauen","2016","group_aksw","leds","martin","es","peer-reviewed"
+         ],
+         
+         "intraHash" : "4d7bd181e26bee2213ba5913029b6c55",
+         "interHash" : "35a2072e84104338717489d5172b86cb",
+         "label" : "Executing SPARQL queries over Mapped Document Stores with SparqlMap-M",
+         "user" : "aksw",
+         "description" : "",
+         "date" : "2019-08-15 09:54:44",
+         "changeDate" : "2019-08-15 09:54:44",
+         "count" : 1,
+         "pub-type": "inproceedings",
+         "booktitle": "12th International Conference on Semantic Systems Proceedings (SEMANTiCS 2016)","series": "SEMANTiCS '16","address":"Leipzig, Germany",
+         "year": "2016", 
+         "url": "", 
+         
+         "author": [ 
+            "Jörg Unbehauen","Michael Martin"
+         ],
+         "authors": [
+         	
+            	{"first" : "Jörg",	"last" : "Unbehauen"},
+            	{"first" : "Michael",	"last" : "Martin"}
+         ],
+         "abstract": "With the increasing adoption of NoSQL data base systems like MongoDB or CouchDB more and more applications store structured data according to a non-relational, document oriented model. Exposing this structured data as Linked Data is currently inhibited by a lack of standards as well as tools and requires the implementation of custom solutions. While recent efforts aim at expressing transformations of such data models into RDF in a standardized manner, there is a lack of approaches which facilitate SPARQL execution over mapped non-relational data sources. With SparqlMap-M we show how dynamic SPARQL access to non-relational data can be achieved. SparqlMap-M is an extension to our SPARQL-to-SQL rewriter SparqlMap that performs a (partial) transformation of SPARQL queries by using a relational abstraction over a document store. Further, duplicate data in the document store is used to reduce the number of joins and custom optimizations are introduced. Our showcase scenario employs the Berlin SPARQL Benchmark (BSBM) with different adaptions to a document data model. We use this scenario to demonstrate the viability of our approach and compare it to different MongoDB setups and native SQL.",
+         "date-modified" : "2012-12-02 12:54:26 +0000",
+         
+         "bdsk-url-1" : "http://svn.aksw.org/papers/2012/SPARQLComponent/JIST_SparqlMap/public.pdf",
+         
+         "bibtexKey": "unbehauen-semantics-2016-sparqlmap-m"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/2b8b5fef4827fe975dec42d39d491b1b5/dblp",         
+         "tags" : [
+            "dblp"
+         ],
+         
+         "intraHash" : "b8b5fef4827fe975dec42d39d491b1b5",
+         "interHash" : "c1a6f72565e58c84de22d133f10d5ec1",
+         "label" : "(No)SQL Platform for Scalable Semantic Processing of Fast Growing Document Repositories.",
+         "user" : "dblp",
+         "description" : "",
+         "date" : "2019-05-22 00:00:00",
+         "changeDate" : "2019-05-23 11:38:05",
+         "count" : 1,
+         "pub-type": "article",
+         "journal": "ERCIM News",
+         "year": "2012", 
+         "url": "http://dblp.uni-trier.de/db/journals/ercim/ercim2012.html#SlezakSN12", 
+         
+         "author": [ 
+            "Dominik Slezak","Krzysztof Stencel","Hung Son Nguyen"
+         ],
+         "authors": [
+         	
+            	{"first" : "Dominik",	"last" : "Slezak"},
+            	{"first" : "Krzysztof",	"last" : "Stencel"},
+            	{"first" : "Hung Son",	"last" : "Nguyen"}
+         ],
+         "volume": "2012","number": "90",
+         "ee" : "http://ercim-news.ercim.eu/en90/ri/nosql-platform-for-scalable-semantic-processing-of-fast-growing-document-repositories",
+         
+         "bibtexKey": "journals/ercim/SlezakSN12"
+
+      }
+,
+      {
+         "type" : "Publication",
+         "id"   : "https://www.bibsonomy.org/bibtex/2be6d5afe0b704558870fe6023a4cb124/mbruschi",         
+         "tags" : [
+            "webbackend","nosql"
+         ],
+         
+         "intraHash" : "be6d5afe0b704558870fe6023a4cb124",
+         "interHash" : "a51cef7f23a209a2aa7deaddd93d4ca7",
+         "label" : "NoSQL Databases",
+         "user" : "mbruschi",
+         "description" : "NoSQL Databases - Springer",
+         "date" : "2015-02-09 11:11:26",
+         "changeDate" : "2015-02-09 11:11:26",
+         "count" : 1,
+         "pub-type": "incollection",
+         "booktitle": "Concise Guide to Databases","series": "Undergraduate Topics in Computer Science","publisher":"Springer London",
+         "year": "2013", 
+         "url": "http://dx.doi.org/10.1007/978-1-4471-5601-7_5", 
+         
+         "author": [ 
+            "Peter Lake","Paul Crowther"
+         ],
+         "authors": [
+         	
+            	{"first" : "Peter",	"last" : "Lake"},
+            	{"first" : "Paul",	"last" : "Crowther"}
+         ],
+         "pages": "97-134","abstract": "The NoSQL movement is still relatively new. Databases which store data without schemas and which do not necessarily provide transactional security may seem like a bad idea to experienced relational database practitioners, but these tools do certainly have their place in today\u2019s data rich society. We examine the area in general and then look at specific examples of a Column-based and a Document-based database, with hands-on tutorials for each, using Cassandra and MongoDB as examples. Today\u2019s sales battlegrounds are often based around Scalability and Performance. And it is precisely these two aspects that tend to be pushed by NoSQL tool providers as they claim their products outperform and out-scale traditional RDBMS. Naturally the traditional vendors are fighting back and making counter claims. Equally naturally the real position is somewhere between the two, with most answers starting with \u201CIt depends \u2026\u201D. So we look at the difference in philosophy between the transactional ACID databases and the No-SQL approach. The concept of \u201Ceventual consistency\u201D is explored. The concept of a schema-less database is discussed and then turned into reality with the tutorial material. And we then we review some of the strengths and weaknesses of these new approaches and examine the business case for a non-relational approach.",
+         "isbn" : "978-1-4471-5600-0",
+         
+         "language" : "English",
+         
+         "doi" : "10.1007/978-1-4471-5601-7_5",
+         
+         "bibtexKey": "noKey"
+
+      }
+	  
+   ]
+}
