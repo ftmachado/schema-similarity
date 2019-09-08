@@ -34,7 +34,8 @@ public class ListasDAO {
         List<List<ElementoBloco>> listaCamposConsolidados = new ArrayList<>();
         List<ElementoBloco> l;
         FileReader arq = new FileReader(arqCamposConsolidados);
-        Scanner scanner = new Scanner(arq).useDelimiter("\\n");
+        Scanner scanner = new Scanner(arq);
+        scanner.useDelimiter("\\n");
 
         while (scanner.hasNext()) {
             String temp = scanner.next();
@@ -74,8 +75,8 @@ public class ListasDAO {
         String arquivo = "src/main/artefatos-entrada/lista-referencias-1.csv";
         List<List<String>> listaReferencias = new ArrayList<>();
         List<String> l;
-        Scanner scanner = new Scanner(new FileReader(arquivo))
-                .useDelimiter("\\n");
+        Scanner scanner = new Scanner(new FileReader(arquivo));
+        scanner.useDelimiter("\\n");
 
         while (scanner.hasNext()) {
             String temp = scanner.next();
@@ -86,6 +87,7 @@ public class ListasDAO {
             }
             listaReferencias.add(l);
         }
+        scanner.close();
         return listaReferencias;
     }
     
@@ -97,7 +99,8 @@ public class ListasDAO {
         
         List<String[]> listaReferencias = new ArrayList<>();
         FileReader arq = new FileReader(arquivo);
-        Scanner scanner = new Scanner(arq).useDelimiter("\\;|\\n");
+        Scanner scanner = new Scanner(arq);
+        scanner.useDelimiter("\\;|\\n");
 
         while (scanner.hasNext()) {
             String nomeCampo = scanner.next();
@@ -152,8 +155,8 @@ public class ListasDAO {
         String arquivo = "src/main/artefatos-entrada/lista-especialista.csv";
         List<List<String>> listaEspecialista = new ArrayList<>();
         List<String> l;
-        Scanner scanner = new Scanner(new FileReader(arquivo))
-                .useDelimiter("\\n");
+        Scanner scanner = new Scanner(new FileReader(arquivo));
+        scanner.useDelimiter("\\n");
 
         while (scanner.hasNext()) {
             String temp = scanner.next();
@@ -164,6 +167,7 @@ public class ListasDAO {
             }
             listaEspecialista.add(l);
         }
+        scanner.close();
         return listaEspecialista;
     }
     

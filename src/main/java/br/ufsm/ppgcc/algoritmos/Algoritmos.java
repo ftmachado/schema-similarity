@@ -6,8 +6,6 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.StringReader;
@@ -25,15 +23,12 @@ import javax.json.JsonReader;
 import javax.json.JsonStructure;
 import javax.json.JsonWriter;
 import javax.json.stream.JsonParser;
-import javax.json.stream.JsonParser.Event;
 
 import org.simmetrics.StringMetric;
 import org.simmetrics.metrics.StringMetrics;
 import org.tartarus.martin.Stemmer;
 
 import br.ufsm.ppgcc.util.Util;
-import br.ufsm.ppgcc.util.UtilJSON;
-import br.ufsm.ppgcc.model.estruturas.ElementoBloco;
 import br.ufsm.ppgcc.model.estruturas.MatrizResultados;
 import br.ufsm.ppgcc.model.dao.ListasDAO;
 import br.ufsm.ppgcc.model.dao.MatrizResultadosDAO;
