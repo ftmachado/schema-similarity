@@ -1,0 +1,697 @@
+[{
+	"@score": "3",
+	"@id": "141651",
+	"info": {
+		"authors": {
+			"author": ["Jane Adriana", "Maristela Holanda"]
+		},
+		"title": "NoSQL2 - SQL to NoSQL Databases.",
+		"venue": "WorldCIST",
+		"pages": "938-948",
+		"year": "2018",
+		"type": "Conference and Workshop Papers",
+		"key": "conf/worldcist/AdrianaH18",
+		"doi": "10.1007/978-3-319-77712-2_89",
+		"ee": "https://doi.org/10.1007/978-3-319-77712-2_89",
+		"url": "https://dblp.org/rec/conf/worldcist/AdrianaH18"
+	},
+	"url": "URL#141651"
+}, {
+	"@score": "2",
+	"@id": "19517",
+	"info": {
+		"authors": {
+			"author": ["Ali Davoudian", "Liu Chen", "Mengchi Liu"]
+		},
+		"title": "A Survey on NoSQL Stores.",
+		"venue": "ACM Comput. Surv.",
+		"volume": "51",
+		"number": "2",
+		"pages": "40:1-40:43",
+		"year": "2018",
+		"type": "Journal Articles",
+		"key": "journals/csur/DavoudianCL18",
+		"doi": "10.1145/3158661",
+		"ee": "http://doi.acm.org/10.1145/3158661",
+		"url": "https://dblp.org/rec/journals/csur/DavoudianCL18"
+	},
+	"url": "URL#19517"
+}, {
+	"@score": "2",
+	"@id": "25863",
+	"info": {
+		"authors": {
+			"author": ["Victor A. E. de Farias", "Flávio R. C. Sousa", "José Gilvan Rodrigues Maia", "João Paulo Pordeus Gomes", "Javam C. Machado"]
+		},
+		"title": "Regression based performance modeling and provisioning for NoSQL cloud databases.",
+		"venue": "Future Generation Comp. Syst.",
+		"volume": "79",
+		"pages": "72-81",
+		"year": "2018",
+		"type": "Journal Articles",
+		"key": "journals/fgcs/FariasSMGM18",
+		"doi": "10.1016/J.FUTURE.2017.08.061",
+		"ee": "https://doi.org/10.1016/j.future.2017.08.061",
+		"url": "https://dblp.org/rec/journals/fgcs/FariasSMGM18"
+	},
+	"url": "URL#25863"
+}, {
+	"@score": "2",
+	"@id": "25899",
+	"info": {
+		"authors": {
+			"author": ["María Teresa González-Aparicio", "Muhammad Younas 0001", "Javier Tuya", "Rubén Casado"]
+		},
+		"title": "Testing of transactional services in NoSQL key-value databases.",
+		"venue": "Future Generation Comp. Syst.",
+		"volume": "80",
+		"pages": "384-399",
+		"year": "2018",
+		"type": "Journal Articles",
+		"key": "journals/fgcs/Gonzalez-Aparicio18",
+		"doi": "10.1016/J.FUTURE.2017.07.004",
+		"ee": "https://doi.org/10.1016/j.future.2017.07.004",
+		"url": "https://dblp.org/rec/journals/fgcs/Gonzalez-Aparicio18"
+	},
+	"url": "URL#25899"
+}, {
+	"@score": "2",
+	"@id": "26979",
+	"info": {
+		"authors": {
+			"author": ["Arnaud Castelltort", "Trevor Martin"]
+		},
+		"title": "Handling scalable approximate queries over NoSQL graph databases - Cypherf and the Fuzzy4S framework.",
+		"venue": "Fuzzy Sets and Systems",
+		"volume": "348",
+		"pages": "21-49",
+		"year": "2018",
+		"type": "Journal Articles",
+		"key": "journals/fss/CastelltortM18",
+		"doi": "10.1016/J.FSS.2017.08.002",
+		"ee": "https://doi.org/10.1016/j.fss.2017.08.002",
+		"url": "https://dblp.org/rec/journals/fss/CastelltortM18"
+	},
+	"url": "URL#26979"
+}, {
+	"@score": "2",
+	"@id": "31228",
+	"info": {
+		"authors": {
+			"author": ["Srinidhi Hiriyannaiah", "G. M. Siddesh", "P. Anoop", "K. G. Srinivasa"]
+		},
+		"title": "Semi-structured data analysis and visualisation using NoSQL.",
+		"venue": "IJBDI",
+		"volume": "5",
+		"number": "3",
+		"pages": "133-142",
+		"year": "2018",
+		"type": "Journal Articles",
+		"key": "journals/ijbdi/HiriyannaiahSAS18",
+		"doi": "10.1504/IJBDI.2018.10008726",
+		"ee": "https://doi.org/10.1504/IJBDI.2018.10008726",
+		"url": "https://dblp.org/rec/journals/ijbdi/HiriyannaiahSAS18"
+	},
+	"url": "URL#31228"
+}, {
+	"@score": "2",
+	"@id": "31377",
+	"info": {
+		"authors": {
+			"author": ["Sangeeta Gupta", "Gugulothu Narsimha"]
+		},
+		"title": "Miscegenation of scalable and DEP3K performance evaluation of nosql-cassandra for bigdata applications deployed in cloud.",
+		"venue": "IJBPIM",
+		"volume": "9",
+		"number": "1",
+		"pages": "12-21",
+		"year": "2018",
+		"type": "Journal Articles",
+		"key": "journals/ijbpim/GuptaN18",
+		"doi": "10.1504/IJBPIM.2018.10012307",
+		"ee": "https://doi.org/10.1504/IJBPIM.2018.10012307",
+		"url": "https://dblp.org/rec/journals/ijbpim/GuptaN18"
+	},
+	"url": "URL#31377"
+}, {
+	"@score": "2",
+	"@id": "31405",
+	"info": {
+		"authors": {
+			"author": ["Sangeeta Gupta", "Gugulothu Narsimha"]
+		},
+		"title": "Secure NoSQL for the Social Networking and E-Commerce Based Bigdata Applications Deployed in Cloud.",
+		"venue": "IJCAC",
+		"volume": "8",
+		"number": "2",
+		"pages": "113-129",
+		"year": "2018",
+		"type": "Journal Articles",
+		"key": "journals/ijcac/GuptaG18a",
+		"doi": "10.4018/IJCAC.2018040106",
+		"ee": "https://doi.org/10.4018/IJCAC.2018040106",
+		"url": "https://dblp.org/rec/journals/ijcac/GuptaG18a"
+	},
+	"url": "URL#31405"
+}, {
+	"@score": "2",
+	"@id": "46341",
+	"info": {
+		"authors": {
+			"author": ["Jaejun Yoo", "Ki-Hoon Lee", "Young-Ho Jeon"]
+		},
+		"title": "Migration from RDBMS to NoSQL Using Column-level Denormalization and Atomic Aggregates.",
+		"venue": "J. Inf. Sci. Eng.",
+		"volume": "34",
+		"number": "1",
+		"pages": "243-259",
+		"year": "2018",
+		"type": "Journal Articles",
+		"key": "journals/jise/YooLJ18",
+		"ee": "http://jise.iis.sinica.edu.tw/JISESearch/pages/View/PaperView.jsf?keyId=160_2116",
+		"url": "https://dblp.org/rec/journals/jise/YooLJ18"
+	},
+	"url": "URL#46341"
+}, {
+	"@score": "2",
+	"@id": "48063",
+	"info": {
+		"authors": {
+			"author": "Fabiano Lucchese"
+		},
+		"title": "From P2P to NoSQL - A continuous metric for classifying large-scale storage systems.",
+		"venue": "J. Parallel Distrib. Comput.",
+		"volume": "113",
+		"pages": "227-249",
+		"year": "2018",
+		"type": "Journal Articles",
+		"key": "journals/jpdc/Lucchese18",
+		"doi": "10.1016/J.JPDC.2017.11.017",
+		"ee": "https://doi.org/10.1016/j.jpdc.2017.11.017",
+		"url": "https://dblp.org/rec/journals/jpdc/Lucchese18"
+	},
+	"url": "URL#48063"
+}, {
+	"@score": "2",
+	"@id": "57381",
+	"info": {
+		"authors": {
+			"author": ["Diogo Augusto Pereira", "Wagner Ourique de Morais", "Edison Pignaton de Freitas"]
+		},
+		"title": "NoSQL real-time database performance comparison.",
+		"venue": "IJPEDS",
+		"volume": "33",
+		"number": "2",
+		"pages": "144-156",
+		"year": "2018",
+		"type": "Journal Articles",
+		"key": "journals/paapp/PereiraMF18",
+		"doi": "10.1080/17445760.2017.1307367",
+		"ee": "https://doi.org/10.1080/17445760.2017.1307367",
+		"url": "https://dblp.org/rec/journals/paapp/PereiraMF18"
+	},
+	"url": "URL#57381"
+}, {
+	"@score": "2",
+	"@id": "61989",
+	"info": {
+		"authors": {
+			"author": ["Arthur Lorenzi Almeida", "Vinícius Junqueira Schettino", "Thiago Jesus Rodrigues Barbosa", "Pedro Fernandes Freitas", "Pedro Gabriel Silva Guimarães", "Wagner Arbex"]
+		},
+		"title": "Relative Scalability of NoSQL Databases for Genotype Data Manipulation.",
+		"venue": "RITA",
+		"volume": "25",
+		"number": "2",
+		"pages": "93-100",
+		"year": "2018",
+		"type": "Journal Articles",
+		"key": "journals/rita/AlmeidaSBFGA18",
+		"ee": "http://www.seer.ufrgs.br/rita/article/view/RITA-VOL-25-NR2-93",
+		"url": "https://dblp.org/rec/journals/rita/AlmeidaSBFGA18"
+	},
+	"url": "URL#61989"
+}, {
+	"@score": "2",
+	"@id": "70898",
+	"info": {
+		"authors": {
+			"author": ["Rami Sellami", "Bruno Defude"]
+		},
+		"title": "Complex Queries Optimization and Evaluation over Relational and NoSQL Data Stores in Cloud Environments.",
+		"venue": "IEEE Trans. Big Data",
+		"volume": "4",
+		"number": "2",
+		"pages": "217-230",
+		"year": "2018",
+		"type": "Journal Articles",
+		"key": "journals/tbd/SellamiD18",
+		"doi": "10.1109/TBDATA.2017.2719054",
+		"ee": "https://doi.org/10.1109/TBDATA.2017.2719054",
+		"url": "https://dblp.org/rec/journals/tbd/SellamiD18"
+	},
+	"url": "URL#70898"
+}, {
+	"@score": "2",
+	"@id": "77504",
+	"info": {
+		"authors": {
+			"author": ["Antonio Celesti", "Maria Fazio", "Agata Romano", "Alessia Bramanti", "Placido Bramanti", "Massimo Villari"]
+		},
+		"title": "An OAIS-Based Hospital Information System on the Cloud - Analysis of a NoSQL Column-Oriented Approach.",
+		"venue": "IEEE J. Biomedical and Health Informatics",
+		"volume": "22",
+		"number": "3",
+		"pages": "912-918",
+		"year": "2018",
+		"type": "Journal Articles",
+		"key": "journals/titb/CelestiFRBBV18",
+		"doi": "10.1109/JBHI.2017.2681126",
+		"ee": "https://doi.org/10.1109/JBHI.2017.2681126",
+		"url": "https://dblp.org/rec/journals/titb/CelestiFRBBV18"
+	},
+	"url": "URL#77504"
+}, {
+	"@score": "2",
+	"@id": "80077",
+	"info": {
+		"authors": {
+			"author": ["Adrian Colaso", "Pablo Prieto", "Jose Angel Herrero", "Pablo Abad Fidalgo", "Lucia G. Menezo", "Valentin Puente", "José-Ángel Gregorio"]
+		},
+		"title": "Memory Hierarchy Characterization of NoSQL Applications through Full-System Simulation.",
+		"venue": "IEEE Trans. Parallel Distrib. Syst.",
+		"volume": "29",
+		"number": "5",
+		"pages": "1161-1173",
+		"year": "2018",
+		"type": "Journal Articles",
+		"key": "journals/tpds/ColasoPHFMPG18",
+		"doi": "10.1109/TPDS.2017.2787150",
+		"ee": "https://doi.org/10.1109/TPDS.2017.2787150",
+		"url": "https://dblp.org/rec/journals/tpds/ColasoPHFMPG18"
+	},
+	"url": "URL#80077"
+}, {
+	"@score": "2",
+	"@id": "86869",
+	"info": {
+		"authors": {
+			"author": "Jaroslav Pokorný"
+		},
+		"title": "Integration of Relational and NoSQL Databases.",
+		"venue": "ACIIDS",
+		"pages": "35-45",
+		"year": "2018",
+		"type": "Conference and Workshop Papers",
+		"key": "conf/aciids/Pokorny18",
+		"doi": "10.1007/978-3-319-75420-8_4",
+		"ee": "https://doi.org/10.1007/978-3-319-75420-8_4",
+		"url": "https://dblp.org/rec/conf/aciids/Pokorny18"
+	},
+	"url": "URL#86869"
+}, {
+	"@score": "2",
+	"@id": "91379",
+	"info": {
+		"authors": {
+			"author": ["Yosra Hajjaji", "Imed Riadh Farah"]
+		},
+		"title": "Performance investigation of selected NoSQL databases for massive remote sensing image data storage.",
+		"venue": "ATSIP",
+		"pages": "1-6",
+		"year": "2018",
+		"type": "Conference and Workshop Papers",
+		"key": "conf/atsip/HajjajiF18",
+		"doi": "10.1109/ATSIP.2018.8364508",
+		"ee": "https://doi.org/10.1109/ATSIP.2018.8364508",
+		"url": "https://dblp.org/rec/conf/atsip/HajjajiF18"
+	},
+	"url": "URL#91379"
+}, {
+	"@score": "2",
+	"@id": "98674",
+	"info": {
+		"authors": {
+			"author": ["Sergey Kucherov", "Yuri I. Rogozov", "Elena Borisova"]
+		},
+		"title": "The Method of Forming Contents for a NoSQL Storage of Configurable Information System.",
+		"venue": "CSOS",
+		"pages": "412-419",
+		"year": "2018",
+		"type": "Conference and Workshop Papers",
+		"key": "conf/csoc/KucherovRB18",
+		"doi": "10.1007/978-3-319-91186-1_43",
+		"ee": "https://doi.org/10.1007/978-3-319-91186-1_43",
+		"url": "https://dblp.org/rec/conf/csoc/KucherovRB18"
+	},
+	"url": "URL#98674"
+}, {
+	"@score": "2",
+	"@id": "99269",
+	"info": {
+		"authors": {
+			"author": ["Prasoon Dadhich", "Andrey Sadovykh", "Alessandra Bagnato", "Michal Kepka", "Ondrej Kaas", "Karel Charvát"]
+		},
+		"title": "Sensor-based Database with SensLog - A Case Study of SQL to NoSQL Migration.",
+		"venue": "DATA",
+		"pages": "239-244",
+		"year": "2018",
+		"type": "Conference and Workshop Papers",
+		"key": "conf/data/DadhichSBKKC18",
+		"doi": "10.5220/0006909202390244",
+		"ee": "https://doi.org/10.5220/0006909202390244",
+		"url": "https://dblp.org/rec/conf/data/DadhichSBKKC18"
+	},
+	"url": "URL#99269"
+}, {
+	"@score": "2",
+	"@id": "99635",
+	"info": {
+		"authors": {
+			"author": ["Mohammed El Malki", "Hamdi Ben Hamadou", "Max Chevalier", "André Péninou", "Olivier Teste"]
+		},
+		"title": "Querying Heterogeneous Data in Graph-Oriented NoSQL Systems.",
+		"venue": "DaWaK",
+		"pages": "289-301",
+		"year": "2018",
+		"type": "Conference and Workshop Papers",
+		"key": "conf/dawak/MalkiHCPT18",
+		"doi": "10.1007/978-3-319-98539-8_22",
+		"ee": "https://doi.org/10.1007/978-3-319-98539-8_22",
+		"url": "https://dblp.org/rec/conf/dawak/MalkiHCPT18"
+	},
+	"url": "URL#99635"
+}, {
+	"@score": "2",
+	"@id": "99643",
+	"info": {
+		"authors": {
+			"author": ["Tim Waage", "Lena Wiese"]
+		},
+		"title": "CloudDBGuard - Enabling Sorting and Searching on Encrypted Data in NoSQL Cloud Databases.",
+		"venue": "DaWaK",
+		"pages": "261-270",
+		"year": "2018",
+		"type": "Conference and Workshop Papers",
+		"key": "conf/dawak/WaageW18",
+		"doi": "10.1007/978-3-319-98539-8_20",
+		"ee": "https://doi.org/10.1007/978-3-319-98539-8_20",
+		"url": "https://dblp.org/rec/conf/dawak/WaageW18"
+	},
+	"url": "URL#99643"
+}, {
+	"@score": "2",
+	"@id": "99665",
+	"info": {
+		"authors": {
+			"author": ["Grisha Weintraub", "Ehud Gudes"]
+		},
+		"title": "Data Integrity Verification in Column-Oriented NoSQL Databases.",
+		"venue": "DBSec",
+		"pages": "165-181",
+		"year": "2018",
+		"type": "Conference and Workshop Papers",
+		"key": "conf/dbsec/WeintraubG18",
+		"doi": "10.1007/978-3-319-95729-6_11",
+		"ee": "https://doi.org/10.1007/978-3-319-95729-6_11",
+		"url": "https://dblp.org/rec/conf/dbsec/WeintraubG18"
+	},
+	"url": "URL#99665"
+}, {
+	"@score": "2",
+	"@id": "101730",
+	"info": {
+		"authors": {
+			"author": ["Belén Vela", "José María Cavero", "Paloma Cáceres", "Almudena Sierra-Alonso", "Carlos E. Cuesta"]
+		},
+		"title": "Using a NoSQL Graph Oriented Database to Store Accessible Transport Routes.",
+		"venue": "EDBT/ICDT Workshops",
+		"pages": "62-66",
+		"year": "2018",
+		"type": "Conference and Workshop Papers",
+		"key": "conf/edbt/VelaCCSC18",
+		"ee": "http://ceur-ws.org/Vol-2083/paper-10.pdf",
+		"url": "https://dblp.org/rec/conf/edbt/VelaCCSC18"
+	},
+	"url": "URL#101730"
+}, {
+	"@score": "2",
+	"@id": "107446",
+	"info": {
+		"authors": {
+			"author": "Fumbeya Marungo"
+		},
+		"title": "A Primer on NoSQL Databases for Enterprise Architects - The CAP Theorem and Transparent Data Access with MongoDB and Cassandra.",
+		"venue": "HICSS",
+		"year": "2018",
+		"type": "Conference and Workshop Papers",
+		"key": "conf/hicss/Marungo18",
+		"ee": "http://aisel.aisnet.org/hicss-51/os/enterprise_architecture/4",
+		"url": "https://dblp.org/rec/conf/hicss/Marungo18"
+	},
+	"url": "URL#107446"
+}, {
+	"@score": "2",
+	"@id": "107892",
+	"info": {
+		"authors": {
+			"author": ["Yuvraj Patel", "Mohit Verma", "Andrea C. Arpaci-Dusseau", "Remzi H. Arpaci-Dusseau"]
+		},
+		"title": "Revisiting Concurrency in High-Performance NoSQL Databases.",
+		"venue": "HotStorage",
+		"year": "2018",
+		"type": "Conference and Workshop Papers",
+		"key": "conf/hotstorage/PatelVAA18",
+		"ee": "https://www.usenix.org/conference/hotstorage18/presentation/patel",
+		"url": "https://dblp.org/rec/conf/hotstorage/PatelVAA18"
+	},
+	"url": "URL#107892"
+}, {
+	"@score": "2",
+	"@id": "112504",
+	"info": {
+		"authors": {
+			"author": ["Antonis Papaioannou", "Kostas Magoutis"]
+		},
+		"title": "Replica-Group Leadership Change as a Performance Enhancing Mechanism in NoSQL Data Stores.",
+		"venue": "ICDCS",
+		"pages": "1448-1453",
+		"year": "2018",
+		"type": "Conference and Workshop Papers",
+		"key": "conf/icdcs/PapaioannouM18",
+		"doi": "10.1109/ICDCS.2018.00147",
+		"ee": "https://doi.org/10.1109/ICDCS.2018.00147",
+		"url": "https://dblp.org/rec/conf/icdcs/PapaioannouM18"
+	},
+	"url": "URL#112504"
+}, {
+	"@score": "2",
+	"@id": "113000",
+	"info": {
+		"authors": {
+			"author": ["Mohammed El Malki", "Hamdi Ben Hamadou", "Nabil El Malki", "Arlind Kopliku"]
+		},
+		"title": "MPT - Suite Tools to Support Performance Tuning in NoSQL Systems.",
+		"venue": "ICEIS",
+		"pages": "127-134",
+		"year": "2018",
+		"type": "Conference and Workshop Papers",
+		"key": "conf/iceis/MalkiHMK18",
+		"doi": "10.5220/0006687601270134",
+		"ee": "https://doi.org/10.5220/0006687601270134",
+		"url": "https://dblp.org/rec/conf/iceis/MalkiHMK18"
+	},
+	"url": "URL#113000"
+}, {
+	"@score": "2",
+	"@id": "119967",
+	"info": {
+		"authors": {
+			"author": ["Lucas B. Dias", "Maristela Holanda", "Ruben Cruz Huacarpuma", "Rafael T. de Sousa Jr."]
+		},
+		"title": "NoSQL Database Performance Tuning for IoT Data - Cassandra Case Study.",
+		"venue": "IoTBDS",
+		"pages": "277-284",
+		"year": "2018",
+		"type": "Conference and Workshop Papers",
+		"key": "conf/iotbd/DiasHHS18",
+		"doi": "10.5220/0006782702770284",
+		"ee": "https://doi.org/10.5220/0006782702770284",
+		"url": "https://dblp.org/rec/conf/iotbd/DiasHHS18"
+	},
+	"url": "URL#119967"
+}, {
+	"@score": "2",
+	"@id": "120755",
+	"info": {
+		"authors": {
+			"author": ["Mahmudul Hassan", "Srividya K. Bansal"]
+		},
+		"title": "Semantic Data Querying over NoSQL Databases with Apache Spark.",
+		"venue": "IRI",
+		"pages": "364-371",
+		"year": "2018",
+		"type": "Conference and Workshop Papers",
+		"key": "conf/iri/HassanB18a",
+		"doi": "10.1109/IRI.2018.00061",
+		"ee": "https://doi.org/10.1109/IRI.2018.00061",
+		"url": "https://dblp.org/rec/conf/iri/HassanB18a"
+	},
+	"url": "URL#120755"
+}, {
+	"@score": "2",
+	"@id": "129154",
+	"info": {
+		"authors": {
+			"author": ["Salvatore Dipietro", "Rajkumar Buyya", "Giuliano Casale"]
+		},
+		"title": "PAX - Partition-aware autoscaling for the Cassandra NoSQL database.",
+		"venue": "NOMS",
+		"pages": "1-9",
+		"year": "2018",
+		"type": "Conference and Workshop Papers",
+		"key": "conf/noms/DipietroBC18",
+		"doi": "10.1109/NOMS.2018.8406271",
+		"ee": "https://doi.org/10.1109/NOMS.2018.8406271",
+		"url": "https://dblp.org/rec/conf/noms/DipietroBC18"
+	},
+	"url": "URL#129154"
+}, {
+	"@score": "2",
+	"@id": "132310",
+	"info": {
+		"authors": {
+			"author": ["Angelo Augusto Frozza", "Ronaldo dos Santos Mello"]
+		},
+		"title": "A Process for Reverse Engineering of Aggregate-Oriented NoSQL Databases with Emphasis on Geographic Data.",
+		"venue": "SBBD Companion",
+		"pages": "109-115",
+		"year": "2018",
+		"type": "Conference and Workshop Papers",
+		"key": "conf/sbbd/FrozzaM18",
+		"ee": "http://sbbd.org.br/2018/wp-content/uploads/sites/5/2018/08/109-sbbd_2018_comp.pdf",
+		"url": "https://dblp.org/rec/conf/sbbd/FrozzaM18"
+	},
+	"url": "URL#132310"
+}, {
+	"@score": "2",
+	"@id": "132337",
+	"info": {
+		"authors": {
+			"author": ["Luciana de Sá Silva Perciliano", "Fernanda Araujo Baião"]
+		},
+		"title": "Alinhamento de Grandes Ontologias com Recurso de Banco de Dados NoSQL e Utilização de Workflow Científico.",
+		"venue": "SBBD Companion",
+		"pages": "53-59",
+		"year": "2018",
+		"type": "Conference and Workshop Papers",
+		"key": "conf/sbbd/PercilianoB18",
+		"ee": "http://sbbd.org.br/2018/wp-content/uploads/sites/5/2018/08/053-sbbd_2018_comp.pdf",
+		"url": "https://dblp.org/rec/conf/sbbd/PercilianoB18"
+	},
+	"url": "URL#132337"
+}, {
+	"@score": "2",
+	"@id": "133905",
+	"info": {
+		"authors": {
+			"author": "Sriram Mohan"
+		},
+		"title": "Teaching NoSQL Databases to Undergraduate Students - A Novel Approach.",
+		"venue": "SIGCSE",
+		"pages": "314-319",
+		"year": "2018",
+		"type": "Conference and Workshop Papers",
+		"key": "conf/sigcse/Mohan18",
+		"doi": "10.1145/3159450.3159554",
+		"ee": "http://doi.acm.org/10.1145/3159450.3159554",
+		"url": "https://dblp.org/rec/conf/sigcse/Mohan18"
+	},
+	"url": "URL#133905"
+}, {
+	"@score": "2",
+	"@id": "134850",
+	"info": {
+		"authors": {
+			"author": ["Mohiuddin Abdul Qader", "Shiwen Cheng", "Vagelis Hristidis"]
+		},
+		"title": "A Comparative Study of Secondary Indexing Techniques in LSM-based NoSQL Databases.",
+		"venue": "SIGMOD Conference",
+		"pages": "551-566",
+		"year": "2018",
+		"type": "Conference and Workshop Papers",
+		"key": "conf/sigmod/QaderCH18",
+		"doi": "10.1145/3183713.3196900",
+		"ee": "http://doi.acm.org/10.1145/3183713.3196900",
+		"url": "https://dblp.org/rec/conf/sigmod/QaderCH18"
+	},
+	"url": "URL#134850"
+}, {
+	"@score": "2",
+	"@id": "141878",
+	"info": {
+		"authors": {
+			"author": ["Debora G. Reis", "Fabio S. Gasparoni", "Maristela Holanda", "Márcio Victorino", "Marcelo Ladeira", "Edward de Oliveira Ribeiro"]
+		},
+		"title": "An Evaluation of Data Model for NoSQL Document-Based Databases.",
+		"venue": "WorldCIST",
+		"pages": "616-625",
+		"year": "2018",
+		"type": "Conference and Workshop Papers",
+		"key": "conf/worldcist/ReisGHVLR18",
+		"doi": "10.1007/978-3-319-77703-0_61",
+		"ee": "https://doi.org/10.1007/978-3-319-77703-0_61",
+		"url": "https://dblp.org/rec/conf/worldcist/ReisGHVLR18"
+	},
+	"url": "URL#141878"
+}, {
+	"@score": "2",
+	"@id": "149577",
+	"info": {
+		"authors": {
+			"author": "Nazim Faour"
+		},
+		"title": "Data Consistency Simulation Tool for NoSQL Database Systems.",
+		"venue": "CoRR",
+		"volume": "abs/1802.08052",
+		"year": "2018",
+		"type": "Informal Publications",
+		"key": "journals/corr/abs-1802-08052",
+		"ee": "http://arxiv.org/abs/1802.08052",
+		"url": "https://dblp.org/rec/journals/corr/abs-1802-08052"
+	},
+	"url": "URL#149577"
+}, {
+	"@score": "2",
+	"@id": "157108",
+	"info": {
+		"authors": {
+			"author": ["Gouri Ginde", "Snehanshu Saha", "Archana Mathur", "Harsha Vamsi", "Sudeepa Roy Dey", "Swati Sampatrao Gambhire"]
+		},
+		"title": "Use of NoSQL database and visualization techniques to analyze massive scholarly article data from journals.",
+		"venue": "CoRR",
+		"volume": "abs/1805.00390",
+		"year": "2018",
+		"type": "Informal Publications",
+		"key": "journals/corr/abs-1805-00390",
+		"ee": "http://arxiv.org/abs/1805.00390",
+		"url": "https://dblp.org/rec/journals/corr/abs-1805-00390"
+	},
+	"url": "URL#157108"
+}, {
+	"@score": "2",
+	"@id": "163848",
+	"info": {
+		"authors": {
+			"author": ["Tran Khanh Dang", "An Khuong Vo", "Josef Küng"]
+		},
+		"title": "A NoSQL Data-based Personalized Recommendation System for C2C e-Commerce.",
+		"venue": "CoRR",
+		"volume": "abs/1806.09793",
+		"year": "2018",
+		"type": "Informal Publications",
+		"key": "journals/corr/abs-1806-09793",
+		"ee": "http://arxiv.org/abs/1806.09793",
+		"url": "https://dblp.org/rec/journals/corr/abs-1806-09793"
+	},
+	"url": "URL#163848"
+}]

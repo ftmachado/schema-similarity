@@ -34,6 +34,9 @@ import org.tartarus.martin.Stemmer;
 import br.ufsm.ppgcc.util.Util;
 import br.ufsm.ppgcc.util.UtilJSON;
 import br.ufsm.ppgcc.model.estruturas.ElementoBloco;
+import br.ufsm.ppgcc.model.estruturas.MatrizResultados;
+import br.ufsm.ppgcc.model.dao.ListasDAO;
+import br.ufsm.ppgcc.model.dao.MatrizResultadosDAO;
 
 public class Algoritmos {
 
@@ -429,65 +432,72 @@ public class Algoritmos {
 	 * Algoritmo 7 - Consolidar Estrutura Apaga as demais ocorrências do campo que
 	 * estão escritas de forma distinta e as guarda na lista de referências
 	 *
-	 * @param resultado - matriz única
-	 * @return campos consolidados.txt
+	 * @param arquivoCampos
+	 * @param arquivoMatriz
+	 * @param outListaRef2 - arquivo de saída para lista de referências 2
+	 * @param outConsolidados - arquivo de saída para campos consolidados
 	 * @author Ezequiel Ribeiro, Fhabiana Machado
-	 * @return listaReferencias2 - Lista de strings com palavra[0] e equivalencia[1]
-	 * @since 04 de agosto de 2019
+	 * @since 08 de setembro de 2019
+	 * @throws IOException
 	 */
-	public static List<String[]> consolidaEstrutura(double[][] resultado, ArrayList<String> palavras,
-		String caminho) throws IOException {
+	public static void consolidaEstrutura(String arquivoCampos, String arquivoMatriz, String outListaRef2,
+            String outConsolidados) throws IOException {
+        
+        //LOG
+        System.out.printf("\n\tConsolidando estrutura...");
 
-		//LOG
-		System.out.printf("\n\tConsolidando estrutura...");
+        // Carrega os artefatos de entrada
+        MatrizResultadosDAO carrega = new MatrizResultadosDAO();
+        MatrizResultados matrizUnicaResultados = carrega.lerMatrizUnicaResultados(arquivoCampos, arquivoMatriz);
 
-		ArrayList<String> aRemover = new ArrayList<String>();
-		List<String[]> listaReferencias2 = new ArrayList<>();
-		int k, l;
-		int tam = resultado.length;
+        List<String[]> listaReferencias2 = new ArrayList<>();
+        List<String> palavrasConsolidadas = new ArrayList<>();
+        List<String> aRemover = new ArrayList<>();
+        List<List<Integer>> matriz = matrizUnicaResultados.getMatriz();
+        
+        // Caminhamento em diagonal (acima da diagonal principal)
 
-		//Consolida todas as palavras da coluna, logo, coluna = ArrayList palavras
+        // Consolida todas as pralavras da coluna
+        for (String palavra : matrizUnicaResultados.getCamposColuna()) {
+            palavrasConsolidadas.add(palavra);
+        }
 
-		try {
-			FileWriter writer = new FileWriter(caminho);
-			
-			writer.write("\n");
-			for (k=0; k<tam ; k++){
-				for (l=0;l<tam;l++){
-					
-					String[] equivalencias = new String[2];
+        for (int j = 0; j < matriz.size(); j++) {
+            if (j == 0) {
+                continue;
+            }
+            // Movimentação das linhas
+            for (int i = j - 1; i >= 0; i--) {
+                if (matriz.get(i).get(j) == 1) {
+                    String[] equivalencia = new String[2];
+                    equivalencia[0] = palavrasConsolidadas.get(i);
+                    equivalencia[1] = palavrasConsolidadas.get(j);
+                    
+                    // Adiciona as equivalências a lista de equivalencias
+                    listaReferencias2.add(equivalencia);
 
-					//Para todo elemento acima da diagonal principal
-					if ((l>k) && (k != l)){
-						if (resultado[k][l] == 1.0){
-							writer.write("A palavra "+palavras.get(k)+" é equivalente a "+palavras.get(l)+"\n");
-							aRemover.add(palavras.get(l));
-							
-							equivalencias[0] = palavras.get(k);
-							equivalencias[1] = palavras.get(l);
-							listaReferencias2.add(equivalencias);
+                    /* Adiciona a palavra da coluna a uma lista de palavras a
+                     * serem excluídas da lista de palavras consolidadas
+                     * posteriormente */
+                    aRemover.add(palavrasConsolidadas.get(j));
+                }
+            }
+        }
 
-						}					
-					}
-				}
-			}
-			
-			writer.close();
-			
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+        //Remove da lista de elementos consolidados os elementos presentes 
+        // na lista temporária aRemover
+        for (String removerPalavra : aRemover) {
+            palavrasConsolidadas.remove(removerPalavra);
+        }
 
-		// System.out.println();
-		for (String s : aRemover) {
-			palavras.remove(s);
-			// System.out.println("Removendo palavra "+s);
-		}
+        //Grava em arquivos os artefatos:
+        //lista de referências 2 e campos consolidados
+        ListasDAO l = new ListasDAO();
+        l.gravarListaCamposConsolidados(palavrasConsolidadas, outConsolidados);
+        l.gravarListaReferencias2(listaReferencias2, outListaRef2);
 
-		// return new List[] {palavras, listaReferencias2};
-		return listaReferencias2;
+    }
 
-	}
 
 	/**
 	 * Algoritmo 8 - Remontar Estrutura

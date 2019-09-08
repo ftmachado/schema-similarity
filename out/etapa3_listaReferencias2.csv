@@ -1,0 +1,14 @@
+User;user
+types;type
+Tag;label
+author;authors
+editor;editors
+count;number
+year;Year
+journal;Journal
+volume;Volume
+title;Title
+author;Author
+Hour;Minute
+number;Issue
+Publication;Issue

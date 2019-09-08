@@ -117,6 +117,29 @@ public class Util {
 	        }  
 	  
 	  }
+	
+	/**
+	 * Grava um arquivo no formato CSV com as palavras do ArrayList
+	 * @param palavras - ArrayList de palavras
+	 * @param destinoArquivo - caminho do arquivo que será salvo com extensão .csv
+	 */
+	 public static void gravaArquivoCsv(ArrayList<String> palavras, String destinoArquivo) {  
+		  
+		try {  
+			FileWriter arq = new FileWriter(destinoArquivo);
+			PrintWriter gravarArq = new PrintWriter(arq);  
+			
+			for (int i = 0; i < palavras.size(); i++) {
+				gravarArq.printf(palavras.get(i)+";");
+			}
+			
+			arq.close();  
+			System.out.print("Arquivo csv gravado com sucesso!");
+		} catch (IOException e) {  
+			System.out.print("Erro ao gravar arquivo csv: " + e);
+		}  
+  
+  }
 	 
 	 
 	 /**

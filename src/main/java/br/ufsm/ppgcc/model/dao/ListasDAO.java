@@ -51,19 +51,14 @@ public class ListasDAO {
         return listaCamposConsolidados;
     }
     
-    public void gravarListaCamposConsolidados(List<List<String>> 
-            listaCamposConsolidados) throws IOException {
-        FileWriter arq = new FileWriter("src/main/artefatos-saida/campos-consolidados.csv");
+    public void gravarListaCamposConsolidados(List<String> listaCamposConsolidados, String caminho) throws IOException {
+        FileWriter arq = new FileWriter(caminho);
         PrintWriter gravarArq = new PrintWriter(arq);
-        for(List<String> linha : listaCamposConsolidados) {
-            for(int i = 0; i < linha.size(); i++) {
-                if(i != 0) {
-                    gravarArq.print(";");
-                }
-                gravarArq.print(linha.get(i));
-            }
-            gravarArq.print("\n");
+
+        for (int i = 0; i < listaCamposConsolidados.size(); i++) {
+            gravarArq.printf(listaCamposConsolidados.get(i)+";");
         }
+        
         gravarArq.close();
         arq.close();
     }
@@ -119,12 +114,14 @@ public class ListasDAO {
      * grava a lista de referências 2 em um arquivo de texto 
      * (lista-referencias-2.csv)
      */
-    public void gravarListaReferencias2(List<String[]> listaReferencias2) throws IOException {
-        FileWriter arq = new FileWriter("src/main/artefatos-saida/lista-referencias-2.csv");
+    public void gravarListaReferencias2(List<String[]> listaReferencias2, String caminho) throws IOException {
+        FileWriter arq = new FileWriter(caminho);
         PrintWriter gravarArq = new PrintWriter(arq);
+        
         for(String[] referencia : listaReferencias2) {
             gravarArq.println(referencia[0]+";"+referencia[1]);
         }
+        
         gravarArq.close();
         arq.close();
     }

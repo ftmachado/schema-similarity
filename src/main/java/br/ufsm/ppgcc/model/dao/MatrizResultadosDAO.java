@@ -6,9 +6,9 @@
 package br.ufsm.ppgcc.model.dao;
 
 import br.ufsm.ppgcc.model.estruturas.MatrizResultados;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -19,60 +19,52 @@ import java.util.Scanner;
  */
 public class MatrizResultadosDAO {
 
-    public MatrizResultados lerMatrizUnicaResultados() throws FileNotFoundException {
-        return lerMatrizUnicaResultados("artefatos-entrada/matriz-unica-resultados-campos.csv",
-                "artefatos-entrada/matriz-unica-resultados.csv");
-    }
+    public MatrizResultados lerMatrizUnicaResultados(String arquivoCampos, String arquivoMatriz)
+            throws FileNotFoundException, IOException{
 
-    public List<MatrizResultados> lerMatrizUnicaResultadosBlocos() throws FileNotFoundException {
-        List<MatrizResultados> blocos = new ArrayList<>(0);
-        int i = 0;
-        while (true) {
-            File f = new File("artefatos-entrada/matriz-unica-resultados-campos-" + i + ".csv");
-            if (!f.exists()) {
-                break;
-            }
-            MatrizResultados t = lerMatrizUnicaResultados("artefatos-entrada/"
-                    + "matriz-unica-resultados-campos-" + i + ".csv",
-                    "artefatos-entrada/matriz-unica-resultados-" + i + ".csv");
-            blocos.add(t);
-            i++;
-        }
-        return blocos;
-    }
-
-    private MatrizResultados lerMatrizUnicaResultados(String arquivoCampos,String arquivoMatriz) throws FileNotFoundException {
-    
         List<List<Integer>> matriz = new ArrayList<>(0);
-        List<String> listaColuna = lerCamposMatrizUnicaResultados(arquivoCampos);
-        List<String> listaLinha = lerCamposMatrizUnicaResultados(arquivoCampos);
 
-        Scanner scanner = new Scanner(new FileReader(arquivoMatriz))
-                .useDelimiter("\\n");
+        List<String> listaColuna = lerCamposMatrizUnicaResultados(arquivoCampos);
+        List<String> listaLinha = listaColuna;
+
+        FileReader arq = new FileReader(arquivoMatriz);
+        Scanner scanner = new Scanner(arq).useDelimiter("\\n");
 
         while (scanner.hasNext()) {
+
             List<Integer> l = new ArrayList<>(0);
             String temp = scanner.next();
             String[] expl = temp.split(";");
             l = new ArrayList<>();
+
             for (String s : expl) {
-                l.add(Integer.parseInt(s.trim()));
+                double d = Double.parseDouble(s.trim());
+                l.add((int) d);
             }
+
             matriz.add(l);
+
         }
+        arq.close();
+        scanner.close();
         return new MatrizResultados(matriz, listaLinha, listaColuna);
     }
 
-    private List<String> lerCamposMatrizUnicaResultados(String arquivo) throws FileNotFoundException {
+    private List<String> lerCamposMatrizUnicaResultados(String arquivo) throws IOException {
+        
         List<String> listaCampos = new ArrayList<>();
-        Scanner scanner = new Scanner(new FileReader(arquivo)).useDelimiter("\\;|\\n");
+        FileReader arq = new FileReader(arquivo);
+        Scanner scanner = new Scanner(arq).useDelimiter("\\;|\\n");
 
-        System.out.println("Lendo campos do arquivo "+arquivo);
+        System.out.printf("\n\t\tLendo campos do arquivo "+arquivo+"\n");
 
         while (scanner.hasNext()) {
             String nomeCampo = scanner.next();
             listaCampos.add(nomeCampo);
         }
+
+        scanner.close();
+        arq.close();
         return listaCampos;
     }
 

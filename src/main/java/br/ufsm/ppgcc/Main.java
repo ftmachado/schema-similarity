@@ -1,10 +1,8 @@
 package br.ufsm.ppgcc;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 import br.ufsm.ppgcc.algoritmos.Algoritmos;
@@ -50,6 +48,11 @@ public class Main {
 		palavras = Algoritmos.removeRepetidasComListaRef(palavras, "-enddoc");
 //		palavras = Util.removeUmaPalavra(palavras, "--enddoc");
 		tamanhoMatriz = palavras.size();
+		try {
+			Util.gravaArquivoCsv(palavras, new File(".").getCanonicalPath() + "/out/etapa2_campos.csv");
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
 		
 		/**
 		 * Algoritmo 3 - Analisar Radical da Palavra
@@ -107,26 +110,24 @@ public class Main {
 		resultados = Algoritmos.calculaEquivalencia(mStem, mLev, mLin, tamanhoMatriz, pontoCorte, pontoCorteAHP);
 //		Util.mostraMatriz(resultados);
 		try {
-			Util.gravaMatrizParaCsv(resultados, new File(".").getCanonicalPath()+"/out/etapa3_resultados.csv");
+			Util.gravaMatrizParaCsv(resultados, new File(".").getCanonicalPath()+"/out/etapa2_resultados.csv");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
 		/*
 		 * Algoritmo 7 - Consolidar estrutura
-		 * @param única matriz por bloco
-		 * @return campos consolidados (palavras), lista de referências 2 
+		 * @param arquivos de entrada da matriz única e dos campos e arquivos de saída
 		 */
-//		List<String[]> listaReferencias2 = new ArrayList<>();
-//                
-//		try {
-////                    Util.geraListaReferencias2(resultados, palavras, new File(".").getCanonicalPath() + "/out/etapa3_listaReferencias2.txt");
-//			listaReferencias2 = Algoritmos.consolidaEstrutura(resultados, palavras,
-//					new File(".").getCanonicalPath() + "/out/etapa3_listaReferencias2.txt");
-//
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
+		try {
+			String campos = new File(".").getCanonicalPath()+"/out/etapa2_campos.csv";
+			String matriz = new File(".").getCanonicalPath()+"/out/etapa2_resultados.csv";
+			String lista2 = new File(".").getCanonicalPath()+"/out/etapa3_listaReferencias2.csv";
+			String consolidados = new File(".").getCanonicalPath()+"/out/etapa3_camposConsolidados.csv";
+			Algoritmos.consolidaEstrutura(campos, matriz, lista2, consolidados);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
 		/**
 		 * Algoritmo 8 - Remontar Estrutura
