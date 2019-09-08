@@ -28,7 +28,8 @@ public class MatrizResultadosDAO {
         List<String> listaLinha = listaColuna;
 
         FileReader arq = new FileReader(arquivoMatriz);
-        Scanner scanner = new Scanner(arq).useDelimiter("\\n");
+        Scanner scanner = new Scanner(arq);
+        scanner.useDelimiter("\\n");
 
         while (scanner.hasNext()) {
 
@@ -54,9 +55,10 @@ public class MatrizResultadosDAO {
         
         List<String> listaCampos = new ArrayList<>();
         FileReader arq = new FileReader(arquivo);
-        Scanner scanner = new Scanner(arq).useDelimiter("\\;|\\n");
+        Scanner scanner = new Scanner(arq);
+        scanner.useDelimiter("\\;|\\n");
 
-        System.out.printf("\n\t\tLendo campos do arquivo "+arquivo+"\n");
+        // System.out.printf("\n\t\tLendo campos do arquivo "+arquivo+"\n");
 
         while (scanner.hasNext()) {
             String nomeCampo = scanner.next();

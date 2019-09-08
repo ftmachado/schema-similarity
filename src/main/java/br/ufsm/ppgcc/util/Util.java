@@ -134,7 +134,6 @@ public class Util {
 			}
 			
 			arq.close();  
-			System.out.print("Arquivo csv gravado com sucesso!");
 		} catch (IOException e) {  
 			System.out.print("Erro ao gravar arquivo csv: " + e);
 		}  

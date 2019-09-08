@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import br.ufsm.ppgcc.algoritmos.Algoritmos;
+import br.ufsm.ppgcc.algoritmos.RemontarEstrutura;
 import br.ufsm.ppgcc.util.*;
 
 public class Main {
@@ -22,20 +23,22 @@ public class Main {
 
 		try{ 
 			String arqDocEstruturalGeral = new File(".").getCanonicalPath()+"/out/etapa1_docEstruturalGeral.txt";
-			String arqCampos = new File(".").getCanonicalPath()+"/out/etapa2_campos.csv";
-			String arqMatrizResultados = new File(".").getCanonicalPath()+"/out/etapa2_resultados.csv";
+			String arqLista1 = new File(".").getCanonicalPath()+"/out/etapa1_listaReferencias1.csv";
+			String arqCampos = new File(".").getCanonicalPath()+"/out/etapa3_matrizUnicaResultadosCampos.csv";
+			String arqMatrizResultados = new File(".").getCanonicalPath()+"/out/etapa3_matrizUnicaResultados.csv";
 			String arqMatrizRadical = new File(".").getCanonicalPath()+"/out/etapa2_matrizRadical.csv";
 			String arqMatrizLevenshtein = new File(".").getCanonicalPath()+"/out/etapa2_matrizLevenshtein.csv";
 			String arqMatrizLin = new File(".").getCanonicalPath()+"/out/etapa2_matrizLin.csv";
 			String arqLista2 = new File(".").getCanonicalPath()+"/out/etapa3_listaReferencias2.csv";
 			String arqConsolidados = new File(".").getCanonicalPath()+"/out/etapa3_camposConsolidados.csv";
+			String arqEstruturaUnificada = new File(".").getCanonicalPath() + "/out/etapa3_estruturaUnificada.txt";
 		
 			/**
 			 * Algoritmo 1 - Separar Campos dos Dados
 			 * @param Documentos pertencentes à mesma coleção
 			 * Diretório - resources/json
 			 */
-			Algoritmos.separaCamposDosDados(jsonDir);
+			Algoritmos.separaCamposDosDados(jsonDir, arqDocEstruturalGeral);
 		
 			/**
 			 * Algoritmo 2 - Mesclar estrutura
@@ -44,8 +47,7 @@ public class Main {
 			 */
 			palavras = Util.leArquivo(arqDocEstruturalGeral);
 			palavras = Util.removeRepetidas(palavras);
-			palavras = Algoritmos.removeRepetidasComListaRef(palavras, "-enddoc");
-	//		palavras = Util.removeUmaPalavra(palavras, "--enddoc");
+			palavras = Algoritmos.removeRepetidasComListaRef(palavras, "-enddoc", arqLista1);
 			tamanhoMatriz = palavras.size();
 			Util.gravaArquivoCsv(palavras, arqCampos);
 		
@@ -75,7 +77,6 @@ public class Main {
 			* Algoritmo 5 - Analisar Similaridade Baseada em Conhecimento
 			* @param ArrayList com arqCampos distintos
 			* @return Matriz Lin[][]
-			* Diretório - src/main/resources/artefatos/lin.csv
 			*/
 			double[][] mLin = new double[tamanhoMatriz][tamanhoMatriz];
 			mLin = Algoritmos.aplicaLin(palavras);
@@ -99,25 +100,16 @@ public class Main {
 			*/
 			Algoritmos.consolidaEstrutura(arqCampos, arqMatrizResultados, arqLista2, arqConsolidados);
 		
+			/**
+			 * Algoritmo 8 - Remontar Estrutura
+			 * @param caminho absoluto dos arquivos
+			 * @return estrutura consolidada
+			 */
+			RemontarEstrutura.remontar(jsonDir, arqLista2, arqEstruturaUnificada, arqConsolidados);
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
-		/**
-		 * Algoritmo 8 - Remontar Estrutura
-		 * @param arqCampos arqConsolidados, lis de referencias 1, lista de referências 2
-		 * @return estrutura consolidada
-		 */
-//		try {
-//			Algoritmos.remontarEstrutura(jsonDir,
-//					new File(".").getCanonicalPath() + "/out/etapa3_estruturaConsolidada.txt",
-//					palavras,
-//					listaReferencias2);
-//		} catch (FileNotFoundException e) {
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
 
 	}
 	

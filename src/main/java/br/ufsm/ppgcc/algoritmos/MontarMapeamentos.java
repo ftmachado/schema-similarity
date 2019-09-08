@@ -17,7 +17,7 @@ public class MontarMapeamentos {
 
     }
 
-    public void montarMapeamentos() throws FileNotFoundException, Exception {
+    public void montarMapeamentos(String arqLista2) throws FileNotFoundException, Exception {
         ListasDAO l = new ListasDAO();
         EstruturaConsolidadaDAO e = new EstruturaConsolidadaDAO();
         //Carrega os artefatos
@@ -30,7 +30,7 @@ public class MontarMapeamentos {
         List<List<String>> listaRef1 = l.lerListaReferencias1();
 
         //Lista de referencias 2
-        List<String[]> listaRef2 = l.lerListaReferencias2();
+        List<String[]> listaRef2 = l.lerListaReferencias2(arqLista2);
 
         //Monta os mapeamentos
         List<String[]> listMapeamentos = getMapeamentos(listaCamposConsolidados,

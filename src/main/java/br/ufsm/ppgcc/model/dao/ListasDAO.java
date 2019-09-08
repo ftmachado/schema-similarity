@@ -29,13 +29,12 @@ public class ListasDAO {
      * @return 
      * @throws java.io.FileNotFoundException 
      */
-    public List<List<ElementoBloco>> lerListaCamposConsolidados()
-            throws FileNotFoundException {
-        String arquivo = "src/main/artefatos-saida/campos-consolidados.csv";
+    public List<List<ElementoBloco>> lerListaCamposConsolidados(String arqCamposConsolidados) throws FileNotFoundException, IOException {
+        
         List<List<ElementoBloco>> listaCamposConsolidados = new ArrayList<>();
         List<ElementoBloco> l;
-        Scanner scanner = new Scanner(new FileReader(arquivo))
-                .useDelimiter("\\n");
+        FileReader arq = new FileReader(arqCamposConsolidados);
+        Scanner scanner = new Scanner(arq).useDelimiter("\\n");
 
         while (scanner.hasNext()) {
             String temp = scanner.next();
@@ -48,6 +47,8 @@ public class ListasDAO {
             }
             listaCamposConsolidados.add(l);
         }
+        arq.close();
+        scanner.close();
         return listaCamposConsolidados;
     }
     
@@ -92,12 +93,11 @@ public class ListasDAO {
      * Método para carregar a segunda lista de referências
      * carrega a partir do arquivo(fixo) lista-referencias2.csv
      */
-    public List<String[]> lerListaReferencias2()
-            throws FileNotFoundException {
-        String arquivo = "src/main/artefatos-saida/lista-referencias-2.csv";
+    public List<String[]> lerListaReferencias2(String arquivo) throws FileNotFoundException, IOException {
+        
         List<String[]> listaReferencias = new ArrayList<>();
-        Scanner scanner = new Scanner(new FileReader(arquivo))
-                .useDelimiter("\\;|\\n");
+        FileReader arq = new FileReader(arquivo);
+        Scanner scanner = new Scanner(arq).useDelimiter("\\;|\\n");
 
         while (scanner.hasNext()) {
             String nomeCampo = scanner.next();
@@ -107,6 +107,8 @@ public class ListasDAO {
             equivalencias[1] = nomeEquiv.trim();
             listaReferencias.add(equivalencias);
         }
+        arq.close();
+        scanner.close();
         return listaReferencias;
     }
     

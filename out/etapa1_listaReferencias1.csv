@@ -1,0 +1,99 @@
+Source; doc1 
+Author; doc1 
+NameList; doc1 
+Person; doc1 
+First; doc1 
+Last; doc1 
+BIBTEX_KeyWords; doc1 
+City; doc1 
+JournalName; doc1 
+Month; doc1 
+Pages; doc1 
+Publisher; doc1 
+SourceType; doc1 
+StandardNumber; doc1 
+Tag; doc1 
+Title; doc1 
+URL; doc1 
+Volume; doc1 
+Year; doc1 
+dblp; doc2 
+article; doc2 
+@key; doc2 
+@mdate; doc2 
+author; doc2 
+title; doc2 
+pages; doc2 
+year; doc2 
+volume; doc2 
+journal; doc2 
+number; doc2 
+ee; doc2 
+url; doc2 
+PubmedArticle; doc2 
+MedlineCitation; doc2 
+@Status; doc2 
+@Owner; doc2 
+PMID; doc2 
+@Version; doc2 
+$; doc2 
+DateCreated; doc2 
+Day; doc2 
+DateRevised; doc2 
+Article; doc2 
+@PubModel; doc2 
+Journal; doc2 
+ISSN; doc2 
+@IssnType; doc2 
+JournalIssue; doc2 
+@CitedMedium; doc2 
+Issue; doc2 
+PubDate; doc2 
+ISOAbbreviation; doc2 
+ArticleTitle; doc2 
+Pagination; doc2 
+MedlinePgn; doc2 
+ELocationID; doc2 
+@EIdType; doc2 
+@ValidYN; doc2 
+Abstract; doc2 
+AbstractText; doc2 
+AuthorList; doc2 
+@CompleteYN; doc2 
+LastName; doc2 
+ForeName; doc2 
+Initials; doc2 
+Identifier; doc2 
+@Source; doc2 
+AffiliationInfo; doc2 
+Affiliation; doc2 
+Language; doc2 
+PublicationTypeList; doc2 
+PublicationType; doc2 
+@UI; doc2 
+ArticleDate; doc2 
+@DateType; doc2 
+MedlineJournalInfo; doc2 
+Country; doc2 
+MedlineTA; doc2 
+NlmUniqueID; doc2 
+ISSNLinking; doc2 
+Authors; doc2 
+Source title; doc2 
+Art. No.; doc2 
+Page start; doc2 
+Page end; doc2 
+Page count; doc2 
+Cited by; doc2 
+DOI; doc2 
+Link; doc2 
+Affiliations; doc2 
+Authors with affiliations; doc2 
+Correspondence Address; doc2 
+Editors; doc2 
+ISBN; doc2 
+CODEN; doc2 
+PubMed ID; doc2 
+Language of Original Document; doc2 
+Abbreviated Source Title; doc2 
+EID; doc2 

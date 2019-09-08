@@ -51,26 +51,32 @@ public class EstruturaConsolidadaDAO {
         arq.close();
     }
     
-    public void gravarEstruturaConsolidada(ElementoBloco elemento) throws IOException {
-        FileWriter arq = new FileWriter("src/main/artefatos-saida/estrutura-consolidada.txt");
-        PrintWriter gravarArq = new PrintWriter(arq);
-        gravarArq.println(getStringEstruturaConsolidada(elemento));
-        gravarArq.close();
-        arq.close();
-    }
-
-    private String getStringEstruturaConsolidada(ElementoBloco elemento) {
-        String str = "";
-        String escNome = "";
-            if (elemento.getNomeConsolidado() != null && !elemento.getNomeConsolidado().equals("")) {
-                escNome = elemento.getNomeConsolidado();
-            } else {
-                escNome = elemento.getNome();
-            }
+    /**
+     * Grava a estrutura consolidada a partir de uma estrutura remontada
+	 * @author Fhabiana Machado
+	 */
+    public void gravarEstruturaConsolidada(ElementoBloco elemento, String arqEstruturaUnificada) throws IOException {
+        
+        FileWriter arq = new FileWriter(arqEstruturaUnificada);
+		PrintWriter gravarArq = new PrintWriter(arq);
+		
+		String str = "";
+		String escNome = "";
+		
+		if (elemento.getNomeConsolidado() != null && !elemento.getNomeConsolidado().equals("")) {
+			escNome = elemento.getNomeConsolidado();
+		} else {
+			escNome = elemento.getNome();
+		}
+		
         str += "" + escNome + ";" + elemento.getAbreDelimitador()
                 + getStringEstruturaConsolidada(elemento.getBlocoFilho())
                 + elemento.getFechaDelimitador() + "";
-        return str;
+
+        gravarArq.println(str);
+        gravarArq.close();
+        arq.close();
+
     }
     
     /**
@@ -110,4 +116,5 @@ public class EstruturaConsolidadaDAO {
         }
         return str;
     }
+    
 }

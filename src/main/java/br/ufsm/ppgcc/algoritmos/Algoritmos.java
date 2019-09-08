@@ -53,20 +53,18 @@ public class Algoritmos {
 	* @return Arquivo .txt com todos os campos de cada documento - artefatos/saidaAlg1.txt
 	*/
 
-	public static void separaCamposDosDados(String caminho) {
+	public static void separaCamposDosDados(String jsonDir, String arqDocGeralEstrutural) {
 		
 		try {
 			int i=0;
-			int n_arquivos=Util.numArquivosJsonPasta(caminho);
+			int n_arquivos=Util.numArquivosJsonPasta(jsonDir);
 		
 			//LOG
 			System.out.printf("\n\tSeparando campos dos dados...");
 	
 			JsonReader reader;
 
-//			FileWriter arq = new FileWriter("src/main/resources/artefatos/saidaAlg1.txt");
-			FileWriter arq = new FileWriter(new File(".").getCanonicalPath() + "/out/etapa1_docEstruturalGeral.txt");
-			
+			FileWriter arq = new FileWriter(arqDocGeralEstrutural);
 			PrintWriter gravarArq = new PrintWriter(arq);
 			
 			for (i=1; i<=n_arquivos; i++) {
@@ -75,7 +73,7 @@ public class Algoritmos {
 					gravarArq.println("-enddoc");
 				}
 			
-				String file = caminho+"/doc"+i+".json";
+				String file = jsonDir+"/doc"+i+".json";
 				
 				reader = Json.createReader(new FileReader(file));
 				JsonStructure jsonst = reader.read();
@@ -126,15 +124,13 @@ public class Algoritmos {
 	 * @return ArrayList apenas com palavras distintas, um arquivo em artefatos/listaRef1.txt
 	 * @since 19 de fevereiro de 2018
 	 */
-	public static ArrayList<String> removeRepetidasComListaRef(ArrayList<String> palavras, String fim_doc) {
+	public static ArrayList<String> removeRepetidasComListaRef(ArrayList<String> palavras, String fim_doc, String arqLista1) {
 		
 		//LOG
 		System.out.printf("\n\tRemovendo palavras repetidas...");
 		
 		try {
-//			FileWriter arq = new FileWriter("src/main/resources/artefatos/listaRef1.txt");
-			FileWriter arq = new FileWriter(new File(".").getCanonicalPath() + "/out/etapa1_listaReferencias1.txt");
-			
+			FileWriter arq = new FileWriter(arqLista1);
             PrintWriter gravarArq = new PrintWriter(arq);
 		
 			String doc_atuali="", doc_atualj=""; int k=2;
@@ -165,14 +161,14 @@ public class Algoritmos {
 	            		if (str1.equals(str2) == true) {// verifica se as palavras são iguais
 	            			palavras.remove(j);
 	            			j--;
-	            			gravarArq.print(", " + doc_atualj);
+	            			gravarArq.print("; " + doc_atualj);
 	            			break;
 	            		}
 	            	}
 	            	
 	            }
 	            
-	            gravarArq.print(", " + doc_atuali + " \n");
+	            gravarArq.print("; " + doc_atuali + " \n");
 	        }
 	        
 	        arq.close();
@@ -497,66 +493,5 @@ public class Algoritmos {
         l.gravarListaReferencias2(listaReferencias2, outListaRef2);
 
     }
-
-
-	/**
-	 * Algoritmo 8 - Remontar Estrutura
-	 * Monta um novo documento com base no documento de origem com maior número de blocos
-	 * @param Campos consolidados, lista de referências 1 e lista de referências 2
-	 * @return Estrutura consolidada
-	 * @author Fhabiana Machado
-	 * @since 21 de agosto de 2019
-	 */
-	public static void remontarEstrutura(String jsonDir, String destino, ArrayList<String> palavras, List<String[]> listaReferencias2)
-		throws FileNotFoundException, IOException {
-		
-		//LOG
-		System.out.printf("\n\tRemontando estrutura...\n");
-
-		//Escolhe o documento de origem para referência (com maior número de blocos)
-		String docReferencia = jsonDir+"\\";
-		docReferencia += UtilJSON.arquivoComMaisBlocos(jsonDir);
-
-		//Transforma palavras em campos consolidados
-		List<List<ElementoBloco>> camposConsolidados = new ArrayList<>();
-		List<ElementoBloco> l = new ArrayList<>();
-		
-		for (String p : palavras) {
-			ElementoBloco e = new ElementoBloco();
-			e.setNome(p);
-			l.add(e);
-                        //System.out.println("Convertendo "+p);
-		}
-		camposConsolidados.add(l);
-
-
-		ElementoBloco raiz = new ElementoBloco("RAIZ", ElementoBloco.OBJETO);
-
-        //Verifica se o documento tem um objeto raiz dos demais
-        if (UtilJSON.temUnicoObjetoRaiz(docReferencia)) {
-            // Se sim, seta o nome do raiz com o nome do primeiro objeto
-            FileInputStream fi = new FileInputStream( new File(docReferencia) );
-            JsonParser parser = Json.createParser(fi);
-			Event evt = null;
-			
-            while (parser.hasNext()) {
-                evt = parser.next();
-                if (evt == Event.KEY_NAME) {
-                    raiz.setNome(parser.getString());
-                    parser.close();
-                    fi.close();
-                    break;
-                }
-			}
-			
-            UtilJSON.montaArvore(raiz, listaReferencias2, camposConsolidados, docReferencia);
-        } else {
-            // Chama a função recursiva para formar a árvore a partir da raiz dada
-            UtilJSON.montaArvore(raiz, listaReferencias2, camposConsolidados, docReferencia);
-        }
-		
-		UtilJSON.gravarEstruturaConsolidada(raiz, destino);
-
-	}
 
 }
