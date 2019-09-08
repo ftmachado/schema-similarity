@@ -7,6 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import br.ufsm.ppgcc.algoritmos.Algoritmos;
+import br.ufsm.ppgcc.util.*;
+
 public class Main {
 
 	static String jsonDir;

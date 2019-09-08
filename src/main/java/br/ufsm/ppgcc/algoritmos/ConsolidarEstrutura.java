@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package br.ufsm.ppgcc;
+package br.ufsm.ppgcc.algoritmos;
 
-//import model.estruturas.MatrizResultados;
-//import model.dao.ListasDAO;
-//import model.dao.MatrizResultadosDAO;
+import br.ufsm.ppgcc.model.estruturas.MatrizResultados;
+import br.ufsm.ppgcc.model.dao.ListasDAO;
+import br.ufsm.ppgcc.model.dao.MatrizResultadosDAO;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
