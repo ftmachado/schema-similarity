@@ -11,10 +11,10 @@ public class AdaptarNotacaoAgregados {
     public AdaptarNotacaoAgregados() {
     }
     
-    public void adaptarNotacaoAgregados() throws Exception {
+    public void adaptarNotacaoAgregados(String arqEstruturaUnificada) throws Exception {
         // Carrega os artefatos de entrada
         EstruturaConsolidadaDAO ecd = new EstruturaConsolidadaDAO();
-        NodoEstruturaConsolidada n = ecd.lerEstruturaConsolidada();
+        NodoEstruturaConsolidada n = ecd.lerEstruturaConsolidada(arqEstruturaUnificada);
 
         // Grava esquema conceitual
         ecd.gravarEsquemaConceitual(n);

@@ -70,12 +70,11 @@ public class ListasDAO {
      * Método para carregar a primeira lista de referências
      * carrega a partir do arquivo(fixo) lista-referencias1.csv
      */
-    public List<List<String>> lerListaReferencias1()
-            throws FileNotFoundException {
-        String arquivo = "src/main/artefatos-entrada/lista-referencias-1.csv";
+    public List<List<String>> lerListaReferencias1(String arqLista1) throws FileNotFoundException {
+        
         List<List<String>> listaReferencias = new ArrayList<>();
         List<String> l;
-        Scanner scanner = new Scanner(new FileReader(arquivo));
+        Scanner scanner = new Scanner(new FileReader(arqLista1));
         scanner.useDelimiter("\\n");
 
         while (scanner.hasNext()) {
@@ -89,6 +88,7 @@ public class ListasDAO {
         }
         scanner.close();
         return listaReferencias;
+
     }
     
     /**
@@ -131,18 +131,18 @@ public class ListasDAO {
         arq.close();
     }
     
-    /**
-     * grava a lista de referências 2 em um arquivo de texto 
-     * (lista-referencias-2.csv)
-     */
-    public void gravarMapeamentos(List<String[]> mapeamentos) throws IOException {
-        FileWriter arq = new FileWriter("src/main/artefatos-saida/mapeamentos.csv");
+    public void gravarMapeamentos(List<String[]> mapeamentos, String arqMapeamentos) throws IOException {
+        
+        FileWriter arq = new FileWriter(arqMapeamentos);
         PrintWriter gravarArq = new PrintWriter(arq);
+
         for(String[] mapeamento : mapeamentos) {
             gravarArq.println(mapeamento[0]+";"+mapeamento[1]+";"+mapeamento[2]);
         }
+
         gravarArq.close();
         arq.close();
+
     }
     
     

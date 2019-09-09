@@ -22,19 +22,21 @@ import java.util.List;
  */
 public class EstruturaConsolidadaDAO {
     
-    public NodoEstruturaConsolidada lerEstruturaConsolidada() 
+    public NodoEstruturaConsolidada lerEstruturaConsolidada(String arqEstruturaUnificada) 
             throws FileNotFoundException, IOException, Exception {
-        String nomeArquivo = "src/main/artefatos-saida/estrutura-consolidada.txt";
+        
         ParserEstruturaConsolidada notacoes = new ParserEstruturaConsolidada();
-        FileReader arq = new FileReader(nomeArquivo);
+        FileReader arq = new FileReader(arqEstruturaUnificada);
         BufferedReader lerArq = new BufferedReader(arq);
         int c;
 
         while ((c = lerArq.read()) != -1) {
             notacoes.lerCaractere((char)c);
         }
+
         lerArq.close();
         arq.close();
+        
         return notacoes.getNodoEstruturaConsolidada();
     }
 

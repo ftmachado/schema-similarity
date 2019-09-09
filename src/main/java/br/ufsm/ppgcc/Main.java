@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import br.ufsm.ppgcc.algoritmos.Algoritmos;
+import br.ufsm.ppgcc.algoritmos.MontarMapeamentos;
 import br.ufsm.ppgcc.algoritmos.RemontarEstrutura;
 import br.ufsm.ppgcc.util.*;
 
@@ -14,7 +15,7 @@ public class Main {
 	static String jsonDir;
 	static double pontoCorte, pontoCorteAHP;
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		
 		ArrayList<String> palavras = new ArrayList<String>();
 		int tamanhoMatriz=0;
@@ -24,6 +25,7 @@ public class Main {
 		try{ 
 			String arqDocEstruturalGeral = new File(".").getCanonicalPath()+"/out/etapa1_docEstruturalGeral.txt";
 			String arqLista1 = new File(".").getCanonicalPath()+"/out/etapa1_listaReferencias1.csv";
+			// String arqLista1ok = new File(".").getCanonicalPath()+"/out/lista-referencias-1-ok.csv";
 			String arqCampos = new File(".").getCanonicalPath()+"/out/etapa3_matrizUnicaResultadosCampos.csv";
 			String arqMatrizResultados = new File(".").getCanonicalPath()+"/out/etapa3_matrizUnicaResultados.csv";
 			String arqMatrizRadical = new File(".").getCanonicalPath()+"/out/etapa2_matrizRadical.csv";
@@ -32,6 +34,7 @@ public class Main {
 			String arqLista2 = new File(".").getCanonicalPath()+"/out/etapa3_listaReferencias2.csv";
 			String arqConsolidados = new File(".").getCanonicalPath()+"/out/etapa3_camposConsolidados.csv";
 			String arqEstruturaUnificada = new File(".").getCanonicalPath() + "/out/etapa3_estruturaUnificada.txt";
+			String arqMapeamentos = new File(".").getCanonicalPath() + "/out/etapa4_mapeamentos.csv";
 		
 			/**
 			 * Algoritmo 1 - Separar Campos dos Dados
@@ -107,6 +110,12 @@ public class Main {
 			 */
 			RemontarEstrutura.remontar(jsonDir, arqLista2, arqEstruturaUnificada, arqConsolidados);
 
+			/**
+			 * Algoritmo 9 - Montar maperamentos
+			 * @param lista1, lista2, estrutura unificada e saída mapeamentos
+			 */
+			MontarMapeamentos.montar(arqLista1, arqLista2, arqEstruturaUnificada, arqMapeamentos);
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -119,7 +128,7 @@ public class Main {
 						"    |_ _  |    | _ | | _  | \\-/ | | _ |  _   |_ _   | | \\-/ | | |   | _ | |  _| |   |    \\/\n"+
 						"        | |    |   | |    |     | |   |          |  | |     | | |   |   | |  \\  |   |    | \n"+
 						"    -----  ---  -  - ---- -     - -   -      -----  - -     - - --- -   - -   - -   -    -\n"+
-						"                                                                              agosto de 2019\n"+
+						"                                                                            setembro de 2019\n"+
 						"                                        by Fhabiana Machado, Renata Padilha, Ezequiel Ribeiro\n\n"
 		);
 		

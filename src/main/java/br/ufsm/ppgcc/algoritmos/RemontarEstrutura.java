@@ -31,6 +31,9 @@ public class RemontarEstrutura {
 
     public static void remontar(String jsonDir, String arqLista2, String arqEstruturaUnificada, String arqCamposConsolidados) throws FileNotFoundException, IOException {
         
+        //LOG
+        System.out.printf("\n\tRemontando estrutura...");
+
         ListasDAO l = new ListasDAO();
         List<String[]> listaReferencias2 = l.lerListaReferencias2(arqLista2);
         List<List<ElementoBloco>> listaConsolidada = l.lerListaCamposConsolidados(arqCamposConsolidados);
