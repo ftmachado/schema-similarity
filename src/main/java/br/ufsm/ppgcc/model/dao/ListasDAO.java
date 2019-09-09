@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.ufsm.ppgcc.model.dao;
 
 import br.ufsm.ppgcc.model.estruturas.ElementoBloco;
@@ -143,32 +138,6 @@ public class ListasDAO {
         gravarArq.close();
         arq.close();
 
-    }
-    
-    
-    /**
-     * Método para carregar a estrutura com instruções do especialista
-     * carrega a partir do arquivo(fixo) lista-especialista.csv
-     */
-    public List<List<String>> lerListaEspecialista() 
-            throws FileNotFoundException {
-        String arquivo = "src/main/artefatos-entrada/lista-especialista.csv";
-        List<List<String>> listaEspecialista = new ArrayList<>();
-        List<String> l;
-        Scanner scanner = new Scanner(new FileReader(arquivo));
-        scanner.useDelimiter("\\n");
-
-        while (scanner.hasNext()) {
-            String temp = scanner.next();
-            String[] expl = temp.split(";");
-            l = new ArrayList<>();
-            for (String s : expl) {
-                l.add(s.trim());
-            }
-            listaEspecialista.add(l);
-        }
-        scanner.close();
-        return listaEspecialista;
     }
     
 }

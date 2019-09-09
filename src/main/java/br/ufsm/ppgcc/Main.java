@@ -35,6 +35,7 @@ public class Main {
 			String arqConsolidados = new File(".").getCanonicalPath()+"/out/etapa3_camposConsolidados.csv";
 			String arqEstruturaUnificada = new File(".").getCanonicalPath() + "/out/etapa3_estruturaUnificada.txt";
 			String arqMapeamentos = new File(".").getCanonicalPath() + "/out/etapa4_mapeamentos.csv";
+			String arqEsquemaConceitual = new File(".").getCanonicalPath() + "/out/etapa4_esquemaConceitual.txt";
 		
 			/**
 			 * Algoritmo 1 - Separar Campos dos Dados
@@ -115,6 +116,12 @@ public class Main {
 			 * @param lista1, lista2, estrutura unificada e saída mapeamentos
 			 */
 			MontarMapeamentos.montar(arqLista1, arqLista2, arqEstruturaUnificada, arqMapeamentos);
+
+			/**
+			 * Algoritmo 10 - Adaptar Notação de Agregados
+			 * @param arquivo estrutura unificada e saída para esquema conceitual
+			 */
+			Algoritmos.adaptarNotacaoAgregados(arqEstruturaUnificada, arqEsquemaConceitual);
 
 		} catch (IOException e) {
 			e.printStackTrace();

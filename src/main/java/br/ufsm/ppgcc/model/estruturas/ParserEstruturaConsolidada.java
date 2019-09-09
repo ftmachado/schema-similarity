@@ -1,9 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package br.ufsm.ppgcc.util;
+package br.ufsm.ppgcc.model.estruturas;
 
 import br.ufsm.ppgcc.model.estruturas.NodoEstruturaConsolidada;
 import java.util.Stack;
@@ -12,7 +7,7 @@ import java.util.Stack;
  * Classe para carregar e interpretar a estrutura consolidada
  * aplica as regras definidas, gerando uma árvore de n-filhos
  * 
- * @author ezequielrr
+ * @author Ezequiel Ribeiro
  */
 public class ParserEstruturaConsolidada {
 
@@ -33,6 +28,7 @@ public class ParserEstruturaConsolidada {
     private final Stack<String> bufferPalavras;
     private char bufferSimbolos;
     private StringBuilder palavraAtual;
+    @SuppressWarnings("rawtypes")
     private final Stack[] pilha;
     private NodoEstruturaConsolidada nodoExibicao;
     private NodoEstruturaConsolidada nodoAtual;
@@ -94,6 +90,7 @@ public class ParserEstruturaConsolidada {
 
     private void adaptarNotacao(char simbolo) {
         NodoEstruturaConsolidada novoNodo = null;
+        
         switch (simbolo) {
             case FIM_PALAVRA:
                 if (bufferPalavras.empty()) {

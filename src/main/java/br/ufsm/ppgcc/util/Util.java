@@ -72,9 +72,6 @@ public class Util {
         return palavras;  
     }
 	
-	
-	
-	
 	/**
 	 * Remove apenas uma palavra do ArrayList
 	 * @param palavras - ArrayList de palavras
@@ -92,7 +89,6 @@ public class Util {
 		}
 		return palavras;
 	}
-	
 	
 	/**
 	 * Grava um arquivo com as palavras do ArrayList

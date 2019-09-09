@@ -32,6 +32,8 @@ import br.ufsm.ppgcc.util.Util;
 import br.ufsm.ppgcc.model.estruturas.MatrizResultados;
 import br.ufsm.ppgcc.model.dao.ListasDAO;
 import br.ufsm.ppgcc.model.dao.MatrizResultadosDAO;
+import br.ufsm.ppgcc.model.dao.EstruturaConsolidadaDAO;
+import br.ufsm.ppgcc.model.estruturas.NodoEstruturaConsolidada;
 
 public class Algoritmos {
 
@@ -487,6 +489,28 @@ public class Algoritmos {
         l.gravarListaCamposConsolidados(palavrasConsolidadas, outConsolidados);
         l.gravarListaReferencias2(listaReferencias2, outListaRef2);
 
+	}
+	
+	/**
+	 * Algoritmo 10 - Adaptar a Notação de Agregados
+	 * @param arqEstruturaUnificada - arquivo que contem a estrutura unificada
+	 * @param arqEsquemaConceitual - arquivo para gravar esquema conceitual
+	 * @return Esquema conceitual textual
+	 * @author Ezequiel Ribeiro, Fhabiana Machado
+	 * @since 09 de setembro de 2019
+	 */
+	public static void adaptarNotacaoAgregados(String arqEstruturaUnificada, String arqEsquemaConceitual)
+        throws Exception {
+		
+		//LOG
+		System.out.printf("\n\tGerando esquema conceitual...");
+
+        // Carrega os artefatos de entrada
+        EstruturaConsolidadaDAO ecd = new EstruturaConsolidadaDAO();
+        NodoEstruturaConsolidada n = ecd.lerEstruturaConsolidada(arqEstruturaUnificada);
+
+        // Grava esquema conceitual
+        ecd.gravarEsquemaConceitual(n, arqEsquemaConceitual);
     }
 
 }

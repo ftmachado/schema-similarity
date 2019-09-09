@@ -1,11 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.ufsm.ppgcc.model.dao;
 
-import br.ufsm.ppgcc.util.ParserEstruturaConsolidada;
+import br.ufsm.ppgcc.model.estruturas.ParserEstruturaConsolidada;
 import br.ufsm.ppgcc.model.estruturas.ElementoBloco;
 import br.ufsm.ppgcc.model.estruturas.NodoEstruturaConsolidada;
 import java.io.BufferedReader;
@@ -18,7 +13,7 @@ import java.util.List;
 
 /**
  *
- * @author ezequielrr
+ * @author Ezequiel Ribeiro
  */
 public class EstruturaConsolidadaDAO {
     
@@ -38,19 +33,6 @@ public class EstruturaConsolidadaDAO {
         arq.close();
         
         return notacoes.getNodoEstruturaConsolidada();
-    }
-
-    /**
-     * Grava a estrutura consolidada a partir de uma estrutura remontada
-     * @param elementos
-     * @throws java.io.IOException
-     */
-    public void gravarEstruturaConsolidada(List<ElementoBloco> elementos) throws IOException {
-        FileWriter arq = new FileWriter("src/main/artefatos-saida/estrutura-consolidada.txt");
-        PrintWriter gravarArq = new PrintWriter(arq);
-        gravarArq.println(getStringEstruturaConsolidada(elementos));
-        gravarArq.close();
-        arq.close();
     }
     
     /**
@@ -84,13 +66,15 @@ public class EstruturaConsolidadaDAO {
     /**
      * Grava o esquema conceitual a partir da estrutura consolidada
      */
-    public void gravarEsquemaConceitual(NodoEstruturaConsolidada estrutura) 
+    public void gravarEsquemaConceitual(NodoEstruturaConsolidada estrutura, String arqEsquemaConceitual) 
             throws IOException {
-        FileWriter arq = new FileWriter("src/main/artefatos-saida/esquema-conceitual.txt");
+        
+        FileWriter arq = new FileWriter(arqEsquemaConceitual);
         PrintWriter gravarArq = new PrintWriter(arq);
         gravarArq.println(estrutura.toString());
         gravarArq.close();
         arq.close();        
+
     }
     
     /**
