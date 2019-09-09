@@ -1,4 +1,4 @@
-package br.ufsm.ppgcc;
+package br.ufsm.ppgcc.util;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -16,6 +16,8 @@ import javax.json.Json;
 import javax.json.stream.JsonParser;
 import static javax.json.stream.JsonParser.Event.KEY_NAME;
 import static javax.json.stream.JsonParser.Event;
+
+import br.ufsm.ppgcc.model.estruturas.ElementoBloco;
 
 
 public class UtilJSON {
@@ -87,7 +89,7 @@ public class UtilJSON {
         return null;
     }
 
-    	/**
+    /**
      * Método para detectar casos onde o arquivo contém um objeto único
      * localizado na raiz do documento JSON
      */

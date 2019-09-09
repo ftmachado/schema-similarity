@@ -1,0 +1,89 @@
+-----------------------------------------------------
+ROOT
+Entidade:PubmedArticle
+Atributos: 
+REFI: , MedlineCitation, e_172210365
+-----------------------------------------------------
+-----------------------------------------------------
+Entidade:MedlineCitation
+Atributos: @Status,@Owner,DateRevised
+REFI: , PMID, DateCreated, Article, MedlineJournalInfo
+-----------------------------------------------------
+-----------------------------------------------------
+Entidade:PMID
+Atributos: @Version,$
+-----------------------------------------------------
+-----------------------------------------------------
+Entidade:DateCreated
+Atributos: Year,Month,Day
+-----------------------------------------------------
+-----------------------------------------------------
+Entidade:Article
+Atributos: @PubModel,ArticleTitle,Language
+REFI: , Journal, Pagination, ELocationID, Abstract, AuthorList, PublicationTypeList, ArticleDate
+-----------------------------------------------------
+-----------------------------------------------------
+Entidade:Journal
+Atributos: Title,ISOAbbreviation
+REFI: , ISSN, JournalIssue
+-----------------------------------------------------
+-----------------------------------------------------
+Entidade:ISSN
+Atributos: @IssnType
+-----------------------------------------------------
+-----------------------------------------------------
+Entidade:JournalIssue
+Atributos: @CitedMedium,Volume,number,PubDate
+-----------------------------------------------------
+-----------------------------------------------------
+Entidade:Pagination
+Atributos: MedlinePgn
+-----------------------------------------------------
+-----------------------------------------------------
+Entidade:ELocationID
+Atributos: @EIdType,@ValidYN
+-----------------------------------------------------
+-----------------------------------------------------
+Entidade:Abstract
+Atributos: AbstractText
+-----------------------------------------------------
+-----------------------------------------------------
+Entidade:AuthorList
+Atributos: @CompleteYN
+EMBED: , Authors
+-----------------------------------------------------
+-----------------------------------------------------
+Entidade:Authors
+Atributos: LastName,ForeName,Initials
+REFI: , Identifier, AffiliationInfo
+-----------------------------------------------------
+-----------------------------------------------------
+Entidade:Identifier
+Atributos: @Source
+-----------------------------------------------------
+-----------------------------------------------------
+Entidade:AffiliationInfo
+Atributos: Affiliation
+-----------------------------------------------------
+-----------------------------------------------------
+Entidade:PublicationTypeList
+Atributos: 
+REFI: , PublicationType
+-----------------------------------------------------
+-----------------------------------------------------
+Entidade:PublicationType
+Atributos: @UI
+-----------------------------------------------------
+-----------------------------------------------------
+Entidade:ArticleDate
+Atributos: @DateType
+-----------------------------------------------------
+-----------------------------------------------------
+Entidade:MedlineJournalInfo
+Atributos: Country,MedlineTA,NlmUniqueID,ISSNLinking
+-----------------------------------------------------
+-----------------------------------------------------
+Entidade:e_172210365
+Atributos: Source,NameList,Person,First,Last,BIBTEX_KeyWords,City,JournalName,Pages,Publisher,SourceType,StandardNumber,Tag,URL,dblp,@key,@mdate,pages,ee,Source title,Art. No.,Page start,Page end,Page count,Cited by,DOI,Link,Authors with affiliations,Correspondence Address,Editors,ISBN,CODEN,PubMed ID,Language of Original Document,Abbreviated Source Title,EID
+-----------------------------------------------------
+

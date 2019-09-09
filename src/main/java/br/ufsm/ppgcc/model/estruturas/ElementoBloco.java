@@ -1,4 +1,4 @@
-package br.ufsm.ppgcc;
+package br.ufsm.ppgcc.model.estruturas;
 
 import java.util.ArrayList;
 import java.util.List;
