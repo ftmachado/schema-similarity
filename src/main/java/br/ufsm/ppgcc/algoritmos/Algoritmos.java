@@ -4,6 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -47,11 +48,13 @@ public class Algoritmos {
 	* @author Fhabiana Machado
 	* @since 15 de fevereiro de 2018
 	* @param caminho - pasta de origem dos arquivos json
-	* @return Arquivo .txt com todos os campos de cada documento - artefatos/saidaAlg1.txt
+	* @return ArrayList de palavras com apenas os campos dos documentos
 	*/
 
-	public static void separaCamposDosDados(String jsonDir, String arqDocGeralEstrutural) {
+	public static ArrayList<String> separaCamposDosDados(String jsonDir, String arqDocGeralEstrutural, String fim_doc) {
 		
+		ArrayList<String> palavras = new ArrayList<String>();
+
 		try {
 			int i=0;
 			int n_arquivos=Util.numArquivosJsonPasta(jsonDir);
@@ -67,7 +70,9 @@ public class Algoritmos {
 			for (i=1; i<=n_arquivos; i++) {
 				
 				if (i!= 1) {
-					gravarArq.println("-enddoc");
+					palavras.add(fim_doc);
+					gravarArq.println(fim_doc);
+					gravarArq.println();
 				}
 			
 				String file = jsonDir+"/doc"+i+".json";
@@ -88,9 +93,29 @@ public class Algoritmos {
 					JsonParser.Event event = parser.next();
 					
 					switch (event) {
+
+						case START_ARRAY: {
+							gravarArq.printf("[");
+							break;
+						}
+						case END_ARRAY: {
+							gravarArq.printf("]");
+							break;
+						}
+						
+						case START_OBJECT: {
+							gravarArq.printf("{");
+							break;
+						}
+
+						case END_OBJECT: {
+							gravarArq.printf("}");
+							break;
+						}
 					
 						case KEY_NAME:
-							gravarArq.println(parser.getString());
+							gravarArq.printf(parser.getString()+";");
+							palavras.add(parser.getString());
 							break;
 							
 						default:
@@ -101,11 +126,13 @@ public class Algoritmos {
 		
 			arq.close();
 			
-			} catch (FileNotFoundException ex) {
-				Logger.getLogger(Algoritmos.class.getName()).log(Level.SEVERE, null, ex);
+		} catch (FileNotFoundException ex) {
+			Logger.getLogger(Algoritmos.class.getName()).log(Level.SEVERE, null, ex);
 		} catch (IOException ex) {
 			Logger.getLogger(Algoritmos.class.getName()).log(Level.SEVERE, null, ex);
 		}
+
+		return palavras;
 	}
 	
 	
@@ -113,7 +140,7 @@ public class Algoritmos {
 	/**
 	 * Algoritmo 2 - Mesclar Estrutura
 	 * Remove as palavras repetidas de um ArrayList gravando a lista de referências 1 
-	 * em um arquivo.
+	 * em um arquivo e retornando uma lista das palavras consolidadas
 	 * 
 	 * @author Fhabiana Machado
 	 * @param palavras - ArrayList<palavras>, String delimitador para marcar fim do documento
@@ -121,60 +148,85 @@ public class Algoritmos {
 	 * @return ArrayList apenas com palavras distintas, um arquivo em artefatos/listaRef1.txt
 	 * @since 19 de fevereiro de 2018
 	 */
-	public static ArrayList<String> removeRepetidasComListaRef(ArrayList<String> palavras, String fim_doc, String arqLista1) {
+	public static ArrayList<String> mesclarEstrutura(ArrayList<String> palavras, String fim_doc, String arqLista1) {
 		
 		//LOG
-		System.out.printf("\n\tRemovendo palavras repetidas...");
+		System.out.printf("\n\tMesclando estrutura...");
+
+		ArrayList<String> consolidadas = new ArrayList<String>();
+		ArrayList<String> referencias = new ArrayList<String>();
 		
-		try {
-			FileWriter arq = new FileWriter(arqLista1);
-            PrintWriter gravarArq = new PrintWriter(arq);
-		
-			String doc_atuali="", doc_atualj=""; int k=2;
+		try {		
+			String doc_atuali="", doc_atualj="", p=""; int k=2, indice=0;
 			
 	        for (int i = 0; i <= palavras.size() - 1; i++) {
 	        	
 	        	if (i==0) {	
-	        		doc_atuali = "doc1";
+	        		doc_atuali = "doc1.json";
 	        	}
 	        	if (palavras.get(i).equals(fim_doc)) {
-	        		doc_atuali = "doc"+k;
+	        		doc_atuali = "doc"+k+".json";
 	        		k++;
 	        		continue;
 	        	}
 	        	
-	        	gravarArq.print(palavras.get(i));
+				p = palavras.get(i);
+				if ( !consolidadas.contains(p) ){
+					consolidadas.add(p);
+					referencias.add(consolidadas.indexOf(p), doc_atuali+";");
+					// System.out.println("adicionando referencias para "+p+" "+doc_atuali);
+				} else {
+					indice = consolidadas.indexOf(p);
+					referencias.add(indice, referencias.get(indice)+doc_atuali+";");
+					// System.out.println("adicionando para indice "+indice+" "+referencias.get(indice)+doc_atuali+";");
+				}
 	        	
 	            for (int j = i + 1; j < palavras.size(); j++) {
 	            	int k2=2;
 	            	
 	            	if (palavras.get(j).equals(fim_doc)) {
-	            		doc_atualj = "doc"+k2;
+	            		doc_atualj = "doc"+k2+".json";
 	            		k2++;
-	            	} else {
-	            		String str1 = palavras.get(i);
+					} else {
+
+						/*
+						* Compara se a palavra p se encontra em outro documento e adiciona referência
+						*/
 	            		String str2 = palavras.get(j);
 	            		
-	            		if (str1.equals(str2) == true) {// verifica se as palavras são iguais
-	            			palavras.remove(j);
+	            		if (p.equals(str2) == true) {// verifica se as palavras são iguais
+							palavras.remove(j);
 	            			j--;
-	            			gravarArq.print("; " + doc_atualj);
+							// gravarArq.print("; " + doc_atualj);
+							indice = consolidadas.indexOf(p);
+							referencias.add(indice, referencias.get(indice)+doc_atualj+";");
+							// System.out.println("adicionando para indice "+indice+" "+referencias.get(indice)+doc_atualj+";");
 	            			break;
 	            		}
 	            	}
 	            	
-	            }
-	            
-	            gravarArq.print("; " + doc_atuali + " \n");
-	        }
+				}
+				
+	            // gravarArq.print("; " + doc_atuali + " \n");
+			}
 	        
+			FileWriter arq = new FileWriter(arqLista1);
+			PrintWriter gravarArq = new PrintWriter(arq);	
+	
+			for(int i=1; i< consolidadas.size(); i++){
+				if (i!=1){
+					gravarArq.print("\n");
+				}
+				gravarArq.print(consolidadas.get(i)+";"+referencias.get(i));
+			}
+
 	        arq.close();
         
 		} catch(IOException e) {
 			System.out.println("Erro: " + e);
 		}
-        palavras = Util.removeUmaPalavra(palavras, fim_doc);
-        return palavras;  
+        // palavras = Util.removeUmaPalavra(palavras, fim_doc);
+        return consolidadas;  
     }
 	
 	/**
@@ -256,23 +308,23 @@ public class Algoritmos {
 	 * @since 19 de fevereiro de 2018
 	 * @return Matriz com 0 e 1
 	 */
-	public static int[][] geraMatrizStemmer(ArrayList<String> palavras){
+	public static double[][] geraMatrizStemmer(ArrayList<String> palavras){
 		
 		//LOG
 		System.out.printf("\n\tGerando matriz com radicais...");
 		
 		int n_palavras = palavras.size();
-		int[][] matriz = new int[n_palavras][n_palavras];
+		double[][] matriz = new double[n_palavras][n_palavras];
 		
 		for (int i = 0; i < n_palavras; i++) {
             for (int j = 0; j < n_palavras; j++) {
             	//Se for a diagonal principal vai ser 1
             	if (i==j) {
-            		matriz[i][j]=1;
+            		matriz[i][j]=1.0;
             	} else if (palavras.get(i).equals(palavras.get(j)) == true) {
-            			matriz[i][j]=1;
+            			matriz[i][j]=1.0;
             		} else {
-            			matriz[i][j]=0;
+            			matriz[i][j]=0.0;
             		}
             }
         }
@@ -363,13 +415,13 @@ public class Algoritmos {
 	 * @author Renata Padilha, Fhabiana Machado
 	 * @since 15 de agosto de 2018
 	 */
-	public static double[][] calculaEquivalencia(int[][] radical, double[][] lev, double[][] lin, int tamanho, double PONTO_CORTE, double PONTO_CORTE_AHP){
+	public static double[][] calculaEquivalencia(double[][] radical, double[][] lev, double[][] lin, int tamanho, double PONTO_CORTE, double PONTO_CORTE_AHP){
 
 		//LOG
 		System.out.printf("\n\tCalculando equivalência...");
 	
 		int i, j, count=0;
-		final int pesoA=1, pesoB=3, pesoC=2;
+		final int pesoA=1, pesoB=2, pesoC=3;
 		double aux=0, media_ponderada=0;
 		double resultado[][]= new double[tamanho][tamanho];
 
@@ -381,8 +433,8 @@ public class Algoritmos {
 					resultado[i][j] = 1;
 				} else {
 					//2º caso
-					if (lev[i][j] == 0 && radical[i][j] == 0 && lin[i][j] == 0)	{
-						resultado[i][j] = 0;
+					if (lev[i][j] == 0.0 && radical[i][j] == 0.0 && lin[i][j] == 0.0)	{
+						resultado[i][j] = 0.0;
 					} else {
 						count=0;
 						//3º caso

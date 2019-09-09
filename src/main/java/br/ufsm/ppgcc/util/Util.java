@@ -45,7 +45,7 @@ public class Util {
             }  
             in.close();  
         } catch (IOException e) {
-	        System.out.println("Ero ao ler arquivo:" + e);
+	        System.out.println("Erro ao ler arquivo:" + e);
 	    }  
 	    return palavras;  
 	}
@@ -371,5 +371,19 @@ public class Util {
 			e.printStackTrace();
 		}
 	}
+
+	/**
+	 * Método que testa se contém na lista com IgnoreCase
+	 * Se sim retorna o índice, senão retorna zero
+	 */
+	public static int containsIgnoreCase(ArrayList<String> list, String s) {
+		
+		for (String string : list) {
+            if (s.equalsIgnoreCase(string)) {
+              return list.indexOf(string);
+            }
+        }
+        return 0;
+    }
 
 }
