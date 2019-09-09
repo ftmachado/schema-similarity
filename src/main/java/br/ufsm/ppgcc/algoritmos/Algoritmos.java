@@ -213,8 +213,8 @@ public class Algoritmos {
 			FileWriter arq = new FileWriter(arqLista1);
 			PrintWriter gravarArq = new PrintWriter(arq);	
 	
-			for(int i=1; i< consolidadas.size(); i++){
-				if (i!=1){
+			for(int i=0; i< consolidadas.size(); i++){
+				if (i!=0){
 					gravarArq.print("\n");
 				}
 				gravarArq.print(consolidadas.get(i)+";"+referencias.get(i));
@@ -430,7 +430,7 @@ public class Algoritmos {
 
 				//1º caso
 				if ((lev[i][j] == 1.0) || (radical[i][j] == 1.0) || (lin[i][j] == 1.0)){
-					resultado[i][j] = 1;
+					resultado[i][j] = 1.0;
 				} else {
 					//2º caso
 					if (lev[i][j] == 0.0 && radical[i][j] == 0.0 && lin[i][j] == 0.0)	{
@@ -453,6 +453,7 @@ public class Algoritmos {
 							count++;
 						}
 						
+						//se apenas uma medida for diferente de 0
 						if (count==1){
 							//se valor maior que ponto de corte(0.7)
 							resultado[i][j] = (aux > PONTO_CORTE) ? 1 : 0;
@@ -460,7 +461,7 @@ public class Algoritmos {
 						} else {
 							if (count>1){
 								//4º caso valores entre 0 < x < 1
-								media_ponderada = (pesoA*radical[i][j] + pesoB*lev[i][j] + pesoC*lin[i][j])/6;
+								media_ponderada = (pesoA*radical[i][j] + pesoB*lev[i][j] + pesoC*lin[i][j])/(pesoA+pesoB+pesoC);
 								resultado[i][j] = (media_ponderada > PONTO_CORTE_AHP) ? 1 : 0;
 							}
 						}

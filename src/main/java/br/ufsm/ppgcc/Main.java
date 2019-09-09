@@ -122,7 +122,7 @@ public class Main {
 		);
 		
 		Scanner ler = new Scanner(System.in);
-		System.out.println("Bem vindo ao sistema para definição de arqCampos equivalentes em fontes de dados JSON");
+		System.out.println("Bem vindo ao sistema para definição de campos equivalentes em fontes de dados JSON");
 		System.out.println("O nome dos arquivos devem ser do modelo doc1.json, doc2.json...");
 		
 		try {

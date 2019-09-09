@@ -2,7 +2,7 @@
 ROOT
 Entidade:PubmedArticle
 Atributos: 
-REFI: , MedlineCitation, e_172210365
+REFI: , MedlineCitation, e_-454133252
 -----------------------------------------------------
 -----------------------------------------------------
 Entidade:MedlineCitation
@@ -15,12 +15,12 @@ Atributos: @Version,$
 -----------------------------------------------------
 -----------------------------------------------------
 Entidade:DateCreated
-Atributos: Year,Month,Day
+Atributos: Year,Month
 -----------------------------------------------------
 -----------------------------------------------------
 Entidade:Article
 Atributos: @PubModel,ArticleTitle,Language
-REFI: , Journal, Pagination, ELocationID, Abstract, AuthorList, PublicationTypeList, ArticleDate
+REFI: , Journal, Pagination, ELocationID, Abstract, AuthorList, PublicationTypeList, e_-374377589
 -----------------------------------------------------
 -----------------------------------------------------
 Entidade:Journal
@@ -33,7 +33,7 @@ Atributos: @IssnType
 -----------------------------------------------------
 -----------------------------------------------------
 Entidade:JournalIssue
-Atributos: @CitedMedium,Volume,number,PubDate
+Atributos: @CitedMedium,Volume,PubDate
 -----------------------------------------------------
 -----------------------------------------------------
 Entidade:Pagination
@@ -59,31 +59,26 @@ REFI: , Identifier, AffiliationInfo
 -----------------------------------------------------
 -----------------------------------------------------
 Entidade:Identifier
-Atributos: @Source
+Atributos: Source
 -----------------------------------------------------
 -----------------------------------------------------
 Entidade:AffiliationInfo
-Atributos: Affiliation
+Atributos: Affiliations
 -----------------------------------------------------
 -----------------------------------------------------
 Entidade:PublicationTypeList
-Atributos: 
-REFI: , PublicationType
------------------------------------------------------
------------------------------------------------------
-Entidade:PublicationType
 Atributos: @UI
 -----------------------------------------------------
 -----------------------------------------------------
-Entidade:ArticleDate
+Entidade:e_-374377589
 Atributos: @DateType
 -----------------------------------------------------
 -----------------------------------------------------
 Entidade:MedlineJournalInfo
-Atributos: Country,MedlineTA,NlmUniqueID,ISSNLinking
+Atributos: City,MedlineTA,NlmUniqueID,ISSNLinking
 -----------------------------------------------------
 -----------------------------------------------------
-Entidade:e_172210365
-Atributos: Source,NameList,Person,First,Last,BIBTEX_KeyWords,City,JournalName,Pages,Publisher,SourceType,StandardNumber,Tag,URL,dblp,@key,@mdate,pages,ee,Source title,Art. No.,Page start,Page end,Page count,Cited by,DOI,Link,Authors with affiliations,Correspondence Address,Editors,ISBN,CODEN,PubMed ID,Language of Original Document,Abbreviated Source Title,EID
+Entidade:e_-454133252
+Atributos: NameList,Person,First,BIBTEX_KeyWords,JournalName,Pages,Publisher,SourceType,StandardNumber,Tag,URL,dblp,@key,@mdate,number,ee,Source title,Art. No.,Page start,Page end,Page count,Cited by,DOI,Authors with affiliations,Correspondence Address,Editors,CODEN,PubMed ID,Language of Original Document,Abbreviated Source Title,EID
 -----------------------------------------------------
 
